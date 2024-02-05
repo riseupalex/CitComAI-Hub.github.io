@@ -36,10 +36,10 @@ To access the service, you will need a valid API key, so go over to [openroutese
 
 ### Get the basics
 
-So far, we have learned the basics of fetching the data and getting a solution from the Openroute service. However, this static example neither allows us to interact with the map nor to obtain new solutions dynamically. The following section contains step-by-step instructions to deploy a full working demo with an interactive web frontend, just like [the live demo]().
+So far, we have learned the basics of fetching the data and getting a solution from the Openroute service. However, this static example neither allows us to interact with the map nor to obtain new solutions dynamically. The following section contains step-by-step instructions to deploy a full working service with an interactive web frontend, just like [the live demo]().
 
 ### Deployment
-Below, you will find step-by-step instructions on how to deploy the complete demo.
+Below, you will find step-by-step instructions on how to deploy the complete service.
 
 1. Clone the reposotory.
 ```bash
@@ -74,8 +74,9 @@ AUTH_USER=user
 AUTH_PASSWORD=password
 OPENROUTESERVICE_API_KEY=xxxxxx
 DISTRICTS_API=xxxxxx
+
 ```
-Then, read it 
+Then, read the .env file
 ```bash
 source .env
 ```  
