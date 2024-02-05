@@ -5,7 +5,7 @@
 ![Waste Collection](img/waste_collection.gif)
 
 ## Introduction
-This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example aims to illustrate how to implement a possible solution based on the proposed architecture embraced by the CitCom.ai project following MIMs.
+This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example illustrates how to implement a minimum viable service following MIMs embraced by the CitCom.ai project.
 
 !!! abstract "Scenario"
     Different sensors are deployed throughout the city to monitor the fill levels of waste containers. These sensors periodically collect data on the fill levels and send it to the city data platform. The goal is to use context information to create optimal waste collection routes for the trucks. The solution will only consider the current waste container filling level, their location, available trucks, their capacity, start and end location, and time restrictions.
