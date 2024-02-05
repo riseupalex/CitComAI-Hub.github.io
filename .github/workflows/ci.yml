@@ -2,8 +2,7 @@ name: ci # (1)!
 on:
   push:
     branches:
-      - master # (2)!
-      - main
+      - main # (2)!
 permissions:
   contents: write
 jobs:
