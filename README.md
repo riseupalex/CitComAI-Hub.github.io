@@ -1,0 +1,2 @@
+# VRAIN documentation for the CitCom.ai project
+[![ci](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/actions/workflows/ci.yml)
