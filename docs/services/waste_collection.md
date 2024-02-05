@@ -2,6 +2,8 @@
 [Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--secondary }
 [Live demo :material-play:](#){ .md-button .md-button--secondary }
 
+![Waste Collection](img/waste_collection.gif)
+
 ## Introduction
 This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example aims to illustrate how to implement a possible solution based on the proposed architecture embraced by the CitCom.ai project following MIMs.
 
