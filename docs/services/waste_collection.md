@@ -1,8 +1,10 @@
-# 🚚 Waste Collection 
+# Minimum viable service - Waste Collection 
 [Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--secondary }
 [Live demo :material-play:](#){ .md-button .md-button--secondary }
 
-![Waste Collection](img/waste_collection.gif)
+<figure markdown>
+  ![Waste Collection](img/waste_collection.gif){ loading=lazy }
+</figure>
 
 ## Introduction
 This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example illustrates how to implement a minimum viable service following MIMs embraced by the CitCom.ai project.
