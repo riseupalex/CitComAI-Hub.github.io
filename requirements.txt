@@ -4,7 +4,6 @@ mkdocs==1.5.3
 # Extensions
 pymdown-extensions==10.3.1
 mkdocs-git-revision-date-localized-plugin==1.2.1
-mkdocs-git-committers-plugin-2==2.2.3
 
 # Theme
 mkdocs-material==9.4.6

@@ -61,6 +61,3 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date-localized
-  - git-committers:
-      repository: CitCom-VRAIN/CitCom-VRAIN.github.io
-      branch: main
