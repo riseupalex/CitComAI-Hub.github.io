@@ -1,5 +1,8 @@
 site_name: CitCom VRAIN 
 site_url: https://citcom-vrain.github.io
+repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
+repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
+copyright: Copyright &copy; 2023 - 2024 CitCom.ai - VRAIN
 site_dir: public
 theme:
   name: material
@@ -8,8 +11,19 @@ theme:
   features:
     - content.code.copy
     - navigation.sections
+    - navigation.footer
   palette: 
   - primary: black
+extra:
+  generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/orgs/CitCom-VRAIN/repositories
+    name: GitHub
+  - icon: material/email
+    link: mailto:<joamoteo@upv.es>
+    name: Email 
+
 markdown_extensions:
   - def_list
   - attr_list
@@ -47,4 +61,6 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date-localized
-  - git-authors
+  - git-committers:
+      repository: CitCom-VRAIN/CitCom-VRAIN.github.io
+      branch: main
