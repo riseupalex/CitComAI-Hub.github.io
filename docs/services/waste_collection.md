@@ -73,6 +73,10 @@ AUTH_PASSWORD=password
 OPENROUTESERVICE_API_KEY=xxxxxx
 DISTRICTS_API=xxxxxx
 ```
+Then, read it 
+```bash
+source .env
+```  
 
 6. Start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 ```bash
