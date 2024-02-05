@@ -1,0 +1,14 @@
+# Documentation static site generator & deployment tool
+mkdocs==1.5.3
+
+# Extensions
+pymdown-extensions==10.3.1
+mkdocs-git-revision-date-localized-plugin==1.2.1
+mkdocs-git-authors-plugin==0.7.2
+
+# Theme
+mkdocs-material==9.4.6
+
+# Add your custom theme if not inside a theme_dir
+# (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+#  mkdocs-material>=5.4.0
