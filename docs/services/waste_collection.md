@@ -68,7 +68,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Then replace the `OPENROUTESERVICE_API_KEY` value with your own settings Openroute service API key.
+Then replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
 ```bash
 PROTOCOL=http
 ENDPOINT_CB=127.0.0.1:1026
