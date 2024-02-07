@@ -30,12 +30,12 @@ An intermediary adapter may be required in cases where the city data platform do
 The AI service will use the gathered information to offer an interactive service through a web dashboard. Once the user provides a desired config, the AI service will produce an optimal solution.
 
 ### Openroute optimization service
-[Openroute](https://openrouteservice.org/) offers a free vehicle routing optimization service based on the [Vroom](https://github.com/VROOM-Project/vroom) project. This demo will employ this service to solve users' waste collection problems. 
+[Openroute](https://openrouteservice.org/) offers a free vehicle routing optimization service based on the [Vroom](https://github.com/VROOM-Project/vroom) project. This demo will employ this service to provide and optimal solution. 
 
 To access the service, you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
 
 ## Getting started
-Below, you will find step-by-step instructions on how to deploy the complete service.
+Below, you will find step-by-step instructions on how to deploy waste collection minimum viable service.
 
 1. Clone the repository and navigate to its root folder:
 ```bash
