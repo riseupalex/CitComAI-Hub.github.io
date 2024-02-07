@@ -35,62 +35,63 @@ The AI service will use the gathered information to offer an interactive service
 To access the service, you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
 
 ## Getting started
-
-### Get the basics
-
-So far, we have learned the basics of fetching the data and getting a solution from the Openroute service. However, this static example neither allows us to interact with the map nor to obtain new solutions dynamically. The following section contains step-by-step instructions to deploy a full working service with an interactive web frontend, just like [the live demo]().
-
-### Deployment
 Below, you will find step-by-step instructions on how to deploy the complete service.
 
-1. Clone the reposotory.
+1. Clone the repository and navigate to its root folder:
 ```bash
 git clone https://github.com/CitCom-VRAIN/waste-collection-demo.git && cd waste-collection-demo
 ```
 
-2. Install submodules
+2. Init git submodules with the following command. This will clone and install a dead simple [ngsi-ld client library](https://github.com/CitCom-VRAIN/ngsild-client) in `lib` folder.
 ```bash
 git submodule init && git submodule update
 ```
 
-3. Create and activate a Python virtual environment.
+3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/).
+and [Docker Compose](https://docs.docker.com/compose) installed. This set-up an Orion-LD broker with a MongoDB database. Check out [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) for more details.
+```bash
+docker compose up
+```
+
+4. Create and activate a Python virtual environment:
 ```bash
 python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
-4. Install the requirements.
+5. Install all requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Create a `.env` file in the project's root folder using the following file as a guide. Fill it with your own settings.
+6. Create an `.env` file using `.env.example` as a guide. 
 ```bash
-PROTOCOL=https
-ENDPOINT_CB=cb.exmple.com:111
-ENDPOINT_CB_TOKEN=auth.example.com:2222
-ENDPOINT_KEYSTONE=auth.example.com:2222
-ENDPOINT_IOTAM=iota.example.com:3333
-ENDPOINT_IOTA_JSON_HTTP=iota-json.example.com:4444
-ENDPOINT_IOTA_JSON_HTTPS=iota-json.example.com:5555
-AUTH_USER=user
-AUTH_PASSWORD=password
-OPENROUTESERVICE_API_KEY=xxxxxx
-DISTRICTS_API=xxxxxx
-
+cp .env.example .env
 ```
-Then, read the .env file
+
+Then replace the `OPENROUTESERVICE_API_KEY` value with your own settings Openroute service API key.
+```bash
+PROTOCOL=http
+ENDPOINT_CB=127.0.0.1:1026
+OPENROUTESERVICE_API_KEY="Replace this string with your Openroute API key"
+WASTECONTAINERS_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
+VEHICLEMODEL_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+```
+
+And last but not least, read the .env file
 ```bash
 source .env
 ```  
 
-6. Start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+7. Populate the broker with some fake data by running the following command. This will create some `WasteContainer` and `VehicleModel` entities in the broker.
+```bash
+python3 upsert_fake_data.py
+```
+
+8. Finally, start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 ```bash
 flask --app server run
 ```
 
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).
-- [ ] Districts data
-    - Not available in our city data platorm. [Currently using custom API](https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/barris-barrios/records?limit=100) which does not follow any Smart Data Model. Custom code at [server.py#L162](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/64e1f25608a321383e1532188c29a79a71bdcfab/server.py#L162) and [DataManager.js#L49](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/64e1f25608a321383e1532188c29a79a71bdcfab/static/modules/DataManager.js#L49)
-- [ ] Trucks data is not available in our city data platform. Currently hard-coded at [server.py#L78](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/64e1f25608a321383e1532188c29a79a71bdcfab/server.py#L78)
 - [ ] Solutions should be provided using Smart data models.
