@@ -68,7 +68,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Then replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
+7. Then replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
 ```bash
 PROTOCOL=http
 ENDPOINT_CB=127.0.0.1:1026
@@ -77,17 +77,17 @@ WASTECONTAINERS_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dat
 VEHICLEMODEL_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
 ```
 
-And last but not least, read the .env file
+8. And last but not least, read the .env file
 ```bash
 source .env
 ```  
 
-7. Populate the broker with some fake data by running the following command. This will create some `WasteContainer` and `VehicleModel` entities in the broker.
+9. Populate the broker with some fake data by running the following command. This will create some `WasteContainer` and `VehicleModel` entities in the broker.
 ```bash
 python3 upsert_fake_data.py
 ```
 
-8. Finally, start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+10. Finally, start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 ```bash
 flask --app server run
 ```
