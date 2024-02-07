@@ -14,7 +14,7 @@ graph LR
 !!! warning
     Lepus is a library still in development. It is considered untested and experimental. Errors may occur.
 
-Create a `docker-compose.yml` file with the following config. Please replace `NGSI_V2_CONTEXT_BROKER` and `CONTEXT_URL` with your own settings. 
+1. Create a `docker-compose.yml` file with the following config. Please, replace `NGSI_V2_CONTEXT_BROKER` with the URL / IP address of your NGSI-v2 Context Broker. Also set `CONTEXT_URL` to the desired context (for instance `ttps://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld`) 
 
 ```yaml
 version: '3.9'
@@ -42,15 +42,33 @@ networks:
   default:
 ```
 
-Create and start the container by using the following command:
+2. Create and start the container by using the following command:
 
 ```bash
  docker compose up
 ```
 
-## Debugging
-As mentioned above, Lepus is still in its early stages, so it lacks some features, and wild bugs may appear. In order to make it easier to detect and report errors, a [developing/debugging repository](https://github.com/CitCom-VRAIN/lepus-dev) was created. If you find any issues or want to request a feature, open a [new issue](https://github.com/jason-fox/lepus/issues/new/choose) in the official repository.
+3. Set-up your AI service / client so it points to `127.0.0.1.1:3000`.
 
+## Debugging
+As mentioned above, Lepus is still in its early stages, so it lacks some features, and wild bugs may appear. In order to make it easier to detect and report errors, a [developing / debugging repository](https://github.com/CitCom-VRAIN/lepus-dev) was created. If you find any issues or want to request a feature, please, open a [new issue](https://github.com/jason-fox/lepus/issues/new/choose) in the official repository.
+
+Steps to run the development version (it is necessary to have [Node.js](https://nodejs.org/en) installed):
+
+1. Clone the repository and navigate to its root folder:
+```bash
+git clone https://github.com/CitCom-VRAIN/lepus-dev && cd lepus-dev
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run
+```bash
+npm start
+```
 
 ## Track and status of detected errors
 
@@ -62,3 +80,4 @@ As mentioned above, Lepus is still in its early stages, so it lacks some feature
 - [ ] HTTPS / SSL problems  
     - Lepus' protocol is http. It should be fine for working locally and testing purposes
     - `NODE_TLS_REJECT_UNAUTHORIZED=0` must be set to avoid SSL certificate checking problem
+- [ ] Static context
