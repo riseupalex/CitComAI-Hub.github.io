@@ -44,8 +44,8 @@ networks:
 
 Create and start the container by using the following command:
 
-```
- docker-compose up
+```bash
+ docker compose up
 ```
 
 ## Debugging
