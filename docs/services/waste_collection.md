@@ -32,7 +32,7 @@ The AI service will use the gathered information to offer an interactive service
 ### Openroute optimization service
 [Openroute](https://openrouteservice.org/) offers a free vehicle routing optimization service based on the [Vroom](https://github.com/VROOM-Project/vroom) project. This demo will employ this service to provide and optimal solution. 
 
-To access the service, you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
+To access the service you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
 
 ## Getting started
 Below, you will find step-by-step instructions on how to deploy waste collection minimum viable service. Tested with Python `3.10.12` and Ubuntu 22.04.
