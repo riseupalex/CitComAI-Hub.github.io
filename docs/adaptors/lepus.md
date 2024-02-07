@@ -14,7 +14,7 @@ graph LR
 !!! warning
     Lepus is a library still in development. It is considered untested and experimental. Errors may occur.
 
-1. Create a `docker-compose.yml` file with the following config. Please, replace `NGSI_V2_CONTEXT_BROKER` with the URL / IP address of your NGSI-v2 Context Broker. Also set `CONTEXT_URL` to the desired context (for instance [WasteManagement context](https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld)) 
+Create a `docker-compose.yml` file with the following config. Please, replace `NGSI_V2_CONTEXT_BROKER` with the URL / IP address of your NGSI-v2 Context Broker. Also set `CONTEXT_URL` to the desired context (for instance [WasteManagement context](https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld)) 
 
 ```yaml
 version: '3.9'
@@ -42,13 +42,13 @@ networks:
   default:
 ```
 
-2. Create and start the container by using the following command:
+Create and start the container by using the following command:
 
 ```bash
  docker compose up
 ```
 
-3. Set-up your AI service / client so it points to `127.0.0.1.1:3000`.
+Set-up your AI service / client so it points to `127.0.0.1.1:3000`.
 
 ## Debugging
 As mentioned above, Lepus is still in its early stages, so it lacks some features, and wild bugs may appear. In order to make it easier to detect and report errors, a [developing / debugging repository](https://github.com/CitCom-VRAIN/lepus-dev) was created. If you find any issues or want to request a feature, please, open a [new issue](https://github.com/jason-fox/lepus/issues/new/choose) in the official repository.
