@@ -14,7 +14,7 @@ graph LR
 !!! warning
     Lepus is a library still in development. It is considered untested and experimental. Errors may occur.
 
-1. Create a `docker-compose.yml` file with the following config. Please, replace `NGSI_V2_CONTEXT_BROKER` with the URL / IP address of your NGSI-v2 Context Broker. Also set `CONTEXT_URL` to the desired context (for instance `ttps://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld`) 
+1. Create a `docker-compose.yml` file with the following config. Please, replace `NGSI_V2_CONTEXT_BROKER` with the URL / IP address of your NGSI-v2 Context Broker. Also set `CONTEXT_URL` to the desired context (for instance [WasteManagement context](https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld)) 
 
 ```yaml
 version: '3.9'
