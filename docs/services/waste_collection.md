@@ -23,11 +23,11 @@ graph LR
   C["📈 Dashboard"] --- D["👥 Users"];
 ```
 
-The above image shows the overall architecture: The AI service will get the necessary data from the city platform using the NGSI-LD specification. In the future, once [the data space connector](/data_space_connector) is deployed, the AI service will get the data through it. 
+The above image shows the overall architecture: The AI service will get the necessary data from the city platform using the NGSI-LD specification. In the future, once [the data space connector](./../data%20space%20connectors/fiware_connector.md) is deployed, the AI service will get the data through it. 
 
 An intermediary adapter may be required in cases where the city data platform does not comply with the proposed NGSI-LD standard. If your current data platform uses the NGSIv2 specification, check the [Lepus adaptor section](../adaptors/lepus.md) to get more details about how to use it. 
 
-The AI service will use the gathered information to offer an interactive service through a web dashboard. Once the user provides a desired config, the AI service will produce an optimal solution.
+The AI service will use the gathered information to offer an interactive service through a web dashboard. Once the user provides a desired config the AI service will produce an optimal solution.
 
 ### Openroute optimization service
 [Openroute](https://openrouteservice.org/) offers a free vehicle routing optimization service based on the [Vroom](https://github.com/VROOM-Project/vroom) project. This demo will employ this service to provide and optimal solution. 
@@ -47,8 +47,7 @@ git clone https://github.com/CitCom-VRAIN/waste-collection-demo.git && cd waste-
 git submodule init && git submodule update
 ```
 
-3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/).
-and [Docker Compose](https://docs.docker.com/compose) installed. This set-up an Orion-LD broker with a MongoDB database. Check out [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) for more details.
+3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose) installed. This will set-up an Orion-LD broker with a MongoDB database. Check out the [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) file for more details.
 ```bash
 docker compose up
 ```
@@ -58,17 +57,17 @@ docker compose up
 python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
-5. Install all requirements
+5. Install all requirements:
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Create an `.env` file using `.env.example` as a guide. 
+6. Create an `.env` file using `.env.example` as a guide: 
 ```bash
 cp .env.example .env
 ```
 
-7. Then replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
+7. Then edit the `.env` file and replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
 ```bash
 PROTOCOL=http
 ENDPOINT_CB=127.0.0.1:1026
@@ -77,17 +76,17 @@ WASTECONTAINERS_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dat
 VEHICLEMODEL_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
 ```
 
-8. And last but not least, read the .env file
+8. After editing the file and saving it, read the .env file:
 ```bash
 source .env
 ```  
 
-9. Populate the broker with some fake data by running the following command. This will create some `WasteContainer` and `VehicleModel` entities in the broker.
+9. Populate the context broker with some fake data by running the following command. This will create some `WasteContainer` and `VehicleModel` entities in the broker:
 ```bash
 python3 upsert_fake_data.py
 ```
 
-10. Finally, start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+10. Finally, start the server and open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser:
 ```bash
 flask --app server run
 ```
