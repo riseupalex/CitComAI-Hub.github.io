@@ -35,7 +35,7 @@ The AI service will use the gathered information to offer an interactive service
 To access the service, you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
 
 ## Getting started
-Below, you will find step-by-step instructions on how to deploy waste collection minimum viable service.
+Below, you will find step-by-step instructions on how to deploy waste collection minimum viable service. Tested with Python `3.10.12` and Ubuntu 22.04.
 
 1. Clone the repository and navigate to its root folder:
 ```bash
@@ -69,8 +69,8 @@ cp .env.example .env
 
 7. Then edit the `.env` file and replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
 ```bash
-PROTOCOL=http
-ENDPOINT_CB=127.0.0.1:1026
+PROTOCOL="http"
+ENDPOINT_CB="127.0.0.1:1026"
 OPENROUTESERVICE_API_KEY="Replace this string with your Openroute API key"
 WASTECONTAINERS_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
 VEHICLEMODEL_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
