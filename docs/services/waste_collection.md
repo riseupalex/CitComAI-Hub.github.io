@@ -1,6 +1,5 @@
 # Minimum viable service - Waste Collection 
 [Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--primary }
-[Live demo :material-play:](#){ .md-button .md-button--primary }
 
 <figure markdown>
   ![Waste Collection](img/waste_collection.gif){ loading=lazy }
