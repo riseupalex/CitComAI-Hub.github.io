@@ -24,7 +24,7 @@ graph LR
 
 The above image shows the overall architecture: The AI service will get the necessary data from the city platform using the NGSI-LD specification. In the future, once [the data space connector](./../data%20space%20connectors/fiware_connector.md) is deployed, the AI service will get the data through it. 
 
-An intermediary adapter may be required in cases where the city data platform does not comply with the proposed NGSI-LD standard. If your current data platform uses the NGSIv2 specification, check the [Lepus adaptor section](../adaptors/lepus.md) to get more details about how to use it. 
+An intermediary adapter may be required in cases where the city data platform does not comply with the proposed NGSI-LD standard. If your current data platform uses the NGSIv2 specification, check the adaptors section for more details about using [Lepus](../adaptors/lepus.md) or [connecting an NGSI-V2 broker with an NGSI-LD broker through subscriptions](../adaptors/iot_agent.md). 
 
 The AI service will use the gathered information to offer an interactive service through a web dashboard. Once the user provides a desired config the AI service will produce an optimal solution.
 
