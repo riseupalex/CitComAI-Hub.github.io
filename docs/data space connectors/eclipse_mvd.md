@@ -13,7 +13,7 @@ The dashboard lets you "negotiate contracts" to access the data offered by the o
 
 The data exchanged are files stored in Azurite (a local Azure instance, just like Amazon's buckets). In other words, the Eclipse Minimum Viable Data space essentially provides a controlled environment for file exchange. 
 
-### Hands on
+### Set-up 
 1. First, make sure that Java 17 is installed in your system. If you are on Ubuntu / Debian you can install it by:
 ```bash
 sudo apt install openjdk-17-jdk
@@ -53,15 +53,16 @@ export TEST_ENVIRONMENT=local
 ./gradlew :system-tests:test -DincludeTags="ComponentTest,EndToEndTest"
 ```
 
-9. Download and install [Microsoft Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to connect to the `Azurite` storage container. It will let us view the transferred files.
+### File transfer demo
+1. Download and install [Microsoft Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to connect to the `Azurite` storage container. It will let us view the transferred files.
 
-10. Using Microsoft Azure Storage Explorer, connect to the local blob storage account on `localhost:10000` (provided by Azurite) of `company1`:
+2. Using Microsoft Azure Storage Explorer, connect to the local blob storage account on `localhost:10000` (provided by Azurite) of `company1`:
     - Account name: `company1assets`
     - Password: `key1`
 
-11. Create a container named `src-container`.
-12. Upload a dummy `text-document.text` file into the newly created container.
-13. The following steps initiate and complete a file transfer with the provided test document:
+3. Create a container named `src-container`.
+4. Upload a dummy `text-document.text` file into the newly created container.
+5. The following steps initiate and complete a file transfer with the provided test document:
     1. Open the website of company1 (e.g. <http://localhost:7080>) and verify the existence of two assets in the
       section `Assets`.
     2. Open the website of the company2 (e.g. <http://localhost:7081>) and verify six existing assets from all participants in
