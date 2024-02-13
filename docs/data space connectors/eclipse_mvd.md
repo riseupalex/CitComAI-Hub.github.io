@@ -52,3 +52,27 @@ docker compose --profile ui -f system-tests/docker-compose.yml up --build
 export TEST_ENVIRONMENT=local
 ./gradlew :system-tests:test -DincludeTags="ComponentTest,EndToEndTest"
 ```
+
+9. Download and install [Microsoft Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) to connect to the `Azurite` storage container. It will let us view the transferred files.
+
+10. Using Microsoft Azure Storage Explorer, connect to the local blob storage account on `localhost:10000` (provided by Azurite) of `company1`:
+    - Account name: `company1assets`
+    - Password: `key1`
+
+11. Create a container named `src-container`.
+12. Upload a dummy `text-document.text` file into the newly created container.
+13. The following steps initiate and complete a file transfer with the provided test document:
+    1. Open the website of company1 (e.g. <http://localhost:7080>) and verify the existence of two assets in the
+      section `Assets`.
+    2. Open the website of the company2 (e.g. <http://localhost:7081>) and verify six existing assets from all participants in
+      the `Catalog Browser`.
+        - In the `Catalog Browser` click `Negotiate` for the asset `test-document_company1`.
+            - There should be a message `Contract Negotiation complete! Show me!` in less than a minute.
+    3. From the previous message click `Show me!`. If you missed it, switch manually to the section `Contracts`.
+        - There should be a new contract. Click `Transfer` to initiate the transfer process.
+        - A dialog should open. Here, select as destination `AzureStorage` and click `Start transfer`.
+        - There should be a message `Transfer [id] complete! Show me!` in less than a minute. (Where `id` is a UUID.)
+    4. To verify the successful transfer the Storage Explorer can be used to look into the storage account of `company2`.
+        - Storage account name and key is set in `system-tests/docker-compose.yml` for the service `azurite`. Default name
+          is `company2assets`, key is `key2`.
+        - There should be new container in the storage account containing two files `.complete` and `text-document.txt`.
