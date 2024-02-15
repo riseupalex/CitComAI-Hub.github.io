@@ -115,8 +115,8 @@ The Minimum Viable AI Service is a starting point for implementing a custom AI s
 
 
   # Define service & subservice
-  service = "tef_vlci"
-  subservice = "/residuos_contenedores_vlc"
+  service = "tef_city"
+  subservice = "/containers"
 
   # Authenticate
   auth = Auth()
