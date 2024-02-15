@@ -325,10 +325,214 @@ These secrets contain the following values:
 In the case of self-signed certificates, it only contains the first two.
 
 ### Routes and Certificates in FIWARE DS Connector
-TO-DO
+It is necessary to have all these Openshift components working properly in our cluster, because during the installation of the FIWARE Data Space Connector with Helm the services are exposed using these resources. The services that are exposed through a subdomain are: **keyrock, activation-service, keycloak, kong, trusted-issuers-list-til, trusted-issuers-list-tir, vcverifier, vcwaltid and vcwaltid-cert**.
+
+To expose each of these services, a number of objects are automatically created:
+
+- **Route objects:** This resource is used to expose services across the network and allow external access to connector applications.
+    <figure markdown>
+    ![Route objects](img/route_objects.png){ loading=lazy }
+    </figure>
+- **Certificate objects:** this resource is used for the management (obtaining, maintenance...) of TLS/SSL certificates for the connector's applications.
+     <figure markdown>
+    ![Certificate objects](img/certificate_objects.png){ loading=lazy }
+    </figure>
+- **Secret objects (TLS secret):** these secrets contain the tls.crt and tls.key values associated with each path to services in the cluster. If these secrets are not being created correctly, the connector deployment fails. connector deployment fails.
+     <figure markdown>
+    ![Secret objects](img/secret_objects.png){ loading=lazy }
+    </figure>
 
 ## Deployment with Helm
-TO-DO
+Helm is a package manager for Kubernetes, which simplifies and automates the deployment and management of applications. A "Helm chart" is a pre-configured Kubernetes resource bundle, designed to be easily shared, versioned and installed using Helm.
+
+The FIWARE Data Space Connector is distributed as an Umbrella-Chart that contains all of the sub-charts (one for each component of the connector) and the necessary dependencies for deployment. deployment.
+
+### Download connector Helm Chart
+We can download the connector via the chart repository:
+
+```bash
+# add the repo
+helm repo add dsc https://fiware-ops.github.io/data-space-connector/
+# Check repo
+helm repo list
+```
+
+Tras esto, tendremos el chart disponible para su uso.
+    <figure markdown>
+    ![Helm repo list](img/helm_rempo_list.png){ loading=lazy }
+    </figure>
+
+We can also download the source code (releases) directly:
+```bash
+# set version you are interested in
+version=0.9.0
+wget
+https://github.com/FIWARE-Ops/data-space-connector/releases/download/data-sp
+ace-connector-$version/data-space-connector-$version.tgz && tar -xzvf
+data-space-connector-$version.tgz
+```
+
+### Configuration using values.yaml
+As we have seen, a Helm Chart is a package that contains all the necessary resources to deploy an application in Kubernetes, in our case, to launch each of the components of the connector.
+
+In the source code we can see that each of the components is presented as a sub-chart, which in turn has its own templates, dependencies, sub-charts and configuration files. configuration files.
+
+<figure markdown>
+![Project folder](img/project_folder.png){ loading=lazy }
+</figure>
+
+To finish defining everything necessary for the deployment of the connector, we will have to create a global configuration file (values.yaml) in which, for each of the components, we define the necessary parameters so that the connector can be deployed in our environment. The values that we define in this global configuration file, somehow complete or overwrite the configuration parameters that come by default in the helm chart. Let's start from the configuration file provided by FIWARE: [values.yaml](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/packet-delivery/data-space-connector/values.yaml).
+
+For example, the configuration for the VCWaltid component would be as follows:
+
+```bash
+# Nombre del componente a configurar
+vcwaltid:
+# Permitir el despliegue del compoente vcwaltid
+deploymentEnabled: true
+# Definir el Decentralized ID de la organización
+did: did:web:pdc-demo.ds.smartcity-marketplace.com:did
+# Definir la ruta al host de la aplicación vcwaltid
+route:
+enabled: true
+# Subdominio que alojará la aplcación
+host: pdc-demo.ds.smartcity-marketplace.com
+# Configuración TLS
+tls:
+insecureEdgeTerminationPolicy: Redirect
+termination: edge
+# Indicamos quien maneja los certificados
+# En nuestro caso el Cluster Issuer que hemos creado en pasos anteriores
+certificate:
+issuer:
+kind: ClusterIssuer
+name: letsencrypt-prod
+# Walt-id configuración interna
+vcwaltid:
+# Persistence
+persistence:
+enabled: true
+pvc:
+size: 1Gi
+# Lista de plantillas a crear
+templates:
+GaiaXParticipantCredential.json: |
+{
+"@context": [
+"https://www.w3.org/2018/credentials/v1",
+"https://registry.lab.dsba.eu/development/api/trusted-shape-registry/v1/shap
+es/jsonld/trustframework#"
+],
+"type": [
+"VerifiableCredential"
+],
+"id": "did:web:raw.githubusercontent.com:egavard:payload-sign:master",
+"issuer":
+"did:web:raw.githubusercontent.com:egavard:payload-sign:master",
+"issuanceDate": "2023-03-21T12:00:00.148Z",
+"credentialSubject": {
+"id": "did:web:raw.githubusercontent.com:egavard:payload-sign:master",
+"type": "gx:LegalParticipant",
+"gx:legalName": "dsba compliant participant",
+"gx:legalRegistrationNumber": {
+"gx:vatID": "MYVATID"
+},
+"gx:headquarterAddress": {
+"gx:countrySubdivisionCode": "BE-BRU"
+},
+"gx:legalAddress": {
+"gx:countrySubdivisionCode": "BE-BRU"
+},
+"gx-terms-and-conditions:gaiaxTermsAndConditions":
+"70c1d713215f95191a11d38fe2341faed27d19e083917bc8732ca4fea4976700"
+}
+}
+NaturalPersonCredential.json: |
+{
+"@context": ["https://www.w3.org/2018/credentials/v1"],
+"credentialSchema": {
+"id":
+"https://raw.githubusercontent.com/FIWARE-Ops/tech-x-challenge/main/schema.j
+son",
+"type": "FullJsonSchemaValidator2021"
+},
+"credentialSubject": {
+"type": "gx:NaturalParticipant",
+"familyName": "Happy",
+"firstName": "User",
+"roles": [{
+"names": ["LEGAL_REPRESENTATIVE"],
+"target": "did:web:onboarding"
+}]
+},
+"id": "urn:uuid:3add94f4-28ec-42a1-8704-4e4aa51006b4",
+"issued": "2021-08-31T00:00:00Z",
+"issuer": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN",
+"validFrom": "2021-08-31T00:00:00Z",
+"issuanceDate": "2021-08-31T00:00:00Z",
+"type": ["VerifiableCredential", "LegalPersonCredential"]
+}
+MarketplaceUserCredential.json: |
+{
+"@context": ["https://www.w3.org/2018/credentials/v1"],
+"credentialSchema": {
+"id":
+"https://raw.githubusercontent.com/FIWARE-Ops/tech-x-challenge/main/schema.j
+son",
+"type": "FullJsonSchemaValidator2021"
+},
+"credentialSubject": {
+"type": "gx:NaturalParticipant",
+"email": "normal-user@fiware.org",
+"familyName": "IPS",
+"firstName": "employee",
+"lastName": "IPS",
+"roles": [{
+"names": ["LEGAL_REPRESENTATIVE"],
+"target": "did:web:onboarding"
+}]
+},
+"id": "urn:uuid:3add94f4-28ec-42a1-8704-4e4aa51006b4",
+"issued": "2021-08-31T00:00:00Z",
+"issuer": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN",
+"validFrom": "2021-08-31T00:00:00Z",
+"issuanceDate": "2021-08-31T00:00:00Z",
+"type": ["MarketplaceUserCredential"]
+}
+EmployeeCredential.json: |
+{
+"@context": ["https://www.w3.org/2018/credentials/v1"],
+"credentialSchema": {
+"id":
+"https://raw.githubusercontent.com/FIWARE-Ops/tech-x-challenge/main/schema.j
+son",
+"type": "FullJsonSchemaValidator2021"
+},
+"credentialSubject": {
+"type": "gx:NaturalParticipant",
+"email": "normal-user@fiware.org",
+"familyName": "IPS",
+"firstName": "employee",
+"lastName": "IPS",
+"roles": [{
+"names": ["LEGAL_REPRESENTATIVE"],
+"target": "did:web:onboarding"
+}]
+},
+"id": "urn:uuid:3add94f4-28ec-42a1-8704-4e4aa51006b4",
+"issued": "2021-08-31T00:00:00Z",
+"issuer": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN",
+"validFrom": "2021-08-31T00:00:00Z",
+"issuanceDate": "2021-08-31T00:00:00Z",
+"type": ["EmployeeCredential"]
+}
+```
+
+### Required secrets
+
+### DS Connector installation
+
+### Access routes
 
 ## Kubectl Cheat Sheet
 TO-DO
