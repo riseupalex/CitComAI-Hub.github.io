@@ -12,7 +12,7 @@ This tutorial shows how to implement an AI-based service for optimizing city was
     Different sensors are deployed throughout the city to monitor the fill levels of waste containers. These sensors periodically collect data on the fill levels and send it to the city data platform. The goal is to use context information to create optimal waste collection routes for the trucks. The solution will only consider the current waste container filling level, their location, available trucks, their capacity, start and end location, and time restrictions.
 
 ### Entities
-The following entities in NGSI-LD format will be used: [WasteContainer](https://github.com/smart-data-models/dataModel.WasteManagement/tree/master/WasteContainer), [Vehicle](https://github.com/smart-data-models/dataModel.Transportation/tree/master/VehicleModel)~~, [FleetVehicle](), [FleetVehicleOperation](), [Road]() and [RoadSegment]()~~. Feel free to click on them and explore their corresponding Smart Data Model specifications.
+The following entities in NGSI-LD format will be used: [WasteContainer](https://github.com/smart-data-models/dataModel.WasteManagement/tree/master/WasteContainer), [Vehicle](https://github.com/smart-data-models/dataModel.Transportation/tree/master/Vehicle). Feel free to click on them and explore their corresponding Smart Data Model specifications.
 
 ### Architecture
 ```mermaid
@@ -90,6 +90,51 @@ python3 upsert_fake_data.py
 flask --app server run
 ```
 
+## Adapting the MVAIS
+The Minimum Viable AI Service is a starting point for implementing a custom AI service. Therefore, feel free to explore and edit the project to start building up your own. Here are some tips that can help you adapt this example to your needs:
+
+- Brief project structure:
+	- `static/`: Frontend folder. 
+		- `index.html`: Defines the UI
+		- `main.js`: Defines the main logic.
+		- `modules/`: Includes entity classes, API rest client, optimization logic, leaflet stuff, and UI functions.
+		- `style.css`: Main CSS style sheet.
+	- `server.py`:  Sets up the Flask server and exposes the service API.
+	- `services/Optimization.py`: Defines the query for Openroute optimization service. 
+	- `lib/`: External python libraries.
+
+- We worked with optimizing trucks routes ([`Vehicle`](https://github.com/smart-data-models/dataModel.Transportation/tree/master/Vehicle) entity) to pickup [`WasteContainers`](https://github.com/smart-data-models/dataModel.WasteManagement/tree/master/WasteContainer) that are full (`fillingLevel` attribute). However, these entities can be replaced to formulate new delivery/pickup problems. Visit the [Smart Data Models repositories](https://github.com/smart-data-models) for more entities and decide which attributes are important for your problem. To integrate these changes in the project, you should modify the [`upsert_fake_data.py`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/upsert_fake_data.py) script accordingly. Then, create the corresponding entity classes in `static/modules/` folder, just like [`WasteContainer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/WasteContainer.js). Take also a look at [`main.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/main.js) to modify the main logic. 
+
+- Moreover, maybe your situation needs to consider some time restrictions or priorities. Check out the [Openroute service API specification](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md), which is powerful and adds the required parameters to fit your optimization needs. To change/add additional query parameters, go over [`Optimization.py`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/services/Optimization.py) and [`Optimizer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/Optimizer.js) files.
+
+- When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitCom-VRAIN/ngsild-client) library included in the example comes with authentication support, with optional service and subservice options. See the following code as a guide to include these features in your project:
+
+  ```python
+  from lib.ngsildclient.Auth import Auth
+  from lib.ngsildclient.Client import Client
+
+
+  # Define service & subservice
+  service = "tef_vlci"
+  subservice = "/residuos_contenedores_vlc"
+
+  # Authenticate
+  auth = Auth()
+  token = auth.get_auth_token_subservice(service, subservice)
+
+  # Ngsi-ld broker client
+  client = Client()
+
+  # Fetch WasteContainer entities
+  containers = broker.get_all_entities_by_type("WasteContainer", context, 100, 0, service, subservice, toke).json()
+  ```
+
+## Prediction service
+!!! info
+    This feature is still a work in progress. Thus, it is not available right now.
+
+In addition to the waste collection optimization, the service will include a prediction of waste containers filling level. The generated data from the AI service will be accessible following MIM1 and MIM2 recomendations.
+
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).
-- [ ] Solutions should be provided using Smart data models.
+- [ ] Solutions should be provided using Smart data models ([FleetVehicle](), [FleetVehicleOperation](), [Road]() and [RoadSegment]()).
