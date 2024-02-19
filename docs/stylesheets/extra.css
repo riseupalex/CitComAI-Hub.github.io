@@ -25,10 +25,12 @@
     border-color: var(--md-primary-fg-color-alternative-hover) !important;
 }
 
-.md-typeset a:focus, .md-typeset a {
+.md-typeset a:focus,
+.md-typeset a {
     color: var(--a-color);
 }
 
-.md-nav__item .md-nav__link--active, .md-nav__item .md-nav__link--active code {
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
     color: var(--a-color);
 }
