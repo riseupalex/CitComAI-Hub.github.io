@@ -4,6 +4,10 @@
 {% block tabs %}
 {{ super() }}
 <style>
+    .md-header__button.md-icon {
+        display: none !important;
+    }
+
     .md-main {
         flex-grow: 0
     }
@@ -222,8 +226,7 @@
                 <p>Welcome to VRAIN documentation for the CitCom.ai project. On the following site, you will find
                     different guides and resources.
                 </p>
-                <a href="/welcome" title="{{ page.next_page.title | striptags }}"
-                    class="md-button md-button--primary">
+                <a href="/welcome" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
                     Get started
                 </a>
                 <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
