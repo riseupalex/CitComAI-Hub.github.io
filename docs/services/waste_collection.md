@@ -6,7 +6,7 @@
 </figure>
 
 ## Introduction
-This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example illustrates how to implement a **Minimum Interoperable AI Service (MVAIS)** following MIMs embraced by the CitCom.ai project.
+This tutorial shows how to implement an AI-based service for optimizing city waste collection using context information and [Openroute](https://openrouteservice.org/) optimization service. This limited example illustrates how to implement a **Minimum Interoperable AI Service (MIAIS)** following MIMs embraced by the CitCom.ai project.
 
 !!! abstract "Scenario"
     Different sensors are deployed throughout the city to monitor the fill levels of waste containers. These sensors periodically collect data on the fill levels and send it to the city data platform. The goal is to use context information to create optimal waste collection routes for the trucks. The solution will only consider the current waste container filling level, their location, available trucks, their capacity, start and end location, and time restrictions.
@@ -90,7 +90,7 @@ python3 upsert_fake_data.py
 flask --app server run
 ```
 
-## Adapting the MVAIS
+## Adapting the MIAIS
 The Minimum Viable AI Service is a starting point for implementing a custom AI service. Therefore, feel free to explore and edit the project to start building up your own. Here are some tips that can help you adapt this example to your needs:
 
 - Brief project structure:
