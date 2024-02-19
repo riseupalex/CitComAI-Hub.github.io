@@ -3,7 +3,7 @@ title: Home
 template: home.html
 ---
 # Minimal Package for TEF nodes
-### WP3 provides the Minimal Package required for CitCom.ai TEF nodes, aimed at ensuring interoperability across a wide range of TEF nodes. This package introduces the initial basic elements necessary to develop interoperable AI services following the mechanisms proposed in MIM1 and MIM2.
+### WP3 provides the Minimal Package required for CitCom.ai TEF nodes, aimed at ensuring interoperability across a wide range of TEF nodes. This package introduces the initial basic elements necessary to develop interoperable AI services following the mechanisms proposed in MIMs.
 <br>
 
 <div class="grid cards" markdown>
@@ -20,7 +20,7 @@ template: home.html
 
     ---
 
-    A set of useful tools compatible with MIM 1 & 2.
+    A set of useful tools compatible with MIMs.
 
     [:octicons-arrow-right-24: Learn more](./toolbox/index.md)
 
@@ -28,7 +28,7 @@ template: home.html
 
     ---
 
-    Minimally viable AI services for platforms compatible with MIM 1 & 2.
+    Minimally viable AI services for platforms compatible with MIMs.
 
     [:octicons-arrow-right-24: Learn more](./services/index.md)
 
