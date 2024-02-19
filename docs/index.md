@@ -14,7 +14,7 @@ template: home.html
 
     Current status of Testing and Experimentation Facilities (TEF).
 
-    [:octicons-arrow-right-24: Learn more](/tef)
+    [:octicons-arrow-right-24: Learn more](./tef/index.md)
 
 -   :material-toolbox-outline:{ .lg .middle } __Toolbox__
 
@@ -22,7 +22,7 @@ template: home.html
 
     A set of useful tools compatible with MIM 1 & 2.
 
-    [:octicons-arrow-right-24: Learn more](/toolbox)
+    [:octicons-arrow-right-24: Learn more](./toolbox/index.md)
 
 -   :material-robot-outline:{ .lg .middle } __AI Services__
 
@@ -30,7 +30,7 @@ template: home.html
 
     Minimally viable AI services for platforms compatible with MIM 1 & 2.
 
-    [:octicons-arrow-right-24: Learn more](/services)
+    [:octicons-arrow-right-24: Learn more](./services/index.md)
 
 -   :material-file-document-outline:{ .lg .middle } __Documentation__
 
@@ -38,6 +38,6 @@ template: home.html
 
     Reports and deployment guides of different components.
 
-    [:octicons-arrow-right-24: Learn more](/documentation)
+    [:octicons-arrow-right-24: Learn more](./documentation/index.md)
 
 </div>
