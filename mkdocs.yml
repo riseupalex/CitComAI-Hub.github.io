@@ -28,11 +28,13 @@ nav:
     - documentation/index.md 
     - Lepus: documentation/lepus.md
     - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
-    - Eclipse Connector: documentation/eclipse_mvd.md
-    - Fiware Connector:
-      - documentation/fiware_connector/index.md
-      - AWS deployment: documentation/fiware_connector/aws_deployment.md
-      - Local deployment: documentation/fiware_connector/local_deployment.md
+    - Data Space Connectors:
+      - documentation/data_space_connector/index.md
+      - Eclipse Connector: documentation/data_space_connector/eclipse_mvd.md
+      - Fiware Connector:
+        - documentation/data_space_connector/fiware_connector/index.md
+        - AWS deployment: documentation/data_space_connector/fiware_connector/aws_deployment.md
+        - Local deployment: documentation/data_space_connector/fiware_connector/local_deployment.md
   - TEF Nodes:
     - tef/index.md
   - Toolbox:
