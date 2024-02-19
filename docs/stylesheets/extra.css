@@ -1,0 +1,25 @@
+:root {
+    --md-primary-fg-color: black;
+    /* --md-primary-fg-color-alternative: #279989;
+    --md-primary-fg-color-alternative-hover: #008F77; */
+    --md-primary-fg-color-alternative: #0096AE;
+    --md-primary-fg-color-alternative-hover: #00869b;
+}
+
+.md-typeset .md-button--primary {
+    background-color: var(--md-primary-fg-color-alternative);
+    border-color: var(--md-primary-fg-color-alternative);
+    color: var(--md-primary-bg-color);
+}
+
+.tx-hero .md-button:focus,
+.tx-hero .md-button:hover {
+    background-color: var(--md-primary-fg-color-alternative-hover) !important;
+    border-color: var(--md-primary-fg-color-alternative-hover) !important;
+}
+
+.md-typeset .md-button:focus,
+.md-typeset .md-button:hover {
+    background-color: var(--md-primary-fg-color-alternative-hover) !important;
+    border-color: var(--md-primary-fg-color-alternative-hover) !important;
+}

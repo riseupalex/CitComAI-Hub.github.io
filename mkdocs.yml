@@ -4,7 +4,10 @@ repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
 repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
 copyright: Copyright &copy; 2023 - 2024 CitCom.ai - VRAIN
 site_dir: public
+extra_css:
+  - stylesheets/extra.css
 theme:
+  custom_dir: docs/overrides
   name: material
   logo: assets/logo.png
   favicon: assets/logo.png
@@ -12,8 +15,9 @@ theme:
     - content.code.copy
     - navigation.sections
     - navigation.footer
+    - navigation.instant
   palette: 
-  - primary: black
+  - primary: custom
 extra:
   generator: false
   social:
