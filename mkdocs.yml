@@ -16,8 +16,27 @@ theme:
     - navigation.sections
     - navigation.footer
     - navigation.instant
+    - navigation.indexes
   palette: 
   - primary: custom
+nav:
+  - welcome.md
+  - AI services:
+    - services/index.md 
+    - Minimum Interoperable AI Service: services/waste_collection.md
+  - Documentation:
+    - documentation/index.md 
+    - Lepus: documentation/lepus.md
+    - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
+    - Eclipse Connector: documentation/eclipse_mvd.md
+    - Fiware Connector:
+      - documentation/fiware_connector/index.md
+      - AWS deployment: documentation/fiware_connector/aws_deployment.md
+      - Local deployment: documentation/fiware_connector/local_deployment.md
+  - TEF Nodes:
+    - tef/index.md
+  - Toolbox:
+    - toolbox/index.md
 extra:
   generator: false
   social:

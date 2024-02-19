@@ -1,4 +1,4 @@
-# Minimum Viable AI Service (MVAIS) - Waste Collection 
+# Minimum Interoperable AI Service (MIAIS) - Waste Collection 
 [Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--primary }
 
 <figure markdown>

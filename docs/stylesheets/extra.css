@@ -4,6 +4,7 @@
     --md-primary-fg-color-alternative-hover: #008F77; */
     --md-primary-fg-color-alternative: #0096AE;
     --md-primary-fg-color-alternative-hover: #00869b;
+    --a-color: #4051b5 !important;
 }
 
 .md-typeset .md-button--primary {
@@ -22,4 +23,12 @@
 .md-typeset .md-button:hover {
     background-color: var(--md-primary-fg-color-alternative-hover) !important;
     border-color: var(--md-primary-fg-color-alternative-hover) !important;
+}
+
+.md-typeset a:focus, .md-typeset a {
+    color: var(--a-color);
+}
+
+.md-nav__item .md-nav__link--active, .md-nav__item .md-nav__link--active code {
+    color: var(--a-color);
 }
