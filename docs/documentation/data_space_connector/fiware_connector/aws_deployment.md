@@ -653,7 +653,68 @@ View logs of a pod (usually to see application errors after deployment):
 kubectl logs <Pod_name> -n <Namespace>
 ```
 ## Troubleshooting
-TO-DO
+### The SSL secret associated with VCWaltid service is not found
+TLS certificates are created as Kubernetes secrets for the components seen in section [Routes and certificates in FIWARE DS Connector](#routes-and-certificates-in-fiware-ds-connector), but if these secrets are not being created automatically, the deployment will fail.
+
+The indicator that this is happening will be found when doing the kubectl describe of one of these components: Keycloak, Keyrock or dsba-pdp. This is because these components have to directly access the TLS secret created for the VCWaltid service, so an error will appear indicating that the pdc-vcwaltid-tls-sec secret has not been found in the environment.
+
+We have encountered this error in two cases:
+
+- When the Cluster Issuer to obtain certificates from Let's Encrypt was not working correctly. That is, when the configuration described in section 4. Domains, routes and Certificates had not been completed correctly.
+
+  **Solution:** Check that all the resources for obtaining TLS certificates are working correctly: CertManager, External DNS and CertUtils. Also check that the domain created in Route53 belongs to us and has been correctly configured in its issuing location with the name servers indicated by AWS.
+
+- When the number of requests to Let's Encrypt for the same domain is exceeded. If we exceed 5 requests for the same domain in the same week (this would be deploying the connector 5 times in the same week).
+
+  **Solution:** Rename the subdomains to have another 5 attempts. Ideally, use the ClusterIssuer self-signed until you are sure that there are no other errors in the values.yaml. Once we know it works, switch to Let's Encrypt's ClusterIsssuer (letsencrypt-prod).
+
+
+### Timed out waiting for the condition
+If the installation with Helm does not finish successfully and you get a "Timed out waiting for the condition" error, it is possible that this is due to the following race condition between Keyrock and MySQL.
+
+During Keyrock deployment, the MySQL instance (initData section in values.yaml) is accessed. This MySQL instance has to be fully deployed for Keyrock to access it, which is not always the case. Keyrock makes 5 attempts (I tried to increase this but I didn't know how) and if it fails to access MySQL, it ends with an error.
+
+<figure markdown>
+![Timed out](img/timed_out_1.png){ loading=lazy }
+</figure>
+
+Usually, by the fifth attempt the MySQL component is ready and the Keyrock can finish successfully, but sometimes it can take a bit longer and for that reason the whole deployment fails.
+
+<figure markdown>
+![Timed out](img/timed_out_2.png){ loading=lazy }
+</figure>
+
+Before learning that the reason for this failure was due to a race condition, the following change was made to the code in the initData section of Keycloack in values.yaml:
+
+```yaml
+Before:
+
+    # Init data
+    initData:
+      initEnabled: true
+      backoffLimit: 1
+      image: quay.io/wi_stefan/mysql:5.7
+
+After:
+
+    # Init data
+    initData:
+      initEnabled: true
+      hook: post-install
+      backoffLimit: 6
+```
+
+It might seem that the key is in the backoffLimit parameter, but the first thing that was tried was to increase this parameter. Changing this alone did not fix the problem.
+
+### GaiaXParticipantCredential context
+In the default values.yaml example for the Packaging Delivery Co. deployment, there is an error when defining the context of the GaiaXParticipantCredential.json in the VCWaltid component.
+
+Because of this error, QRs of type GaiaXParticipantCredential could not be read with the demo-wallet.
+
+The URL used was:
+[https://registry.lab.dsba.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#](https://registry.lab.dsba.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#)
+Changed to:
+[https://registry.lab.geia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#](https://registry.lab.geia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework)
 
 ## Sources
 - [FIWARE Data Space Connector, FIWARE](https://github.com/FIWARE/data-space-connector)
