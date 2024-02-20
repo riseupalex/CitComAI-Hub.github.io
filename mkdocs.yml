@@ -23,7 +23,7 @@ nav:
   - welcome.md
   - AI services:
     - services/index.md 
-    - Minimum Interoperable AI Service: services/waste_collection.md
+    - Minimal Interoperable AI Service: services/waste_collection.md
   - Documentation:
     - documentation/index.md 
     - Lepus: documentation/lepus.md
