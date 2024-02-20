@@ -28,7 +28,7 @@ template: home.html
 
     ---
 
-    Minimally viable AI services for platforms compatible with MIMs.
+    Minimally interoperable AI services for platforms compatible with MIMs.
 
     [:octicons-arrow-right-24: Learn more](./services/index.md)
 

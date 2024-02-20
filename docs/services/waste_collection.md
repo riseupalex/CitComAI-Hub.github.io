@@ -34,7 +34,7 @@ The AI service will use the gathered information to offer an interactive service
 To access the service you will need a valid API key, so go over to [openrouteservice.org](https://openrouteservice.org) and get one; you will need it later. The API and parameters specification are explained [in the following page](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md).
 
 ## Getting started
-Below, you will find step-by-step instructions on how to deploy waste collection minimum viable service. Tested with Python `3.10.12` and Ubuntu 22.04.
+Below, you will find step-by-step instructions on how to deploy waste collection minimum interoperable service. Tested with Python `3.10.12` and Ubuntu 22.04.
 
 1. Clone the repository and navigate to its root folder:
 ```bash
@@ -91,7 +91,7 @@ flask --app server run
 ```
 
 ## Adapting the MIAIS
-The Minimum Viable AI Service is a starting point for implementing a custom AI service. Therefore, feel free to explore and edit the project to start building up your own. Here are some tips that can help you adapt this example to your needs:
+The Minimum Interoperable AI Service is a starting point for implementing a custom AI service. Therefore, feel free to explore and edit the project to start building up your own. Here are some tips that can help you adapt this example to your needs:
 
 - Brief project structure:
 	- `static/`: Frontend folder. 
