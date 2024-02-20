@@ -529,14 +529,129 @@ son",
 ```
 
 ### Required secrets
+During the connector deployment process, we are required to have a number of secrets created in our Kubernetes namespaces.
+
+Some of these secrets contain the credentials that we are going to assign to certain services during their creation, so we will have to create them manually before starting the deployment. These secrets are:
+
+<figure markdown>
+![Required secrets](img/required_secrets.png){ loading=lazy }
+</figure>
+
+Example of a file to define a secret:
+
+```bash
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+  namespace: pdc
+type: Opaque
+data:
+    dbPassword: YWRtaW4=
+    mysql-password: YWRtaW4=
+    mysql-replication-password: YWRtaW4=
+    mysql-root-password: YWRtaW4=
+```
+
+As we can see, the assigned values must be in base 64. In this case, all fields have been assigned the value "admin" in base 64.
+
+Another secret referred to in the values.yaml is the pdc-vcwaltid-tls-sec secret. This secret contains the TLS certificate of the VCWaltid component and should be created automatically during deployment, as long as our Cluster Issuer is working properly and obtaining the certificates for our services.
 
 ### DS Connector installation
+After creating the necessary secrets and setting the necessary parameters in the values.yaml file, we can move on to deploying the connector:
+
+```bash
+# Install from Helm repo
+helm install pdc dsc/data-space-connector -n <Namespace> -f values.yaml
+```
+
+```bash
+# Isstall from source code 
+helm install pdc <PATH_TO_RELEASE>/data-space-connector -n <Namespace> -f values.yaml
+```
+
+We can check if the connector has been deployed correctly by running:
+
+```bash
+kubectl get all -n <Namespace>
+```
+
+<figure markdown>
+![Pods](img/pods.png){ loading=lazy }
+</figure>
 
 ### Access routes
 
-## Kubectl Cheat Sheet
-TO-DO
+| **Aplicación**                            | URL                                                                                                                                                                              | Descripción                                                                              |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Keycloack de nuestro Package Delivery Co. | [https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/](https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/) | Keycloak para obtener Verifiable Credentials. Usuario y contraseña: legal-representative |
+| Wallet                                    | [https://demo-wallet.fiware.dev/](https://demo-wallet.fiware.dev/)                                                                                                               | Para escanear los QR y obtener los credenciales a través de un smartphone                |
+| Onboarding Portal                         | [https://onboarding-portal.dsba.fiware.dev](https://onboarding-portal.dsba.fiware.dev/)                                                                                          | Para registrarse en el Demo Data Space de FIWARE                                         |
+| Marketplace                               | [https://marketplace.dsba.fiware.dev](https://marketplace.dsba.fiware.dev/)                                                                                                      | Acceder al marketplace del Demo Data Space de FIWARE                                     |
 
+Details about the onboarding process in the Data Space and access to the Marketplace:
+[https://github.com/DOME-Marketplace/dome-gitops/blob/main/doc/DEMO.md](https://github.com/DOME-Marketplace/dome-gitops/blob/main/doc/DEMO.md)
+
+## Kubectl Cheat Sheet
+Create or delete a namespace:
+
+```bash
+# Create
+kubectl create ns <Namespace>
+# Delete
+kubectl delete ns <Namespace>
+```
+**Note:** When the connector deployment fails, the quickest option is to delete the namespace and recreate it. Then re-create the secrets and start the deployment with helm.
+
+Create a resource via a file:
+
+```bash
+kubectl apply -f <FILE.YAML>
+```
+
+Check the resources deployed in a namespace:
+
+```bash
+# Get Pods
+kubectl get pods -n <Namespace>
+# Get services
+kubectl get services -n <Namespace>
+# Get jobs 
+kubectl get jobs -n <Namespace>
+# Get routes
+kubectl get routes -n <Namespace>
+# Get secrets
+kubectl get secrets -n <Namespace>
+# Get certificates
+kubectl get certificates -n <Namespace>
+# ...
+# Get all
+kubectl get all -n <Namespace>
+```
+
+Check resources at cluster level:
+
+```bash
+# Get Cluster Issuers list
+kubectl get clusterissuer
+# Get External DNS list
+kubectl get externaldns
+
+```
+
+Describe a resource (to see errors when the resource is not displayed correctly):
+
+```bash
+kubectl describe <Resource_type> <Resource_name> -n <Namespace>
+
+# Example
+kubectl describe pod keyrock-pdc-0 -n pdc
+
+```
+View logs of a pod (usually to see application errors after deployment):
+```bash
+kubectl logs <Pod_name> -n <Namespace>
+```
 ## Troubleshooting
 TO-DO
 
