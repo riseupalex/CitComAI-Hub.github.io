@@ -39,6 +39,7 @@ nav:
     - tef/index.md
   - Toolbox:
     - toolbox/index.md
+    - AI Toolkit: toolbox/ai_toolkit.md
 extra:
   generator: false
   social:
