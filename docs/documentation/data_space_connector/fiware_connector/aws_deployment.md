@@ -9,6 +9,8 @@ Here are the steps for preparing an AWS account to deploy a Red Hat OpenShift Se
 ###  Required AWS Service Fees
 The following table describes the AWS quotas and service levels required to create and run a Red Hat OpenShift Service (ROSA) cluster.
 
+Large quota requests are sent to Amazon Support for review and may take some time to be approved.
+
 | **Service code** | Quota name                                                       | Quota code | AWS default | Minimum required | Description                                                                                                                                                                                                                                                |
 | ---------------- | ---------------------------------------------------------------- | ---------- | ----------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ec2              | Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances | L-1216C47A | 5           | 100              | Maximum number of vCPUs assigned to the Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances.<br><br>The default value of 5 vCPUs is not sufficient to create ROSA clusters. ROSA has a minimum requirement of 100 vCPUs for cluster creation. |
@@ -45,7 +47,7 @@ tar zxvf openshift-client-linux.tar.gz
 We will explain the steps involved in creating a Red Hat OpenShift Service cluster on AWS (ROSA).
 
 ### Login and quota verification
-To log in to ROSA CLI, we need to obtain our Red Hat account token from the following link: https://console.redhat.com/openshift/create/rosa/getstarted
+To log in to ROSA CLI, we need to obtain our Red Hat account token from the following [link](https://console.redhat.com/openshift/create/rosa/getstarted)
 
 ```bash
 rosa login --token=<RED_HAT_TOKEN>
@@ -224,6 +226,7 @@ This is because during the deployment of the connector it is very likely that we
 
 Therefore, it is advisable to use self-signed certificates until all the connector components are working properly.
 
+ClusterIssuer to generate TLS certificates through Let's Encrypt:
 ```bash
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -250,8 +253,7 @@ name: aws-access-key
 key: aws_secret_access_key
 ```
 
-ClusterIssuer to generate TLS certificates through Let's Encrypt:
-
+ClusterIssuer to generate self-signed certificates:
 ```bash
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -321,7 +323,7 @@ These secrets contain the following values:
   - tls.key: private key of the certificate
   - tls.crt: certificate
   - ca.crt: the CA that validates the certificate.
-  - 
+
 In the case of self-signed certificates, it only contains the first two.
 
 ### Routes and Certificates in FIWARE DS Connector
@@ -347,7 +349,7 @@ Helm is a package manager for Kubernetes, which simplifies and automates the dep
 
 The FIWARE Data Space Connector is distributed as an Umbrella-Chart that contains all of the sub-charts (one for each component of the connector) and the necessary dependencies for deployment. deployment.
 
-### Download connector Helm Chart
+### Download connector with Helm Chart
 We can download the connector via the chart repository:
 
 ```bash
@@ -583,9 +585,9 @@ kubectl get all -n <Namespace>
 
 | **Aplicación**                            | URL                                                                                                                                                                              | Descripción                                                                              |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Keycloack de nuestro Package Delivery Co. | [https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/](https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/) | Keycloak para obtener Verifiable Credentials. Usuario y contraseña: legal-representative |
-| Wallet                                    | [https://demo-wallet.fiware.dev/](https://demo-wallet.fiware.dev/)                                                                                                               | Para escanear los QR y obtener los credenciales a través de un smartphone                |
-| Onboarding Portal                         | [https://onboarding-portal.dsba.fiware.dev](https://onboarding-portal.dsba.fiware.dev/)                                                                                          | Para registrarse en el Demo Data Space de FIWARE                                         |
+| Keycloack de nuestro Package Delivery Co. | [https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/](https://keycloak-pdc-demo.ds.smartcity-marketplace.com/realms/fiware-server/account/#/) | Keycloak to obtain Verifiable Credentials. Username and password: legal-representative |
+| Wallet                                    | [https://demo-wallet.fiware.dev/](https://demo-wallet.fiware.dev/)                                                                                                               | To scan QRs and obtain credentials via a smartphone                |
+| Onboarding Portal                         | [https://onboarding-portal.dsba.fiware.dev](https://onboarding-portal.dsba.fiware.dev/)                                                                                          | To register to the FIWARE Demo Data Space                                         |
 | Marketplace                               | [https://marketplace.dsba.fiware.dev](https://marketplace.dsba.fiware.dev/)                                                                                                      | Acceder al marketplace del Demo Data Space de FIWARE                                     |
 
 Details about the onboarding process in the Data Space and access to the Marketplace:
@@ -655,11 +657,11 @@ kubectl logs <Pod_name> -n <Namespace>
 ### The SSL secret associated with VCWaltid service is not found
 TLS certificates are created as Kubernetes secrets for the components seen in section [Routes and certificates in FIWARE DS Connector](#routes-and-certificates-in-fiware-ds-connector), but if these secrets are not being created automatically, the deployment will fail.
 
-The indicator that this is happening will be found when doing the kubectl describe of one of these components: Keycloak, Keyrock or dsba-pdp. This is because these components have to directly access the TLS secret created for the VCWaltid service, so an error will appear indicating that the pdc-vcwaltid-tls-sec secret has not been found in the environment.
+The indicator that this is happening will be found when doing the **kubectl describe** of one of these components: Keycloak, Keyrock or dsba-pdp. This is because these components have to directly access the TLS secret created for the VCWaltid service, so an error will appear indicating that the **pdc-vcwaltid-tls-sec** secret has not been found in the environment.
 
 We have encountered this error in two cases:
 
-- When the Cluster Issuer to obtain certificates from Let's Encrypt was not working correctly. That is, when the configuration described in section 4. Domains, routes and Certificates had not been completed correctly.
+- When the Cluster Issuer to obtain certificates from Let's Encrypt was not working correctly. That is, when the configuration described in section [Domains, routes and Certificates](#domains-routes-and-certificates) had not been completed correctly.
 
   **Solution:** Check that all the resources for obtaining TLS certificates are working correctly: CertManager, External DNS and CertUtils. Also check that the domain created in Route53 belongs to us and has been correctly configured in its issuing location with the name servers indicated by AWS.
 
@@ -677,7 +679,7 @@ During Keyrock deployment, the MySQL instance (initData section in values.yaml) 
 ![Timed out](img/timed_out_1.png){ loading=lazy }
 </figure>
 
-Usually, by the fifth attempt the MySQL component is ready and the Keyrock can finish successfully, but sometimes it can take a bit longer and for that reason the whole deployment fails.
+No particular solution to this problem has been found, other than to try deploying again from scratch. Usually, by the fifth attempt the MySQL component is ready and the Keyrock can finish successfully, but sometimes it can take a bit longer and for that reason the whole deployment fails.
 
 <figure markdown>
 ![Timed out](img/timed_out_2.png){ loading=lazy }
