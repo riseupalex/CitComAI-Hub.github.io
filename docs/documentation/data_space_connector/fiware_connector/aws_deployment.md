@@ -356,8 +356,7 @@ helm repo add dsc https://fiware-ops.github.io/data-space-connector/
 # Check repo
 helm repo list
 ```
-
-Tras esto, tendremos el chart disponible para su uso.
+Then, the chart will be ready to be used.
     <figure markdown>
     ![Helm repo list](img/helm_rempo_list.png){ loading=lazy }
     </figure>
