@@ -133,7 +133,7 @@ The Minimal Interoperable AI Service is a starting point for implementing a cust
 !!! info
     This feature is still a work in progress. Thus, it is not available right now.
 
-In addition to the waste collection optimization, the service will include a prediction of waste containers filling level. The generated data from the AI service will be accessible following MIM1 and MIM2 recomendations.
+In addition to the waste collection optimization, the service will include a prediction of waste containers filling level. The generated data from the AI service will be accessible following MIM1 and MIM2 recommendations.
 
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).
