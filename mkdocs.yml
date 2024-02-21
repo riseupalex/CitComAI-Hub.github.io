@@ -37,9 +37,12 @@ nav:
         - Local deployment: documentation/data_space_connector/fiware_connector/local_deployment.md
   - TEF Nodes:
     - tef/index.md
+    - TEF sites analysis: tef/tef_list.md
   - Toolbox:
     - toolbox/index.md
     - AI Toolkit: toolbox/ai_toolkit.md
+    - MIMs Toolkit: toolbox/mims_toolkit.md
+    - Other Tools: toolbox/other_toolkit.md
 extra:
   generator: false
   social:
