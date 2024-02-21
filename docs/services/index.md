@@ -1,5 +1,5 @@
 ---
-icon: simple/probot
+icon: material/robot-outline
 title: AI Services
 ---
 
