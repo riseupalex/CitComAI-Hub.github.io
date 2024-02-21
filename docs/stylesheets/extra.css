@@ -36,5 +36,6 @@
 }
 
 .md-nav__link svg {
+    /* Fix for  rendering SVGs in Safari */
     transform: translate(0, 0);
 }
