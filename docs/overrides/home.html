@@ -4,6 +4,18 @@
 {% block tabs %}
 {{ super() }}
 <style>
+    .md-footer-meta__inner {
+        margin-top: 0 !important;
+    }
+
+    .md-source-file {
+        display: none !important;
+    }
+
+    .md-content__inner {
+        margin: 0 0.8rem 2rem !important;
+    }
+
     .md-header__button.md-icon {
         display: none !important;
     }
@@ -240,4 +252,3 @@
 
 {% endblock %}
 {% block site_nav %}{% endblock %}
-{% block footer %}{% endblock %}
