@@ -126,7 +126,7 @@ The Minimal Interoperable AI Service is a starting point for implementing a cust
   client = Client()
 
   # Fetch WasteContainer entities
-  containers = broker.get_all_entities_by_type("WasteContainer", context, 100, 0, service, subservice, toke).json()
+  containers = client.get_all_entities_by_type("WasteContainer", context, 100, 0, service, subservice, toke).json()
   ```
 
 ## Prediction service
