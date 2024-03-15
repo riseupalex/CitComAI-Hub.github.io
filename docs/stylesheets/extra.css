@@ -39,3 +39,6 @@
     /* Fix for  rendering SVGs in Safari */
     transform: translate(0, 0);
 }
+.md-main {
+    flex-grow: 1 !important;
+}
