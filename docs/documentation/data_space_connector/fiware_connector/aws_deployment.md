@@ -676,13 +676,13 @@ If the installation with Helm does not finish successfully and you get a "Timed 
 During Keyrock deployment, the MySQL instance (initData section in values.yaml) is accessed. This MySQL instance has to be fully deployed for Keyrock to access it, which is not always the case. Keyrock makes 5 attempts (I tried to increase this but I didn't know how) and if it fails to access MySQL, it ends with an error.
 
 <figure markdown>
-![Timed out](img/timed_out_1.png){ loading=lazy }
+![Timed out](./img/time_out_1.png){ loading=lazy }
 </figure>
 
 No particular solution to this problem has been found, other than to try deploying again from scratch. Usually, by the fifth attempt the MySQL component is ready and the Keyrock can finish successfully, but sometimes it can take a bit longer and for that reason the whole deployment fails.
 
 <figure markdown>
-![Timed out](img/timed_out_2.png){ loading=lazy }
+![Timed out](./img/time_out_2.png){ loading=lazy }
 </figure>
 
 Before learning that the reason for this failure was due to a race condition, the following change was made to the code in the initData section of Keycloack in values.yaml:
