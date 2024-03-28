@@ -31,7 +31,7 @@ Detailed local deployment status.
     | [**Orion LD**](#orion-ld) |      ✅      | 
     | [**Credentials Config Service**](#credentials-config-service) |      ✅      |
     | [**Trusted ISSUERS List**](#trusted-issuers-list) |      ✅      |
-    | [**Trusted PARTICIPANTS List**](#trusted-participants-registry-trusted-issuers-registry-for-fiware) |      ❓      |
+    | [**Trusted PARTICIPANTS Registry**](#trusted-participants-registry-trusted-issuers-registry-for-fiware) |      ❓      |
     | [**Verifier**](#verifier)       |      ⚠️      |
     | [**PDP**](#pdp)                 |      ❓     |
     | [**Kong (Proxy)**](#kong-proxy) |      ⚠️      |
