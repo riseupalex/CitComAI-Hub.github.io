@@ -28,13 +28,19 @@ nav:
     - documentation/index.md 
     - Lepus: documentation/lepus.md
     - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
-    - Data Space Connectors:
-      - documentation/data_space_connector/index.md
-      - Eclipse Connector: documentation/data_space_connector/eclipse_mvd.md
-      - Fiware Connector:
-        - documentation/data_space_connector/fiware_connector/index.md
-        - AWS deployment: documentation/data_space_connector/fiware_connector/aws_deployment.md
-        - Local deployment: documentation/data_space_connector/fiware_connector/local_deployment.md
+    - Data Space:
+      - documentation/data_space/index.md
+      - Connectors: 
+        - documentation/data_space/connector/index.md
+        - Eclipse: documentation/data_space/connector/eclipse_mvd.md
+        - Fiware:
+          - documentation/data_space/connector/fiware/index.md
+          - AWS deployment: documentation/data_space/connector/fiware/aws_deployment.md
+          - Local deployment: documentation/data_space/connector/fiware/local_deployment.md
+      - FIWARE Ecosystem:
+        - documentation/data_space/fiware_ecosystem/index.md
+        - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
+          - documentation/data_space/fiware_ecosystem/mvds_iaas/index.md
   - TEF Nodes:
     - tef/index.md
     - TEF sites analysis: tef/tef_list.md
