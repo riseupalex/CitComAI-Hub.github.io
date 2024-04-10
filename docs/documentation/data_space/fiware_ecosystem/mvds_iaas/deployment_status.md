@@ -27,13 +27,13 @@ Detailed local deployment status.
     | ------------------------: | :----------: | 
     | [**MongoDB**](#mongodb)   |      ✅      | 
     | [**MySQL**](#mysql)       |      ✅      | 
-    | [**WaltID**](#waltid)     |      ⚠️       |
+    | [**WaltID**](#-waltid)     |      ⚠️       |
     | [**Orion LD**](#orion-ld) |      ✅      | 
     | [**Credentials Config Service**](#credentials-config-service) |      ✅      |
     | [**Trusted ISSUERS List**](#trusted-issuers-list) |      ✅      |
-    | [**Trusted PARTICIPANTS Registry**](#trusted-participants-registry-trusted-issuers-registry-for-fiware) |      ❓      |
-    | [**Verifier**](#verifier)       |      ⚠️      |
-    | [**PDP**](#pdp)                 |      ❓     |
+    | [**Trusted PARTICIPANTS Registry**](#-trusted-participants-registry) |      ❓      |
+    | [**Verifier**](#-verifier)       |      ⚠️      |
+    | [**PDP**](#-pdp)                 |      ❓     |
     | [**Kong (Proxy)**](#kong-proxy) |      ⚠️      |
     | [**Portal**](#portal)           |      ✅     |
     | [**Keyrock**](#keyrock)         |      ❌     |
@@ -56,7 +56,7 @@ Detailed local deployment status.
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
     | ✅     | -          | [mysql.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml) | - |
-
+    
     - **values.yaml**: [modules/ds_operator/config/helm_values/mysql.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml)
         - **variables**:
             - `service_name = mysql`
@@ -66,7 +66,7 @@ Detailed local deployment status.
         - **FIWARE definitions**:
             - `fullnameOverride (service name) = mysql-onboarding`   
 
-=== "WaltID"
+=== "⚠️ WaltID"
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
@@ -142,13 +142,13 @@ Detailed local deployment status.
             - _trusted issuers list_: `til.ds-operator.io`
             - _trusted issuers registry_: `tir.ds-operator.io`
 
-=== "Trusted PARTICIPANTS Registry"
+=== "❓ Trusted PARTICIPANTS Registry"
 
-    Trusted Issuers Registry [_for FIWARE_](https://github.com/FIWARE-Ops/fiware-gitops/tree/master/aws/dsba/onboarding-portal/trusted-issuers-registry)
+    Also called: Trusted Issuers Registry [_for FIWARE_](https://github.com/FIWARE-Ops/fiware-gitops/tree/master/aws/dsba/onboarding-portal/trusted-issuers-registry)
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
+    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
 
     !!! warning "Doubts/Errors"
         - [**satellite**](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/trusted-issuers-registry/values.yaml#L27): 
@@ -167,11 +167,11 @@ Detailed local deployment status.
     - **endpoint type**: `ClusterIP + Ingress`
         - **ingress**: `tpr.ds-operator.io`
 
-=== "Verifier"
+=== "⚠️ Verifier"
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️    | [Credentials Config Service](#credentials-config-service)<br>[Trusted ISSUERS List](#trusted-issuers-list)<br>[WaltID](#waltid) | [verifier.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml) | `verifier.ds-operator.io` |
+    |  ⚠️    | [Credentials Config Service](#credentials-config-service)<br>[Trusted ISSUERS List](#trusted-issuers-list)<br>[WaltID](#-waltid) | [verifier.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml) | `verifier.ds-operator.io` |
 
     !!! warning "Doubts/Errors"
         With the _initContainers_ configuration as [Fiware](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/verifier/values.yaml#L26) has it, the service is not deployed.
@@ -201,11 +201,11 @@ Detailed local deployment status.
     - **endpoint type**: `ClusterIP + Ingress`
         - **ingress**: `verifier.ds-operator.io`
 
-=== "PDP"
+=== "❓ PDP"
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️    | [WaltID](#waltid)<br>[Verifier](#verifier)<br>[Keyrock?](#keyrock) | [pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
+    |  ❓    | [WaltID](#-waltid)<br>[Verifier](#-verifier)<br>[Keyrock?](#keyrock) | [pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
 
     !!! warning "Doubts/Errors"
         - [**ishare.existingSecret**](): 
@@ -232,6 +232,12 @@ Detailed local deployment status.
 
 === "Kong (Proxy)"
 
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    |  ⚠️    | [Orion LD](#orion-ld)<br>[PDP](#-pdp) | [pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
+
+    !!! warning "under configuration ..."
+
     ```bash
     2024/03/31 11:36:52 [error] 1#0: init_by_lua error: /usr/local/share/lua/5.1/kong/init.lua:553: error parsing declarative config file /kong_dbless/kong.yml:
     in '_format_version': required field missing
@@ -256,10 +262,75 @@ Detailed local deployment status.
     ```
 
 === "Portal"
-    - 
 
-=== "Keyrock"
-    -
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    |  ✅    | - | [portal.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
+
+=== "❌ Keyrock"
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    |  ❌     | -          | [kong.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/kong_conf.yaml) | - |
+
+    ```bash
+    > fiware-idm@8.3.0 start /opt/fiware-idm
+    <!-- # > node --max-http-header-size=${IDM_SERVER_MAX_HEADER_SIZE:-8192} ./bin/www
+
+    Connection has been established successfully
+    Database created
+    Database migrated
+    Unable to seed database:  Error: Command failed: npm run seed_db --silent
+    ERROR: Validation error
+
+        at ChildProcess.exithandler (child_process.js:383:12)
+        at ChildProcess.emit (events.js:400:28)
+        at maybeClose (internal/child_process.js:1088:16)
+        at Process.ChildProcess._handle.onexit (internal/child_process.js:296:5) {
+      killed: false,
+      code: 1,
+      signal: null,
+      cmd: 'npm run seed_db --silent'
+    }
+    internal/fs/watchers.js:251
+        throw error;
+        ^
+
+    Error: EMFILE: too many open files, watch '/opt/fiware-idm/etc/translations/'
+        at FSWatcher.<computed> (internal/fs/watchers.js:243:19)
+        at Object.watch (fs.js:1587:34)
+        at module.exports (/opt/fiware-idm/node_modules/i18n-express/index.js:68:6)
+        at Object.<anonymous> (/opt/fiware-idm/app.js:177:5)
+        at Module._compile (internal/modules/cjs/loader.js:1085:14)
+        at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+        at Module.load (internal/modules/cjs/loader.js:950:32)
+        at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+        at Module.require (internal/modules/cjs/loader.js:974:19)
+        at require (internal/modules/cjs/helpers.js:101:18)
+        at start_server (/opt/fiware-idm/bin/www:106:15)
+        at /opt/fiware-idm/bin/www:140:7
+        at /opt/fiware-idm/lib/database.js:112:11
+        at /opt/fiware-idm/lib/database.js:39:18
+        at ChildProcess.exithandler (child_process.js:390:5)
+        at ChildProcess.emit (events.js:400:28)
+        at maybeClose (internal/child_process.js:1088:16)
+        at Process.ChildProcess._handle.onexit (internal/child_process.js:296:5) {
+      errno: -24,
+      syscall: 'watch',
+      code: 'EMFILE',
+      path: '/opt/fiware-idm/etc/translations/',
+      filename: '/opt/fiware-idm/etc/translations/'
+    }
+    npm ERR! code ELIFECYCLE
+    npm ERR! errno 1
+    npm ERR! fiware-idm@8.3.0 start: `node --max-http-header-size=${IDM_SERVER_MAX_HEADER_SIZE:-8192} ./bin/www`
+    npm ERR! Exit status 1
+    npm ERR! 
+    npm ERR! Failed at the fiware-idm@8.3.0 start script.
+    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+    npm ERR! A complete log of this run can be found in:
+    npm ERR!     /root/.npm/_logs/2024-03-14T13_19_08_227Z-debug.log -->
+    ```
 
 ---
 
