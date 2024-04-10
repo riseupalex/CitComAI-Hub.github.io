@@ -268,9 +268,10 @@ Detailed local deployment status.
     |  ✅    | - | [portal.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
 
 === "❌ Keyrock"
+
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ❌     | -          | [kong.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/kong_conf.yaml) | - |
+    |  ❌     | [WaltID](#-waltid)<br>[MySQL](#mysql)<br>[PDP](#-pdp) | [kong.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/kong_conf.yaml) | - |
 
     ```bash
     > fiware-idm@8.3.0 start /opt/fiware-idm
