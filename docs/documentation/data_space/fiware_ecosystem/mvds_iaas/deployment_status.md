@@ -265,7 +265,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | - | [portal.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
+    |  ✅    | [Credentials Config Service](#credentials-config-service)<br>[Kong](#kong-proxy)<br>[Verifier](#-verifier) | [portal.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
 
 === "❌ Keyrock"
 
