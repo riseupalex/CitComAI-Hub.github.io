@@ -5,9 +5,58 @@
 
 Detailed local deployment status.
 
----
-
 ## Data Space Operator
+
+### Minimal Trust Anchor
+
+??? status  "Status (3 total): 0 🛑 / 0 ❌ / 0 ⚠️ / 1 ❓ / 2 ✅" 
+
+    !!! abstract inline end "_Services Status_"
+
+        🛑 _not started._
+
+        ❌ _not running CRITICAL ERROR_
+
+        ⚠️ _running with doubts/ERRORS_
+
+        ❓ _running with doubts_
+
+        ✅ _running_
+
+    |     **Component**         |  **Status**  | 
+    | ------------------------: | :----------: | 
+    | [**MongoDB**](#mongodb)   |      ✅      | 
+    | [**Orion LD**](#orion-ld) |      ✅      | 
+    | [**Trusted PARTICIPANTS Registry**](#-trusted-participants-registry) |      ❓      |
+
+=== "MongoDB"
+
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    | ✅     | -          | [mongodb.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
+
+=== "Orion LD"
+
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    |  ✅    | [MongoDB](#mongodb) | [orionld.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
+
+=== "❓ Trusted PARTICIPANTS Registry"
+
+    Also called: Trusted Issuers Registry [_for FIWARE_](https://github.com/FIWARE-Ops/fiware-gitops/tree/master/aws/dsba/onboarding-portal/trusted-issuers-registry)
+
+    | Status | Depends on | Values.yaml | Endpoint |
+    | :----: | :--------: | :---------  | :------  |
+    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
+
+    !!! warning "Doubts/Errors"
+        - [**satellite**](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/trusted-issuers-registry/values.yaml#L27): 
+            - What is this satelite? 
+            - Where do you get it from? 
+            - What is its function? 
+            - Can the ID name (EU.EORI.FIWARESATELLITE) be any name or does it have to be that name for some reason?
+
+### DSBA-compliant demo
 
 ??? status  "Status (12 total): 0 🛑 / 1 ❌ / 3 ⚠️ / 2 ❓ / 6 ✅" 
 
@@ -25,13 +74,13 @@ Detailed local deployment status.
 
     |     **Component**         |  **Status**  | 
     | ------------------------: | :----------: | 
-    | [**MongoDB**](#mongodb)   |      ✅      | 
+    | [**MongoDB**](#mongodb_1)   |      ✅      | 
     | [**MySQL**](#mysql)       |      ✅      | 
     | [**WaltID**](#-waltid)     |      ⚠️       |
-    | [**Orion LD**](#orion-ld) |      ✅      | 
+    | [**Orion LD**](#orion-ld_1) |      ✅      | 
     | [**Credentials Config Service**](#credentials-config-service) |      ✅      |
     | [**Trusted ISSUERS List**](#trusted-issuers-list) |      ✅      |
-    | [**Trusted PARTICIPANTS Registry**](#-trusted-participants-registry) |      ❓      |
+    | [**Trusted PARTICIPANTS Registry**](#-trusted-participants-registry_1) |      ❓      |
     | [**Verifier**](#-verifier)       |      ⚠️      |
     | [**PDP**](#-pdp)                 |      ❓     |
     | [**Kong (Proxy)**](#kong-proxy) |      ⚠️      |
@@ -335,9 +384,133 @@ Detailed local deployment status.
 
 ---
 
-## Data Space Marketplace
+## Data Space Connector
 
+??? status  "Status (15 total): 0 🛑 / 1 ❌ / 2 ⚠️ / 1 ❓ / 11 ✅" 
+
+    !!! abstract inline end "_Services Status_"
+
+        🛑 _not started._
+
+        ❌ _not running CRITICAL ERROR_
+
+        ⚠️ _running with doubts/ERRORS_
+
+        ❓ _running with doubts_
+
+        ✅ _running_
+
+    |                          **Component**                            |  **Status**   | 
+    | ----------------------------------------------------------------: | :---------- : | 
+    | [**MongoDB**](#mongodb_2)                                         |       ✅      | 
+    | [**MySQL**](#mysql_1)                                             |       ✅      | 
+    | [**Postgres**](#postgres)                                         |       ✅      | 
+    | [**WaltID**](#-waltid_1)                                          |       ⚠️       |
+    | [**TF Forum API**](#tm-forum-api)                                 |       ✅      |
+    | [**Orion LD**](#orion-ld_2)                                       |       ✅      | 
+    | [**Keycloak**](#-keycloak)                                        |       ⚠️       | 
+    | [**Credentials Config Service**](#credentials-config-service_1)   |       ✅      |
+    | [**Trusted ISSUERS List**](#trusted-issuers-list_1)               |       ✅      |
+    | [**Verifier**](#verifier)                                         |       ✅      |
+    | [**Contract Management**](#contract-management)                   |       ✅      |
+    | [**Activation Service**](#activation-service)                     |       ✅      |
+    | [**Keyrock**](#-keyrock_1)                                        |       ❌      |
+    | [**PDP**](#-pdp_1)                                                |       ✅      |
+    | [**Kong (Proxy)**](#kong-proxy_1)                                 |       ❓      |
+
+**values.yaml**: [modules/ds_connector/config/helm_values/connector.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/feature/module_connector/modules/ds_connector/config/helm_values/connector.yaml)
+
+=== "Mongo DB"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | -          | -        |
+
+=== "MySQL"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | -          | -        |
+
+=== "Postgres"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | -          | -        |
+
+=== "⚠️ WaltID"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ⚠️     | -          | -        |
+
+=== "TF Forum API"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | -          | -        |
+
+=== "Orion LD"
+
+    | Status | Depends on            | Endpoint |
+    | :----: | :-------------------: | :------  |
+    |  ✅    | [MongoDB](#mongodb_2) | -        |
+
+=== "⚠️ Keycloak"
+
+    | Status | Depends on           | Endpoint |
+    | :----: | :------------------: | :------  |
+    |  ⚠️     | [Postgres](#postgres) |  - |
+
+=== "Credentials Config Service"
+
+    | Status | Depends on        | Endpoint |
+    | :----: | :---------------: | :------  |
+    |  ✅    | [MySQL](#mysql_1) | - |
+
+=== "Trusted ISSUERS List"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
+
+=== "Verifier"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
+
+=== "Contract Management"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
+
+=== "Activation Service"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
+
+=== "❌ Keyrock"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ❌    | [MongoDB](#mongodb) | - |
+
+=== "PDP"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
+
+
+=== "❓ Kong (Proxy)"
+
+    | Status | Depends on | Endpoint |
+    | :----: | :--------: | :------  |
+    |  ✅    | [MongoDB](#mongodb) | - |
 
 ---
 
-## Data Space Connector
+## Data Space Marketplace
