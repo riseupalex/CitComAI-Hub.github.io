@@ -431,7 +431,7 @@ Detailed local deployment status.
     | [**MySQL**](#mysql_1)                                             |       ✅      | 
     | [**Postgres**](#postgres)                                         |       ✅      | 
     | [**WaltID**](#-waltid_1)                                          |       ⚠️       |
-    | [**TF Forum API**](#tm-forum-api)                                 |       ✅      |
+    | [**TM Forum API**](#tm-forum-api)                                 |       ✅      |
     | [**Orion LD**](#orion-ld_2)                                       |       ✅      | 
     | [**Keycloak**](#-keycloak)                                        |       ⚠️       | 
     | [**Credentials Config Service**](#credentials-config-service_1)   |       ✅      |
@@ -440,8 +440,8 @@ Detailed local deployment status.
     | [**Contract Management**](#contract-management)                   |       ✅      |
     | [**Activation Service**](#activation-service)                     |       ✅      |
     | [**Keyrock**](#-keyrock_1)                                        |       ❌      |
-    | [**PDP**](#-pdp_1)                                                |       ✅      |
-    | [**Kong (Proxy)**](#kong-proxy_1)                                 |       ❓      |
+    | [**PDP**](#pdp)                                                   |       ✅      |
+    | [**Kong (Proxy)**](#-kong-proxy)                                  |       ❓      |
 
 **values.yaml**: [modules/ds_connector/config/helm_values/connector.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/feature/module_connector/modules/ds_connector/config/helm_values/connector.yaml)
 
@@ -469,7 +469,9 @@ Detailed local deployment status.
     | :----: | :--------: | :------  |
     |  ⚠️     | -          | -        |
 
-=== "TF Forum API"
+    Deployed but needs to be checked the waltid-cert configuration.
+
+=== "TM Forum API"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
@@ -481,41 +483,41 @@ Detailed local deployment status.
     | :----: | :-------------------: | :------  |
     |  ✅    | [MongoDB](#mongodb_2) | -        |
 
-=== "⚠️ Keycloak"
-
-    | Status | Depends on           | Endpoint |
-    | :----: | :------------------: | :------  |
-    |  ⚠️     | [Postgres](#postgres) |  - |
-
 === "Credentials Config Service"
 
     | Status | Depends on        | Endpoint |
     | :----: | :---------------: | :------  |
-    |  ✅    | [MySQL](#mysql_1) | - |
+    |  ✅    | [MySQL](#mysql_1) | -        |
 
 === "Trusted ISSUERS List"
 
-    | Status | Depends on | Endpoint |
-    | :----: | :--------: | :------  |
-    |  ✅    | [MongoDB](#mongodb) | - |
+    | Status | Depends on                                | Endpoint |
+    | :----: | :---------------------------------------: | :------- |
+    |  ✅    | [WaltID](#-waltid_1)<br>[MySQL](#mysql_1) | `til.ds-connector.io`<br>`tir.ds-connector.io` |
+
+=== "⚠️ Keycloak"
+
+    | Status | Depends on           | Endpoint |
+    | :----: | :------------------: | :------  |
+    |  ⚠️     | [WaltID](#-waltid_1)<br>[Postgres](#postgres) |  - |
 
 === "Verifier"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
-    |  ✅    | [MongoDB](#mongodb) | - |
+    |  ✅    | [WaltID](#-waltid_1)<br>[Trusted Participants Registry](#-trusted-participants-registry_1)<br>[Credentials Config Service](#credentials-config-service_1) | `verifier.ds-connector.io` |
 
 === "Contract Management"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
-    |  ✅    | [MongoDB](#mongodb) | - |
+    |  ✅    | [Trusted Issuers List](#trusted-issuers-list_1)<br>[TM Forum API](#tm-forum-api) | - |
 
 === "Activation Service"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
-    |  ✅    | [MongoDB](#mongodb) | - |
+    |  ✅    | [MongoDB](#mongodb) |  |
 
 === "❌ Keyrock"
 
