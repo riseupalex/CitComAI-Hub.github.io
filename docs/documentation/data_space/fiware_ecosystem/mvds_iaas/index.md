@@ -8,48 +8,34 @@
 The Minimum Viable Data Space Infrastructure as a Service (MVDS-IaaS) is a set of components that are necessary to deploy a Data Space. The MVDS-IaaS is based on the [FIWARE](https://www.fiware.org/) ecosystem and is designed to be deployed on top of a Kubernetes cluster. The MVDS-IaaS is composed of the following components:
 
 - Data Space Operator (*Trusted Issuers Registry*)
-- Data Space Marketplace (*only on the [DSBA-compliant demo](https://github.com/FIWARE-Ops/data-space-connector)*)
-- [FIWARE Data Space Connector](https://github.com/FIWARE-Ops/data-space-connector)
+- Data Space Connector
 
 ## On premise/Local deployment
 
-The MVDS-IaaS can be deployed on a local/cloud/on-premise machine using [kind](https://kind.sigs.k8s.io/). The objective is provide an autonomous environment to test the components of the Data Space with the minimum cost and complexity possible.
+The MVDS-IaaS can be deployed on a local/cloud/on-premise machine using [Kind](https://kind.sigs.k8s.io/). The objective is provide an autonomous environment to test the components of the Data Space with the minimum cost and complexity possible.
 
 ### Environment setup
 
-The environment is composed of a Kubernetes cluster created with kind, with one master node and two worker nodes. Also installed:
-
-- [Ingress Nginx Controller](https://kind.sigs.k8s.io/docs/user/ingress/#ingress-nginx)
-
-- [Load Balancer](https://kind.sigs.k8s.io/docs/user/loadbalancer/#installing-metallb-using-default-manifests)
+The environment is composed of a Kubernetes cluster created with Kind, with one master node and two worker nodes (for example).
 
 ![kind_cluster](img/kind_cluster.png)
 
-### Data Space Operator
+!!! abstract inline end "Other components that need to be installed in the cluster:"
 
-The Dataspace Operator acts as the TrustAnchor of the Data Space. It provides the particpants information on whom to trust.
+    - [Ingress Nginx Controller](https://kind.sigs.k8s.io/docs/user/ingress/#ingress-nginx)
 
-#### Minimal Trust Anchor
+    - [Load Balancer](https://kind.sigs.k8s.io/docs/user/loadbalancer/#installing-metallb-using-default-manifests)
 
-![trust_anchor](img/trust_anchor.png)
 
-#### DSBA-compliant demo
+| **Component** | **Version** |
+| ------------: | :---------- |
+| OS            | Ubuntu 20.04  |
+| [Docker](https://docs.docker.com/engine/install/ubuntu/) | 26.0.1 |
+| [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installing-from-release-binaries) | 0.20.0 |
+| [Helm](https://helm.sh/docs/intro/install/#from-apt-debianubuntu) | 3.14.2 |
+| [Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) |  v1.28.3 |
+| [Terraform](https://developer.hashicorp.com/terraform/install?product_intent=terraform) |  v1.8.1 |
 
-The DSBA-compliant demo architecture for the Data Space Operator is composed of the following components:
-
-![operator_scheme](img/operator.png)
-
-Also some services need external access, so the Ingress Nginx Controller is configured.
-
-![operator_ingress](img/operator_ingress.png)
-
-### Marketplace
-
-!!! info "The market is not a mandatory component of having a minimal data space."
-
-### Data Space Connector
-
-![connector_scheme](img/fiware_connector.png)
 
 ### Status
 
