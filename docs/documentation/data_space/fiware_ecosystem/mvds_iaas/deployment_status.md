@@ -422,7 +422,7 @@ Detailed local deployment status.
 
 ## Data Space Connector
 
-??? status  "Status (15 total): 0 🛑 / 1 ❌ / 2 ⚠️ / 1 ❓ / 11 ✅" 
+??? status  "Status (15 total): 0 🛑 / 1 ❌ / 0 ⚠️ / 1 ❓ / 13 ✅" 
 
     !!! abstract inline end "_Services Status_"
 
@@ -441,10 +441,10 @@ Detailed local deployment status.
     | [**MongoDB**](#mongodb_2)                                         |       ✅      | 
     | [**MySQL**](#mysql_1)                                             |       ✅      | 
     | [**Postgres**](#postgres)                                         |       ✅      | 
-    | [**WaltID**](#-waltid_1)                                          |       ⚠️       |
+    | [**WaltID**](#waltid_1)                                           |       ✅      |
     | [**TM Forum API**](#tm-forum-api)                                 |       ✅      |
     | [**Orion LD**](#orion-ld_2)                                       |       ✅      | 
-    | [**Keycloak**](#-keycloak)                                        |       ⚠️       | 
+    | [**Keycloak**](#keycloak)                                         |       ✅      | 
     | [**Credentials Config Service**](#credentials-config-service_1)   |       ✅      |
     | [**Trusted ISSUERS List**](#trusted-issuers-list_1)               |       ✅      |
     | [**Verifier**](#verifier)                                         |       ✅      |
@@ -474,13 +474,11 @@ Detailed local deployment status.
     | :----: | :--------: | :------  |
     |  ✅    | -          | -        |
 
-=== "⚠️ WaltID"
+=== "WaltID"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
-    |  ⚠️     | -          | -        |
-
-    Deployed but needs to be checked the waltid-cert configuration.
+    |  ✅    | -          | -        |
 
 === "TM Forum API"
 
@@ -504,19 +502,19 @@ Detailed local deployment status.
 
     | Status | Depends on                                | Endpoint |
     | :----: | :---------------------------------------: | :------- |
-    |  ✅    | [WaltID](#-waltid_1)<br>[MySQL](#mysql_1) | `til.ds-connector.io`<br>`tir.ds-connector.io` |
+    |  ✅    | [WaltID](#waltid_1)<br>[MySQL](#mysql_1) | `til.ds-connector.io`<br>`tir.ds-connector.io` |
 
-=== "⚠️ Keycloak"
+=== "Keycloak"
 
-    | Status | Depends on           | Endpoint |
-    | :----: | :------------------: | :------  |
-    |  ⚠️     | [WaltID](#-waltid_1)<br>[Postgres](#postgres) |  - |
+    | Status | Depends on                                   | Endpoint |
+    | :----: | :------------------------------------------: | :------  |
+    |  ✅    | [WaltID](#waltid_1)<br>[Postgres](#postgres) |    -     |
 
 === "Verifier"
 
     | Status | Depends on | Endpoint |
     | :----: | :--------: | :------  |
-    |  ✅    | [WaltID](#-waltid_1)<br>[Trusted Participants Registry](#-trusted-participants-registry_1)<br>[Credentials Config Service](#credentials-config-service_1) | `verifier.ds-connector.io` |
+    |  ✅    | [WaltID](#waltid_1)<br>[Trusted Participants Registry](#-trusted-participants-registry_1)<br>[Credentials Config Service](#credentials-config-service_1) | `verifier.ds-connector.io` |
 
 === "Contract Management"
 
