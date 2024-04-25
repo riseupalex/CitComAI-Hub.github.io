@@ -37,6 +37,11 @@ Detailed local deployment status.
     | :----: | :--------: | :---------  | :------  |
     | ✅     | -          | [mongodb.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
 
+    |    Variables    |   Value   |
+    | :-------------: | :-------- |
+    | `service_name`  | `mongodb` |
+    | `root_password` | `admin`   |
+
 === "Orion LD"
 
     !!! info "Same parameters as [DSBA-compliant demo](#orion-ld_1)"
@@ -44,6 +49,12 @@ Detailed local deployment status.
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
     |  ✅    | [MongoDB](#mongodb_1) | [orionld.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
+
+    |    Variables    |     Value    |
+    | :-------------: | :----------- |
+    | `service_name`  | `orionld`    |
+    | `root_password` | `admin`      |
+    | `orion_db_name` | `orion-oper` |
 
 === "❓ Trusted PARTICIPANTS Registry"
 
