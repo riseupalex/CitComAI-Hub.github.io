@@ -47,12 +47,12 @@ The environment is composed of a Kubernetes cluster created with Kind, with one 
 
     ✅ _running_
 
-|                    **Component**                        |  **Status**  | **Services Deployed** |
-| ------------------------------------------------------: | :----------: | :-------------------: |
-| [**Minimal Trust Anchor**](#minimal-trust-anchor)       |      ✅      |           3/3         |
-| [**Data Space Connector**](#data-space-connector)       |      👷      |          13/15        |
-| [**Data Space Operator (DSBA)**](#data-space-operator)  |      👷      |          11/12        |
-| [**Marketplace**](#data-space-marketplace)              |      🛑      |          -/-          |
+|         **Component**          |  **Status**  | **Services Deployed** |
+| -----------------------------: | :----------: | :-------------------: |
+| **Minimal Trust Anchor**       |      ✅      |           3/3         |
+| **Data Space Connector**       |      👷      |          14/15        |
+| **Data Space Operator (DSBA)** |      👷      |          11/12        |
+| **Marketplace**                |      🛑      |          -/-          |
 
 !!! info "Detailed status"
 
