@@ -8,6 +8,14 @@ template: home.html
 
 <div class="grid cards" markdown>
 
+-   :material-city-variant-outline:{ .lg .middle } __Getting Started__
+
+    ---
+
+    Getting started in Citcom.ai Data Spaces.
+
+    [:octicons-arrow-right-24: Learn more](./getting_started/index.md)
+
 -   :material-city-variant-outline:{ .lg .middle } __TEF Nodes__
 
     ---

@@ -21,9 +21,12 @@ theme:
   - primary: custom
 nav:
   - welcome.md
-  - AI services:
-    - services/index.md 
-    - Minimal Interoperable AI Service: services/waste_collection.md
+  - Getting started: 
+    - getting_started/index.md
+    - Data Catalog: getting_started/data_catalog/index.md
+    - Smart City Infrastructure: getting_started/smart_city_infra/index.md
+    - Data Space Deployment: getting_started/dataspace_deployment/index.md
+    - Be part of a Data Space: getting_started/connect_to_dataspace/index.md
   - Documentation:
     - documentation/index.md 
     - Lepus: documentation/lepus.md
@@ -41,6 +44,9 @@ nav:
         - documentation/data_space/fiware_ecosystem/index.md
         - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
           - documentation/data_space/fiware_ecosystem/mvds_iaas/index.md
+  - AI services:
+    - services/index.md 
+    - Minimal Interoperable AI Service: services/waste_collection.md
   - TEF Nodes:
     - tef/index.md
     - TEF sites analysis: tef/tef_list.md
@@ -49,15 +55,8 @@ nav:
     - AI Toolkit: toolbox/ai_toolkit.md
     - MIMs Toolkit: toolbox/mims_toolkit.md
     - Other Tools: toolbox/other_toolkit.md
-  - Citcom Data Spaces:
-    - citcom_dataspaces/index.md
-    - Getting started: 
-      - citcom_dataspaces/getting_started/index.md
-      - Data Catalog: citcom_dataspaces/getting_started/data_catalog/index.md
-      - Smart City Infrastructure: citcom_dataspaces/getting_started/smart_city_infra/index.md
-      - Data Space Deployment: citcom_dataspaces/getting_started/dataspace_deployment/index.md
-      - Be part of a Data Space: citcom_dataspaces/getting_started/connect_to_dataspace/index.md
-    - FAQS: citcom_dataspaces/faqs.md
+  - FAQS: 
+    - faqs/index.md
 extra:
   generator: false
   social:
