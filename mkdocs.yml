@@ -49,6 +49,15 @@ nav:
     - AI Toolkit: toolbox/ai_toolkit.md
     - MIMs Toolkit: toolbox/mims_toolkit.md
     - Other Tools: toolbox/other_toolkit.md
+  - Citcom Data Spaces:
+    - citcom_dataspaces/index.md
+    - Getting started: 
+      - citcom_dataspaces/getting_started/index.md
+      - Data Catalog: citcom_dataspaces/getting_started/data_catalog/index.md
+      - Smart City Infrastructure: citcom_dataspaces/getting_started/smart_city_infra/index.md
+      - Data Space Deployment: citcom_dataspaces/getting_started/dataspace_deployment/index.md
+      - Be part of a Data Space: citcom_dataspaces/getting_started/connect_to_dataspace/index.md
+    - FAQS: citcom_dataspaces/faqs.md
 extra:
   generator: false
   social:
