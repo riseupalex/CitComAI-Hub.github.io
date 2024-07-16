@@ -114,3 +114,13 @@ For the development and implementation of different AI services, here we list a 
 | [CVAT](https://www.cvat.ai/) | Annotate better with CVAT, the industry-leading data engine for machine learning. Used and trusted by teams at any scale, for data of any scale. |
 | [Supervisely](https://supervisely.com/) | Develop AI faster and better with on-premise, enterprise-grade end-to-end solution for every task: from labeling to building production models. |
 
+
+## Validation
+
+| **Validation** | |
+|-|-|
+| [Evidently AI](https://www.evidentlyai.com/) | Evidently helps analyze and monitor the quality of machine learning models in production. It generates detailed reports on data drift and model performance, using visualizations to identify significant changes in input data or model performance. |
+| [Whylogs](https://whylabs.ai/) | Whylogs is a lightweight and scalable library for logging and monitoring ML data in production. It provides statistical profiles of input and output data, facilitating the detection of data drift and anomalies in real-time or batch data. |
+| [Promehteus](https://prometheus.io/) & [Grafana](https://grafana.com/)| Although not specific to ML, they can be adapted to monitor specific ML model metrics, including production accuracy. By defining custom metrics that reflect model performance, they can be used to capture and visualize data drift or model drift, though this requires manual configuration and clear metric definitions. |
+| [Alibi Detect](https://docs.seldon.io/projects/alibi-detect/en/latest/) | Specialized in anomaly and data drift detection, Alibi Detect offers a series of techniques and algorithms designed specifically to identify changes in input data and model behavior, which may indicate the need for retraining. |
+| [MLPerf](https://github.com/mlperf) _(and [MLCommons](https://github.com/mlcommons/))_ | MLPerf is a suite of benchmarks that evaluates the performance of hardware, software, and machine learning models. It provides standardized metrics that allow comparing different implementations and configurations of ML, helping to identify best practices and optimizations in the field of machine learning. |
