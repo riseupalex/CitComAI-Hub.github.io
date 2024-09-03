@@ -6,6 +6,7 @@ copyright: Copyright &copy; 2023 - 2024 CitCom.ai - VRAIN
 site_dir: public
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/neoteroi-mkdocs.css
 theme:
   custom_dir: docs/overrides
   name: material
@@ -23,6 +24,7 @@ nav:
   - welcome.md
   - Getting started:
       - getting_started/index.md
+      - Nodes & Countries: getting_started/nodes_countries.md
       - Interoperability: getting_started/interoperability.md
       - Data spaces: getting_started/data_spaces.md
       - Get involved: getting_started/get_involved.md
@@ -92,6 +94,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - neoteroi.timeline
 plugins:
   - search
   - git-revision-date-localized

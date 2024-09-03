@@ -1,0 +1,18 @@
+- title: "[About CitCom.ai](../welcome.md#about-citcomai)"
+  icon: ':material-rocket-launch-outline:'
+- title: "[Nodes & Countries](nodes_countries.md)"
+  icon: ':fontawesome-solid-gem:'
+- title: "[Interoperability](interoperability.md)"
+  icon: ':material-gauge-empty:'
+- title: "[Data Spaces](data_spaces.md)"
+  icon: ':material-bug:'
+- title: "[Get involved](get_involved.md)"
+  icon: ':material-bug:'
+- title: "[Join a Data space](connect_to_dataspace.md)"
+  icon: ':material-bug:'
+  # content: Lorem ipsum dolor sit amet.
+  # sub_title: 2022-Q4
+# - title: AI Experimentation
+#   icon: ':material-bug:'
+#   # content: Lorem ipsum dolor sit amet.
+#   # sub_title: 2022-Q4
