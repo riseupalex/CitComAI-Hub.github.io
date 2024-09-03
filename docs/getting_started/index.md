@@ -1,10 +1,15 @@
-# Getting started
+---
+icon: material/rocket-outline
+title: Getting started
+---
 
 <div class="grid cards" markdown>
 
--   __Data Catalog__
+-   :material-store-search-outline:{ .lg .middle } __Data catalog__
 
     ---
+
+    Explore available data within currently deployed data spaces.
 
     [:octicons-arrow-right-24: Learn more](data_catalog/index.md)
 

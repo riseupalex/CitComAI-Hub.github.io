@@ -8,7 +8,7 @@ template: home.html
 
 <div class="grid cards" markdown>
 
--   :material-city-variant-outline:{ .lg .middle } __Getting Started__
+-   :material-rocket-outline:{ .lg .middle } __Getting Started__
 
     ---
 
