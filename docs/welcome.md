@@ -64,7 +64,7 @@ In addition, access to a data space does not have to be only as a **consumer** o
 
 <div class="grid cards" markdown>
 
--   :material-database-outline:{ .lg .middle } __Join a Data Space__
+-   :material-database-arrow-right-outline:{ .lg .middle } __Join a Data Space__
 
     ---
 

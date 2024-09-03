@@ -20,7 +20,7 @@ title: Getting started
     [:octicons-arrow-right-24: Learn more](dataspace_deployment/index.md)
 
 
--   __Be part of a Data Space__
+-   :material-database-arrow-right-outline:{ .lg .middle } __Join a Data Space__
 
     ---
 
