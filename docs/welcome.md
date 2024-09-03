@@ -3,7 +3,7 @@ icon: material/hand-wave-outline
 title: Welcome
 ---
 
-Welcome to VRAIN documentation for the [Citcom.AI](https://citcom.ai) project. On the following site, you will find different guides and resources.
+Welcome to VRAIN documentation for the [Citcom.ai](https://citcom.ai) project. On the following site, you will find different guides and resources.
 
 ## About the project
 The [Citcom.ai](https://citcom.ai) project is an ambitious European Union initiative aimed at establishing a comprehensive [Testing and Experimentation Facilities (TEFs)](https://digital-strategy.ec.europa.eu/en/activities/testing-and-experimentation-facilities) for AI and robotics, tailored explicitly to smart and sustainable cities and communities. This project is designed to accelerate the adoption of AI technologies across Europe by providing real-world testing environments where companies can develop, test, and validate their AI-driven products and services. CitCom.ai ensures that these technologies meet the latest EU regulations, including those related to data privacy and cybersecurity while supporting the creation of interoperable and ethically sound AI solutions. The project spans multiple countries, with over 50 participating organizations, and it emphasizes a coordinated approach to fostering innovation that aligns with the EU’s goals for a greener and more digital future.
@@ -12,7 +12,7 @@ The initiative is particularly valuable for companies looking to understand and 
 
 ### Nodes & Countries
 
-The Citcom.AI project is organized into a network of specialized testing sites known as **nodes**. These nodes are strategically distributed across different locations to cover a wide range of environments and use cases. The project is divided into three main __*super nodes*__, each with its own focus areas and satellite sub-nodes.
+The Citcom.ai project is organized into a network of specialized testing sites known as **nodes**. These nodes are strategically distributed across different locations to cover a wide range of environments and use cases. The project is divided into three main __*super nodes*__, each with its own focus areas and satellite sub-nodes.
 
 - **Nordic Node**: Focuses on innovations in **energy** management and sustainability, leveraging the expertise and infrastructure available in Northern Europe.
 - **Central Node**: Located in the heart of Europe, this node emphasizes urban **mobility** and smart city solutions, testing technologies like autonomous vehicles and smart traffic systems.
@@ -39,7 +39,40 @@ Data spaces support interoperability, ensuring that data from different sources 
 In Citcom.ai, data spaces play a pivotal role in accelerating innovation by facilitating collaboration among different stakeholders. They offer a secure and compliant framework for data exchange, ensuring that the AI solutions developed within the project are both reliable and aligned with European standards. This emphasis on innovation is sure to excite the audience about the potential progress.
 
 ## How to join the Citcom.ai ecosystem? 
-Any interested company or institution can join a currently available data space. The following section will explore the available data catalog, providing an opportunity to review and identify relevant datasets and resources. Additionally, the process of joining an existing dataspace will be outlined, including details on membership requirements, access controls, and collaboration tools within that environment. For those requiring a customized data environment, guidance will be provided on deploying a personal dataspace, covering aspects such as infrastructure setup and data governance configuration. This section aims to equip the reader with the necessary knowledge and tools to manage and utilize the available data resources effectively. 
+Citcom.ai is a project open to the European society, allowing any interested company or institution to join this ecosystem. Citcom.ai's core technology is data spaces, which guarantee completely secure environments for data exchange.  
+
+### What data are available?
+There are multiple data spaces grouping different institutions (e.g. cities, companies, etc.) at local, national or European Union level. Depending on each data space, the available data may vary. 
+
+<div class="grid cards" markdown>
+
+-   :material-store-search-outline:{ .lg .middle } __Data catalog__
+
+    ---
+
+    Explore available data within currently deployed data spaces.
+
+    [:octicons-arrow-right-24: Learn more](getting_started/data_catalog/index.md)
+
+</div>
+
+### How can I join a data space? 
+Basically, you need to deploy a data space connector and request certified access to the data space trust anchor manager.  
+
+The process of joining an existing data space will be outlined, including details on membership requirements, access controls, and collaboration tools within that environment. 
+
+In addition, access to a data space does not have to be only as a consumer of data, but you can also access it as a provider. Depending on the role you want to play in the data space, the way you join may vary. 
+
+<div class="grid cards" markdown>
+
+-   __Be part of a Data Space__
+
+    ---
+
+    [:octicons-arrow-right-24: Learn more](getting_started/connect_to_dataspace/index.md)
+
+
+</div>
 
 <br>
 <center>
