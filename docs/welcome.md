@@ -28,6 +28,13 @@ CitCom.ai project embraces minimal interoperability mechanisms (MIMs) as part of
 
 In particular, MIMs help create a common framework for AI applications, data management, and public administration tools, ensuring that these systems can work together seamlessly across different cities and regions. This alignment with MIMs ensures that the AI tools developed under the CitCom.AI project are not only practical but also scalable and adaptable to various local needs​.
 
+### Data spaces
+Data spaces refer to structured and managed environments where data from various sources is securely stored, shared, and utilized for AI and robotics applications within smart and sustainable cities. These data spaces are essential components of the project, enabling participants to access and leverage high-quality data for testing, experimentation, and validation of AI technologies.
+
+Dataspaces support interoperability, ensuring that data from different sources can be combined and used while complying with regulations such as the GDPR and other EU directives. They provide the necessary infrastructure for managing data in a way that supports ethical considerations, cybersecurity, and the broader goals of creating a more digital and sustainable urban environment.
+
+In Citcom.ai, dataspaces play a pivotal role in accelerating innovation by facilitating collaboration among different stakeholders. They offer a secure and compliant framework for data exchange, ensuring that the AI solutions developed within the project are both reliable and aligned with European standards. This emphasis on innovation is sure to excite the audience about the potential progress.
+
 ### How to be part of a data space?
 
 [...]
