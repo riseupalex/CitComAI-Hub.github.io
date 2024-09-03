@@ -13,7 +13,7 @@ title: Getting started
 
     [:octicons-arrow-right-24: Learn more](data_catalog/index.md)
 
--   __Smart City Infrastructure__
+-   :material-city-variant-outline:{ .lg .middle } __Smart City Infrastructure__
 
     ---
 
