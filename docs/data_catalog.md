@@ -3,7 +3,7 @@ icon: material/store-search-outline
 title: Data Catalog
 ---
 !!! info
-    This data catalog is still a work in progress. Thus, it is not available right now.
+    Data catalog is still a work in progress. Thus, it is not available right now.
 
 <!-- ## The Nordic Super Node
 
