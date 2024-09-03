@@ -13,7 +13,7 @@ title: Getting started
 
     [:octicons-arrow-right-24: Learn more](data_catalog/index.md)
 
--   __Data Space Deployment__
+-   :material-database-cog-outline:{ .lg .middle } __Data Space Deployment__
 
     ---
 
