@@ -64,9 +64,11 @@ In addition, access to a data space does not have to be only as a **consumer** o
 
 <div class="grid cards" markdown>
 
--   __Join a Data Space__
+-   :material-database-outline:{ .lg .middle } __Join a Data Space__
 
     ---
+
+    Understand the process of joining to an existing data space.
 
     [:octicons-arrow-right-24: Learn more](getting_started/connect_to_dataspace/index.md)
 
