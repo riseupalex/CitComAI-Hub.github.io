@@ -25,7 +25,7 @@ nav:
       - getting_started/index.md
       - Data Catalog: getting_started/data_catalog/index.md
       - Smart City Infrastructure: getting_started/smart_city_infra/index.md
-      - Be part of a Data Space: getting_started/connect_to_dataspace/index.md
+      - Join a Data Space: getting_started/connect_to_dataspace/index.md
       - Data Space Deployment: getting_started/dataspace_deployment/index.md
   - Documentation:
       - documentation/index.md

@@ -64,7 +64,7 @@ In addition, access to a data space does not have to be only as a **consumer** o
 
 <div class="grid cards" markdown>
 
--   __Be part of a Data Space__
+-   __Join a Data Space__
 
     ---
 
