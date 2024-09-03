@@ -1,4 +1,7 @@
-# Data Catalog
+---
+icon: material/store-search-outline
+title: Data Catalog
+---
 
 ## The Nordic Super Node
 
