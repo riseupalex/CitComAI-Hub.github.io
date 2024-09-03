@@ -1,4 +1,4 @@
-site_name: CitCom.ai - VRAIN 
+site_name: CitCom.ai - VRAIN
 site_url: https://citcom-vrain.github.io
 repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
 repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
@@ -17,56 +17,48 @@ theme:
     - navigation.footer
     - navigation.instant
     - navigation.indexes
-  palette: 
-  - primary: custom
+  palette:
+    - primary: custom
 nav:
   - welcome.md
-  - Getting started: 
-    - getting_started/index.md
-    - Data Catalog: getting_started/data_catalog/index.md
-    - Smart City Infrastructure: getting_started/smart_city_infra/index.md
-    - Be part of a Data Space: getting_started/connect_to_dataspace/index.md
-    - Data Space Deployment: getting_started/dataspace_deployment/index.md
+  - Getting started:
+      - getting_started/index.md
+      - Data Catalog: getting_started/data_catalog/index.md
+      - Smart City Infrastructure: getting_started/smart_city_infra/index.md
+      - Be part of a Data Space: getting_started/connect_to_dataspace/index.md
+      - Data Space Deployment: getting_started/dataspace_deployment/index.md
   - Documentation:
-    - documentation/index.md 
-    - Lepus: documentation/lepus.md
-    - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
-    - Data Space:
-      - documentation/data_space/index.md
-      - Connectors: 
-        - documentation/data_space/connector/index.md
-        - Eclipse: documentation/data_space/connector/eclipse_mvd.md
-        - Fiware:
-          - documentation/data_space/connector/fiware/index.md
-          - AWS deployment: documentation/data_space/connector/fiware/aws_deployment.md
-          - Local deployment: documentation/data_space/connector/fiware/local_deployment.md
-      - FIWARE Ecosystem:
-        - documentation/data_space/fiware_ecosystem/index.md
-        - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
-          - documentation/data_space/fiware_ecosystem/mvds_iaas/index.md
+      - documentation/index.md
+      - Lepus: documentation/lepus.md
+      - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
+      - Data Space:
+          - documentation/data_space/index.md
+          - Connectors:
+              - documentation/data_space/connector/index.md
+              - Eclipse: documentation/data_space/connector/eclipse_mvd.md
+              - Fiware:
+                  - documentation/data_space/connector/fiware/index.md
+                  - AWS deployment: documentation/data_space/connector/fiware/aws_deployment.md
+                  - Local deployment: documentation/data_space/connector/fiware/local_deployment.md
+          - FIWARE Ecosystem:
+              - documentation/data_space/fiware_ecosystem/index.md
+              - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
+                  - documentation/data_space/fiware_ecosystem/mvds_iaas/index.md
   - AI services:
-    - services/index.md 
-    - Minimal Interoperable AI Service: services/waste_collection.md
+      - services/index.md
+      - Minimal Interoperable AI Service: services/waste_collection.md
   - TEF Nodes:
-    - tef/index.md
-    - TEF sites analysis: tef/tef_list.md
+      - tef/index.md
+      - TEF sites analysis: tef/tef_list.md
   - Toolbox:
-    - toolbox/index.md
-    - AI Toolkit: toolbox/ai_toolkit.md
-    - MIMs Toolkit: toolbox/mims_toolkit.md
-    - Other Tools: toolbox/other_toolkit.md
-  - FAQS: 
-    - faqs/index.md
+      - toolbox/index.md
+      - AI Toolkit: toolbox/ai_toolkit.md
+      - MIMs Toolkit: toolbox/mims_toolkit.md
+      - Other Tools: toolbox/other_toolkit.md
+  - FAQS:
+      - faqs/index.md
 extra:
   generator: false
-  social:
-  - icon: fontawesome/brands/github
-    link: https://github.com/orgs/CitCom-VRAIN/repositories
-    name: GitHub
-  - icon: material/email
-    link: mailto:<joamoteo@upv.es>
-    name: Email 
-
 markdown_extensions:
   - def_list
   - attr_list
@@ -87,7 +79,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format  
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
