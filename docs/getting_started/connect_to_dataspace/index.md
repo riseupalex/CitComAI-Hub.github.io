@@ -1,4 +1,4 @@
-# Be part of a Data Space
+# Join a Data Space
 
 !!! warning
 
