@@ -1,10 +1,10 @@
 # Welcome
 
-Welcome to VRAIN documentation for the CitCom.ai project. On the following site, you will find different guides and resources.
+Welcome to VRAIN documentation for the [Citcom.AI](https://citcom.ai) project. On the following site, you will find different guides and resources.
 
 ## About the project
 
-The [Citcom.AI](https://citcom.ai) is one of the [Testing and Experimentation Facilities (TEFs)](https://digital-strategy.ec.europa.eu/en/activities/testing-and-experimentation-facilities), which are specialized sites for testing *state-of-the-art* AI and robotics solutions. These facilities provide technical support to innovators, allowing them to test both software and hardware AI products at scale (Technology Readiness Levels 6-8).
+[Citcom.AI](https://citcom.ai) is one of the [Testing and Experimentation Facilities (TEFs)](https://digital-strategy.ec.europa.eu/en/activities/testing-and-experimentation-facilities), which are specialized sites for testing *state-of-the-art* AI and robotics solutions. These facilities are open to all European technology providers and provide technical support to innovators, allowing them to test both software and hardware AI products at scale (Technology Readiness Levels 6-8).
 
 [...]
 
