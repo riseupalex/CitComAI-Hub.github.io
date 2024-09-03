@@ -39,4 +39,4 @@ The Data Space Connector (DSC) is a software component that is responsible for m
 
 Fiware provides a reference implementation of the DSC, which is available in the [Fiware GitHub repository](https://github.com/FIWARE/data-space-connector/tree/main)
 
-See the deployment [instructions](../dataspace_deployment/index.md#data-space-connector) for more details.
+See the deployment [instructions](../dataspace_deployment/index.md#fiware-data-space-connector) for more details.
