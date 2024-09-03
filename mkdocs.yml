@@ -26,6 +26,7 @@ nav:
       - Interoperability: getting_started/interoperability.md
       - Data spaces: getting_started/data_spaces.md
       - Get involved: getting_started/get_involved.md
+      - Join a Data space: getting_started/connect_to_dataspace.md
   - Data catalog: data_catalog.md
   - Guides:
       - documentation/index.md
@@ -35,7 +36,6 @@ nav:
         - Overview: documentation/data_space_connectors/status.md
         - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
         - Fiware:
-            - Join a Data space: documentation/data_space_connectors/fiware/connect_to_dataspace.md
             - Deployment: documentation/data_space_connectors/fiware/data_space_deployment.md
             - AWS deployment (Legacy): documentation/data_space_connectors/fiware/aws_deployment.md
             - Local deployment (Legacy): documentation/data_space_connectors/fiware/local_deployment.md

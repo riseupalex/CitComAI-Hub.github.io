@@ -30,7 +30,6 @@ In addition, access to a data space does not have to be only as a **consumer** o
 
     Understand the process of joining to an existing data space.
 
-    [:octicons-arrow-right-24: Learn more](../documentation/data_space_connectors/fiware/connect_to_dataspace.md)
-
+    [:octicons-arrow-right-24: Learn more](connect_to_dataspace.md)
 
 </div>
