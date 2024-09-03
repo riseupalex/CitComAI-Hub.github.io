@@ -35,17 +35,8 @@ Data spaces support interoperability, ensuring that data from different sources 
 
 In Citcom.ai, data spaces play a pivotal role in accelerating innovation by facilitating collaboration among different stakeholders. They offer a secure and compliant framework for data exchange, ensuring that the AI solutions developed within the project are both reliable and aligned with European standards. This emphasis on innovation is sure to excite the audience about the potential progress.
 
-### How to be part of a data space?
-
-[...]
-
-#### Consumer or Provider?
-
-[...]
-
-### Demo
-    
-[...]
+## How to join the Citcom.ai ecosystem? 
+Any interested company or institution can join a currently available data space. The following section will explore the available data catalog, providing an opportunity to review and identify relevant datasets and resources. Additionally, the process of joining an existing dataspace will be outlined, including details on membership requirements, access controls, and collaboration tools within that environment. For those requiring a customized data environment, guidance will be provided on deploying a personal dataspace, covering aspects such as infrastructure setup and data governance configuration. This section aims to equip the reader with the necessary knowledge and tools to manage and utilize the available data resources effectively. 
 
 <br>
 <center>
