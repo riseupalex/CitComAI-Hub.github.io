@@ -73,9 +73,3 @@ In addition, access to a data space does not have to be only as a consumer of da
 
 
 </div>
-
-<br>
-<center>
-  <img style="margin-right: 1rem;" src="/assets/citcom.svg" width="150">
-  <img src="/assets/vrain.jpg" width="150">
-</center>

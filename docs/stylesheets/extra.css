@@ -60,16 +60,22 @@ footer {
     padding: 10px;
 }
 
-footer .footer-logo img {
+footer .footer-logo .citcom-logo {
     width: 5rem;
     filter: invert(100%);
 }
 
+footer .footer-logo .vrain-logo {
+    width: 5rem;
+    margin-left: 1rem;
+}
+
 footer .footer-tagline img {
-    margin-bottom: 0.5rem;
     width: 6rem;
 }
 
 footer .footer-tagline p {
     font-size: 0.4rem;
+    margin: 0;
+    padding: 0;
 }
