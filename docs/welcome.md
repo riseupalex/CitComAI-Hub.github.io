@@ -3,10 +3,9 @@
 Welcome to VRAIN documentation for the [Citcom.AI](https://citcom.ai) project. On the following site, you will find different guides and resources.
 
 ## About the project
+The [Citcom.ai](https://citcom.ai) project is an ambitious European Union initiative aimed at establishing a comprehensive [Testing and Experimentation Facilities (TEFs)](https://digital-strategy.ec.europa.eu/en/activities/testing-and-experimentation-facilities) for AI and robotics, tailored explicitly to smart and sustainable cities and communities. This project is designed to accelerate the adoption of AI technologies across Europe by providing real-world testing environments where companies can develop, test, and validate their AI-driven products and services. CitCom.ai ensures that these technologies meet the latest EU regulations, including those related to data privacy and cybersecurity while supporting the creation of interoperable and ethically sound AI solutions. The project spans multiple countries, with over 50 participating organizations, and it emphasizes a coordinated approach to fostering innovation that aligns with the EU’s goals for a greener and more digital future.
 
-[Citcom.AI](https://citcom.ai) is one of the [Testing and Experimentation Facilities (TEFs)](https://digital-strategy.ec.europa.eu/en/activities/testing-and-experimentation-facilities), which are specialized sites for testing *state-of-the-art* AI and robotics solutions. These facilities are open to all European technology providers and provide technical support to innovators, allowing them to test both software and hardware AI products at scale (Technology Readiness Levels 6-8).
-
-[...]
+The initiative is particularly valuable for companies looking to understand and comply with new EU laws surrounding AI, providing them with technical support, access to high-performance computing, digital twins, and other advanced tools. It also serves as a resource for public organizations to learn about and procure innovative AI solutions.
 
 ### Nodes & Countries
 
@@ -20,14 +19,14 @@ The Citcom.AI project is organized into a network of specialized testing sites k
 | -:        | :-------------------: | :--------------------: | :---------------------: |
 | *Focus Area* | POWER              | MOVE                   | CONNECT                   |
 | *Lead*    | Denmark               | Belgium                | Spain                   |
-| *Members* | Sweden, Finland       | France, Luxembourg, The Netherlands | Italy, Poland, Germany |
+| *Members* | Denmark, Sweden, Finland       | Belgium, France, Luxembourg, The Netherlands | Spain, Italy, Poland, Germany |
 
 ### Interoperability & MIMs
 [MIMs](https://mims.oascities.org/) stands for "Minimal Interoperability Mechanisms." These guidelines and standards were developed by the Open & Agile Smart Cities (OASC) initiative to promote interoperability among different city systems and technologies, such as traffic management systems, waste management systems, and energy distribution systems. The idea is to ensure that data, systems, and services can be shared and used across various platforms without vendor lock-in, enabling a more cohesive and collaborative global marketplace for smart city solutions. MIMs address scenarios like integrating these different technologies, accessing data from various sources, and building interoperable solutions​.
 
-CitCom.AI project embraces minimal interoperability mechanisms (MIMs) as part of its approach. MIMs are crucial for ensuring interoperability and standardization within smart city solutions, a vital focus of the Open & Agile Smart Cities (OASC) initiative. The CitCom.AI project is aligned with these principles, as it aims to develop AI-driven tools that are interoperable, transparent, and secure across different urban contexts.
+CitCom.ai project embraces minimal interoperability mechanisms (MIMs) as part of its approach. MIMs are crucial for ensuring interoperability and standardization within smart city solutions, a vital focus of the [Open & Agile Smart Cities (OASC)](https://oascities.org/) initiative. The CitCom.AI **project is aligned with these principles**, as it aims to develop AI-driven tools that are interoperable, transparent, and secure across different urban contexts.
 
-In particular, MIMs help create a common framework for AI applications, data management, and public administration tools, ensuring that these systems can work together seamlessly across different cities and regions. This alignment with MIMs ensures that the AI tools developed under the CitCom.AI project are not only practical but also scalable and adaptable to various local needs​
+In particular, MIMs help create a common framework for AI applications, data management, and public administration tools, ensuring that these systems can work together seamlessly across different cities and regions. This alignment with MIMs ensures that the AI tools developed under the CitCom.AI project are not only practical but also scalable and adaptable to various local needs​.
 
 ### How to be part of a data space?
 
