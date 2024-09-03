@@ -1,4 +1,7 @@
-# Welcome
+---
+icon: material/hand-wave-outline
+title: Welcome
+---
 
 Welcome to VRAIN documentation for the [Citcom.AI](https://citcom.ai) project. On the following site, you will find different guides and resources.
 
