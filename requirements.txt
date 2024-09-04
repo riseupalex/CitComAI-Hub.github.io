@@ -4,6 +4,7 @@ mkdocs==1.5.3
 # Extensions
 pymdown-extensions==10.3.1
 mkdocs-git-revision-date-localized-plugin==1.2.1
+neoteroi-mkdocs==1.1.0
 
 # Theme
 mkdocs-material==9.5.9

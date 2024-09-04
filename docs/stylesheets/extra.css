@@ -39,6 +39,41 @@
     /* Fix for  rendering SVGs in Safari */
     transform: translate(0, 0);
 }
+
 .md-main {
     flex-grow: 1 !important;
+}
+
+footer {
+    color: #fff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto;
+}
+
+.footer-column {
+    padding: 10px;
+}
+
+footer .footer-logo .citcom-logo {
+    width: 5rem;
+    filter: invert(100%);
+}
+
+footer .footer-logo .vrain-logo {
+    width: 5rem;
+    margin-left: 1rem;
+}
+
+footer .footer-tagline img {
+    width: 6rem;
+}
+
+footer .footer-tagline p {
+    font-size: 0.4rem;
+    margin: 0;
+    padding: 0;
 }
