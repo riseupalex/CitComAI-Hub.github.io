@@ -37,7 +37,8 @@ nav:
       - Data Space Connectors: 
         - Overview: documentation/data_space_connectors/status.md
         - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
-        - Fiware:
+        - Fiware: 
+            - documentation/data_space_connectors/fiware/index.md
             - Deployment: documentation/data_space_connectors/fiware/data_space_deployment.md
             - AWS deployment (Legacy): documentation/data_space_connectors/fiware/aws_deployment.md
             - Local deployment (Legacy): documentation/data_space_connectors/fiware/local_deployment.md
