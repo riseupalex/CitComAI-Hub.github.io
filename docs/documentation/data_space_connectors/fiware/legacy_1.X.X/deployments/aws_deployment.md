@@ -1,7 +1,7 @@
 # AWS deployment
 
 !!! warning
-    This guide is still a work in progress. Errors may appear.
+    Experimental guide. Errors may appear.
 
 ## AWS Account Preparation
 Here are the steps for preparing an AWS account to deploy a Red Hat OpenShift Service (ROSA) cluster.
@@ -59,7 +59,7 @@ rosa whoami
 ```
 
 <figure markdown>
-  ![Whoami](img/whoami.png){ loading=lazy }
+  ![Whoami](img/aws/whoami.png){ loading=lazy }
 </figure>
 
 Before proceeding with the creation of the Openshift cluster, let's check that our AWS account meets the minimum required quotas:
@@ -69,7 +69,7 @@ rosa verify quota
 ```
 
 <figure markdown>
-  ![Verify quota](img/verify_quota.png){ loading=lazy }
+  ![Verify quota](img/aws/verify_quota.png){ loading=lazy }
 </figure>
 
 If everything is correct, we can proceed with the creation of roles for our Red Hat account account (first time only):
@@ -79,7 +79,7 @@ rosa create account-roles --mode auto --yes
 ```
 
 <figure markdown>
-  ![Create account](img/create_account.png){ loading=lazy }
+  ![Create account](img/aws/create_account.png){ loading=lazy }
 </figure>
 
 ### Creating the cluster
@@ -101,7 +101,7 @@ rosa describe cluster --cluster <name>
 ```
 
 <figure markdown>
-  ![Create account](img/describe_cluster.png){ loading=lazy }
+  ![Create account](img/aws/describe_cluster.png){ loading=lazy }
 </figure>
 
 Create the cluster admin user:
@@ -135,7 +135,7 @@ The deployment of the FIWARE Data Space Connector assumes that you have an Opens
 The process to follow to install these components is explained in the FIWARE repository: [ROUTES.md](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/doc/ROUTES.md).
 
 <figure markdown>
-  ![DSC components](img/dsc_components.png){ loading=lazy }
+  ![DSC components](img/aws/dsc_components.png){ loading=lazy }
 </figure>
 
 ### Using External-DNS
@@ -145,7 +145,7 @@ After installing, we can check that the operator has been deployed correctly by 
 kubectl get all -n external-dns-operator
 ```
 <figure markdown>
-  ![External DNS](img/external_dns.png){ loading=lazy }
+  ![External DNS](img/aws/external_dns.png){ loading=lazy }
 </figure>
 
 If everything is OK, we can move on to the creation of the External DNS resource that will be responsible for creating entries in our Route53 Hosted Zone.
@@ -204,7 +204,7 @@ kubectl get all -n openshift-operators
 ```
 
 <figure markdown>
-  ![Cert manager](img/cert_manager.png){ loading=lazy }
+  ![Cert manager](img/aws/cert_manager.png){ loading=lazy }
 </figure>
 
 Now we are going to create a Kubernetes secret with the access key and the AWS secret, in the same way as we did in the previous section. This is necessary because the secrets are created at namespace level, if we want to have a secret in several namespaces, we will have to create it in each of them independently.
@@ -264,7 +264,7 @@ selfSigned: {}
 ```
 
 <figure markdown>
-  ![Cluster issuers](img/cluster_issuers.png){ loading=lazy }
+  ![Cluster issuers](img/aws/cluster_issuers.png){ loading=lazy }
 </figure>
 
 Once we have created the Cluster Issuers, let's check if they are able to request and store the certificates. store the certificates. To do this we create Certificate type resources.
@@ -306,7 +306,7 @@ kubectl get certificates
 ```
 
 <figure markdown>
-  ![Get certificates](img/get_certificates.png){ loading=lazy }
+  ![Get certificates](img/aws/get_certificates.png){ loading=lazy }
 </figure>
 
 If the value TRUE appears in the READY column, it means that the certificates have been successfully obtained and stored in the indicated secrets. We can also check the secrets by executing the following command:
@@ -316,7 +316,7 @@ kubectl get secrets --field-selector type=kubernetes.io/tls
 ```
 
 <figure markdown>
-  ![Get secrets](img/get_secrets.png){ loading=lazy }
+  ![Get secrets](img/aws/get_secrets.png){ loading=lazy }
 </figure>
 
 These secrets contain the following values:
@@ -333,15 +333,15 @@ To expose each of these services, a number of objects are automatically created:
 
 - **Route objects:** This resource is used to expose services across the network and allow external access to connector applications.
     <figure markdown>
-    ![Route objects](img/route_objects.png){ loading=lazy }
+    ![Route objects](img/aws/route_objects.png){ loading=lazy }
     </figure>
 - **Certificate objects:** this resource is used for the management (obtaining, maintenance...) of TLS/SSL certificates for the connector's applications.
      <figure markdown>
-    ![Certificate objects](img/certificate_objects.png){ loading=lazy }
+    ![Certificate objects](img/aws/certificate_objects.png){ loading=lazy }
     </figure>
 - **Secret objects (TLS secret):** these secrets contain the tls.crt and tls.key values associated with each path to services in the cluster. If these secrets are not being created correctly, the connector deployment fails. connector deployment fails.
      <figure markdown>
-    ![Secret objects](img/secret_objects.png){ loading=lazy }
+    ![Secret objects](img/aws/secret_objects.png){ loading=lazy }
     </figure>
 
 ## Deployment with Helm
@@ -360,7 +360,7 @@ helm repo list
 ```
 Then, the chart will be ready to be used.
     <figure markdown>
-    ![Helm repo list](img/helm_rempo_list.png){ loading=lazy }
+    ![Helm repo list](img/aws/helm_rempo_list.png){ loading=lazy }
     </figure>
 
 We can also download the source code (releases) directly:
@@ -379,7 +379,7 @@ As we have seen, a Helm Chart is a package that contains all the necessary resou
 In the source code we can see that each of the components is presented as a sub-chart, which in turn has its own templates, dependencies, sub-charts and configuration files. configuration files.
 
 <figure markdown>
-![Project folder](img/project_folder.png){ loading=lazy }
+![Project folder](img/aws/project_folder.png){ loading=lazy }
 </figure>
 
 To finish defining everything necessary for the deployment of the connector, we will have to create a global configuration file (values.yaml) in which, for each of the components, we define the necessary parameters so that the connector can be deployed in our environment. The values that we define in this global configuration file, somehow complete or overwrite the configuration parameters that come by default in the helm chart. Let's start from the configuration file provided by FIWARE: [values.yaml](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/packet-delivery/data-space-connector/values.yaml).
@@ -535,7 +535,7 @@ During the connector deployment process, we are required to have a number of sec
 Some of these secrets contain the credentials that we are going to assign to certain services during their creation, so we will have to create them manually before starting the deployment. These secrets are:
 
 <figure markdown>
-![Required secrets](img/required_secrets.png){ loading=lazy }
+![Required secrets](img/aws/required_secrets.png){ loading=lazy }
 </figure>
 
 Example of a file to define a secret:
@@ -578,7 +578,7 @@ kubectl get all -n <Namespace>
 ```
 
 <figure markdown>
-![Pods](img/pods.png){ loading=lazy }
+![Pods](img/aws/pods.png){ loading=lazy }
 </figure>
 
 ### Access routes
@@ -676,13 +676,13 @@ If the installation with Helm does not finish successfully and you get a "Timed 
 During Keyrock deployment, the MySQL instance (initData section in values.yaml) is accessed. This MySQL instance has to be fully deployed for Keyrock to access it, which is not always the case. Keyrock makes 5 attempts (I tried to increase this but I didn't know how) and if it fails to access MySQL, it ends with an error.
 
 <figure markdown>
-![Timed out](./img/time_out_1.png){ loading=lazy }
+![Timed out](./img/aws/time_out_1.png){ loading=lazy }
 </figure>
 
 No particular solution to this problem has been found, other than to try deploying again from scratch. Usually, by the fifth attempt the MySQL component is ready and the Keyrock can finish successfully, but sometimes it can take a bit longer and for that reason the whole deployment fails.
 
 <figure markdown>
-![Timed out](./img/time_out_2.png){ loading=lazy }
+![Timed out](./img/aws/time_out_2.png){ loading=lazy }
 </figure>
 
 Before learning that the reason for this failure was due to a race condition, the following change was made to the code in the initData section of Keycloack in values.yaml:

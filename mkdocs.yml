@@ -26,26 +26,39 @@ nav:
       - getting_started/index.md
       - Nodes & Countries: getting_started/nodes_countries.md
       - Interoperability: getting_started/interoperability.md
-      - Data spaces: getting_started/data_spaces.md
+      - Data spaces: 
+        - getting_started/data_spaces/index.md
+        - Join one: getting_started/data_spaces/join.md
+        - Deploys one: getting_started/data_spaces/deployment.md
       - Get involved: getting_started/get_involved.md
-      - Join a Data space: getting_started/connect_to_dataspace.md
-  - Data catalog: data_catalog.md
+  - Data catalog: 
+    - data_catalog/index.md
   - Guides:
       - documentation/index.md
-      - Lepus: documentation/lepus.md
-      - NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent: documentation/iot_agent.md
+      - Data Federation:
+        - documentation/data_federation/index.md
+        - NGSI-LD to NGSI-LD:
+          - documentation/data_federation/ngsild_to_ld/index.md
+        - NGSI-v2 to NGSI-LD:
+          - documentation/data_federation/ngsiv2_to_ld/index.md
+          - Lepus: documentation/data_federation/ngsiv2_to_ld/lepus.md
+          - FIWARE IoT-Agent: documentation/data_federation/ngsiv2_to_ld/iot_agent.md
+        - Custom brokers:
+          - documentation/data_federation/custom/index.md
       - Data Space Connectors: 
-        - Overview: documentation/data_space_connectors/status.md
+        - documentation/data_space_connectors/index.md
         - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
         - Fiware: 
             - documentation/data_space_connectors/fiware/index.md
-            - Deployment: documentation/data_space_connectors/fiware/data_space_deployment.md
-            - AWS deployment (Legacy): documentation/data_space_connectors/fiware/aws_deployment.md
-            - Local deployment (Legacy): documentation/data_space_connectors/fiware/local_deployment.md
-          # - FIWARE Ecosystem:
-          #     - documentation/data_space/fiware_ecosystem/index.md
-          #     - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
-          #         - documentation/data_space/fiware_ecosystem/mvds_iaas/index.md
+            - Legacy (v. 1.X.X):
+                - documentation/data_space_connectors/fiware/legacy_1.X.X/index.md
+                - Deployments:
+                  - AWS deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/aws_deployment.md
+                  - Local deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/local_deployment.md
+                  - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
+                      - documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/mvds_iaas/index.md
+            - Latest (v. 2.X.X):
+                - documentation/data_space_connectors/fiware/latest_2.X.X/index.md
   - AI services:
       - services/index.md
       - Minimal Interoperable AI Service: services/waste_collection.md
