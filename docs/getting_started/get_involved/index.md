@@ -1,3 +1,5 @@
+# Get involved
+
 CitCom.ai is a project **open to the European society, allowing any interested company or institution to join this ecosystem**. CitCom.ai's **core technology is data spaces**, which guarantee secure environments for data exchange.  
 
 ## What data are available?
@@ -11,7 +13,7 @@ There are multiple data spaces grouping different institutions (e.g. cities, com
 
     Explore available data within currently deployed data spaces.
 
-    [:octicons-arrow-right-24: Learn more](../data_catalog.md)
+    [:octicons-arrow-right-24: Learn more](../../data_catalog/index.md)
 
 </div>
 

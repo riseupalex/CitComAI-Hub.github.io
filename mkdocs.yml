@@ -27,9 +27,11 @@ nav:
       - Nodes & Countries: getting_started/nodes_countries.md
       - Interoperability: getting_started/interoperability.md
       - Data spaces: getting_started/data_spaces.md
-      - Get involved: getting_started/get_involved.md
-      - Join a Data space: getting_started/connect_to_dataspace.md
-  - Data catalog: data_catalog.md
+      - Get involved: 
+        - getting_started/get_involved/index.md
+        - Join a Data space: getting_started/get_involved/connect_to_dataspace.md
+  - Data catalog: 
+    - data_catalog/index.md
   - Guides:
       - documentation/index.md
       - Lepus: documentation/lepus.md
