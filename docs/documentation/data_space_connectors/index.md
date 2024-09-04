@@ -1,6 +1,10 @@
 ---
-title: Data Space Connectors status report
+title: Overview
 ---
+
+!!! Info
+
+    More information about Data Spaces [here](../../getting_started/data_spaces.md).
 
 ## Status overview of existing connectors
 

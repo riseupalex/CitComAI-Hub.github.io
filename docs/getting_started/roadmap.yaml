@@ -4,13 +4,11 @@
   icon: ':material-graph-outline:'
 - title: "[Interoperability](interoperability.md)"
   icon: ':material-hub-outline:'
-- title: "[Data Spaces](data_spaces.md)"
+- title: "[Data Spaces](data_spaces/index.md)"
   icon: ':material-database-outline:'
-- title: "[Get involved](./get_involved/index.md)"
+- title: "[Get involved](./get_involved.md)"
   icon: ':material-login:'
 - title: "[AI Services](../services/index.md)"
   icon: ':material/robot-outline:'
-# - title: AI Experimentation
-#   icon: ':material-bug:'
 #   # content: Lorem ipsum dolor sit amet.
 #   # sub_title: 2022-Q4

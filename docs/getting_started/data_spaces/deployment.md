@@ -21,19 +21,4 @@ This section describes how to deploy a Data Space from scratch in different scen
 
     This guide is a work in progress. It will be updated with more detailed in the next months.
 
-<!-- ### Trust Anchor
-
-### Data Space Connector -->
-
-
-## Data federation
-
-### Broker subscription NGSI-LD
-
-### Broker NGSI-v2 to NGSI-LD
-
-#### Lepus
-
-#### IoT Agent
-
-### Custom Broker
+## Data Federation

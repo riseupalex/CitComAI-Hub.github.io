@@ -13,7 +13,7 @@ There are multiple data spaces grouping different institutions (e.g. cities, com
 
     Explore available data within currently deployed data spaces.
 
-    [:octicons-arrow-right-24: Learn more](../../data_catalog/index.md)
+    [:octicons-arrow-right-24: Learn more](../data_catalog/index.md)
 
 </div>
 
@@ -32,6 +32,6 @@ In addition, access to a data space does not have to be only as a **consumer** o
 
     Understand the process of joining to an existing data space.
 
-    [:octicons-arrow-right-24: Learn more](connect_to_dataspace.md)
+    [:octicons-arrow-right-24: Learn more](data_spaces/join.md)
 
 </div>

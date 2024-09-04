@@ -15,4 +15,4 @@ Basically, a data space must be formed, at least, by the following components:
 
 !!! Tip "More details"
 
-    Overview of open-source data spaces connectors: [Overview section](../documentation/data_space_connectors/status.md)
+    Overview of open-source data spaces connectors: [Overview section](../../documentation/data_space_connectors/index.md)
