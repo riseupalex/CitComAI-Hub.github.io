@@ -11,4 +11,8 @@ Basically, a data space must be formed, at least, by the following components:
 
 - **Data Space Connector (DSC)**: Responsible for managing the communication between the different elements of the data space. It oversees managing authentication, authorization and data access control. There must be at least two DSCs, one per organization, to be able to affirm that a data space exists.
 
-![data space](img/basic_architectural_concepts_ids.png)
+![data_space](img/basic_architectural_concepts_ids.png)
+
+!!! Tip "More details"
+
+    Overview of open-source data spaces connectors: [Overview section](../documentation/data_space_connectors/status.md)
