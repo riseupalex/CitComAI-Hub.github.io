@@ -1,7 +1,7 @@
 # AWS deployment
 
 !!! warning
-    This guide is still a work in progress. Errors may appear.
+    Experimental guide. Errors may appear.
 
 ## AWS Account Preparation
 Here are the steps for preparing an AWS account to deploy a Red Hat OpenShift Service (ROSA) cluster.
