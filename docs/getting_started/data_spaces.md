@@ -3,7 +3,7 @@ Data spaces refer to structured and managed environments where data from various
 
 Data spaces support **interoperability**, ensuring that data from different sources can be combined and used while **complying with regulations** such as the GDPR and other EU directives. They provide the necessary infrastructure for managing data in a way that supports ethical considerations, cybersecurity, and the broader goals of creating a more digital and sustainable urban environment.
 
-In Citcom.ai, data spaces are pivotal in accelerating innovation by facilitating collaboration among different stakeholders. They offer a **secure** and compliant framework for data exchange, ensuring that the **AI solutions developed within the project are both reliable and aligned with European standards**. This emphasis on innovation and the potential for significant progress is sure to excite the audience.
+In CitCom.ai, data spaces are pivotal in accelerating innovation by facilitating collaboration among different stakeholders. They offer a **secure** and compliant framework for data exchange, ensuring that the **AI solutions developed within the project are both reliable and aligned with European standards**. This emphasis on innovation and the potential for significant progress is sure to excite the audience.
 
 Basically, a data space must be formed, at least, by the following components: 
 

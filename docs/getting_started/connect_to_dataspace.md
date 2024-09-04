@@ -2,7 +2,7 @@
 
 !!! warning
 
-    Citcom.ai uses data spaces based on [Fiware technology](https://github.com/FIWARE/data-space-connector/tree/main).
+    CitCom.ai uses data spaces based on [Fiware technology](https://github.com/FIWARE/data-space-connector/tree/main).
 
 
 To access to a data space, you mainly need: 

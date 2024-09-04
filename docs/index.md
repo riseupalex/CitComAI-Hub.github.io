@@ -12,7 +12,7 @@ template: home.html
 
     ---
 
-    Getting started in Citcom.ai Data Spaces.
+    Getting started in CitCom.ai Data Spaces.
 
     [:octicons-arrow-right-24: Learn more](./getting_started/index.md)
 
