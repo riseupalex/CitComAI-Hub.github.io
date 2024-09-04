@@ -12,5 +12,6 @@ The Citcom.ai project is organized into a **network** of specialized testing sit
 | *Lead*    | Denmark               | Belgium                | Spain                   |
 | *Members* | Denmark, Sweden, Finland       | Belgium, France, Luxembourg, The Netherlands | Spain, Italy, Poland, Germany |
 
+!!! Tip "More details"
 
-
+    Check [TEF sites analysis](./../tef/tef_list.md) section.
