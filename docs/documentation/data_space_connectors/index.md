@@ -4,7 +4,7 @@ title: Overview
 
 !!! Info
 
-    More information about Data Spaces [here](../../getting_started/data_spaces.md).
+    More information about Data Spaces [here](../../getting_started/data_spaces/index.md).
 
 ## Status overview of existing connectors
 
