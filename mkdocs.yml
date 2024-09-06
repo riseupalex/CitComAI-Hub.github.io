@@ -40,7 +40,7 @@ nav:
         - NGSI-LD to NGSI-LD:
           - documentation/data_federation/ngsild_to_ld/index.md
         - NGSI-v2 to NGSI-LD:
-          - documentation/data_federation/ngsiv2_to_ld/index.md
+          # - documentation/data_federation/ngsiv2_to_ld/index.md
           - Lepus: documentation/data_federation/ngsiv2_to_ld/lepus.md
           - FIWARE IoT-Agent: documentation/data_federation/ngsiv2_to_ld/iot_agent.md
         - Custom brokers:
