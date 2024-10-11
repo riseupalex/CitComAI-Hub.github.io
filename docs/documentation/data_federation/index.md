@@ -8,6 +8,6 @@ The federation arises in data spaces due to the need for collaboration and large
 
 | *Brokers communication* | **NGSI-LD** | **NGSI-v2** | **Custom** |
 | ----------- | ----------- | ----------- | ---------- |
-| **NGSI-LD** | [Subscription](./ngsild_to_ld/index.md) | [Lepus](./ngsiv2_to_ld/lepus.md) \| [IoT Agent](./ngsiv2_to_ld/iot_agent.md) | *not tested* |
+| **NGSI-LD** | *not tested*| [Lepus](./ngsiv2_to_ld/lepus.md) \| [IoT Agent](./ngsiv2_to_ld/iot_agent.md) | *not tested* |
 | **NGSI-v2** | [Lepus](./ngsiv2_to_ld/lepus.md) \| [IoT Agent](./ngsiv2_to_ld/iot_agent.md) | *not in data spaces* | *not tested* |
 | **Custom** | *not tested* | *not tested* | *not tested* |

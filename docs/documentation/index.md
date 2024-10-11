@@ -7,12 +7,29 @@ Reports and deployment guides of different components.
 
 ## How can I connect different data platforms or data spaces?
 
-The [data federation section](./data_federation/index.md) groups the guides to be able to communicate different brokers based on their technology.
+<div class="grid cards" markdown>
 
-- [NGSI-V2 to NGSI-LD](./data_federation/ngsiv2_to_ld/index.md)
-- [NGSI-LD to NGSI-LD](./data_federation/ngsild_to_ld/index.md)
-- [Custom brokers](./data_federation/custom/index.md)
+-   :material-store-search-outline:{ .lg .middle } __Data Federation__
+
+    ---
+
+    The *data federation section* groups the guides to be able to communicate different brokers based on their technology.
+
+    [:octicons-arrow-right-24: Learn more](./data_federation/index.md)
+
+</div>
+
 
 ## What data space connector technologies exist and how can I deploy a connector?
 
-The [Data Space Connectors section](./data_space_connectors/index.md) groups the guides.
+<div class="grid cards" markdown>
+
+-   :material-store-search-outline:{ .lg .middle } __Data Space Connector__
+
+    ---
+
+    The *Data Space Connectors section* groups the guides of data space connector technology.
+
+    [:octicons-arrow-right-24: Learn more](./data_space_connectors/index.md)
+
+</div>
