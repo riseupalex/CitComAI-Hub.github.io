@@ -6,12 +6,12 @@ The CitCom.ai project is organized into a **network** of specialized testing sit
 - **Central Node**: Located in the heart of Europe, this node emphasizes urban **mobility** and smart city solutions, testing technologies like autonomous vehicles and smart traffic systems.
 - **Southern Node**: This node concentrates on **connectivity** and telecommunications, ensuring robust and scalable solutions for both urban and rural settings.
 
-|           | The Nordic Super Node | The Central Super Node | The Southern Super Node |
-| -:        | :-------------------: | :--------------------: | :---------------------: |
-| *Focus Areas* | POWER              | MOVE                   | CONNECT                   |
-| *Lead*    | Denmark               | Belgium                | Spain                   |
-| *Members* | Denmark, Sweden, Finland       | Belgium, France, Luxembourg, The Netherlands | Spain, Italy, Poland, Germany |
+|               |  The Nordic Super Node   |            The Central Super Node            |    The Southern Super Node    |
+| ------------: | :----------------------: | :------------------------------------------: | :---------------------------: |
+| *Focus Areas* |          POWER           |                   MOBILITY                   |         CONNECTIVITY          |
+|        *Lead* |         Denmark          |                   Belgium                    |             Spain             |
+|     *Members* | Denmark, Sweden, Finland | Belgium, France, Luxembourg, The Netherlands | Spain, Italy, Poland, Germany |
 
-!!! Tip "More details"
+!!! Tip "Learn more about this"
 
-    Check [TEF sites analysis](./../tef/tef_list.md) section.
+    Each super node groups different TEF nodes/sites. Check the [TEF nodes](./../tef/index.md) section for further details.
