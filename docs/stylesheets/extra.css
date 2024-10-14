@@ -1,44 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.md-content {
+    min-height: 33rem !important;
+}
+
 :root {
+    /* Primary and accent colors */
     --md-primary-fg-color: black;
-    /* --md-primary-fg-color-alternative: #279989;
-    --md-primary-fg-color-alternative-hover: #008F77; */
-    --md-primary-fg-color-alternative: #0096AE;
-    --md-primary-fg-color-alternative-hover: #00869b;
-    --a-color: #4051b5 !important;
+    /* Blue */
+    --md-primary-bg-color: white;
+    --md-accent-fg-color: #0A9396;
+    /* Dark green */
+    --md-accent-bg-color: #0A9396;
+
+    /* Background and surface colors */
+    --md-default-bg-color: #ffffff;
+    /* White background */
+
+    --md-default-fg-color: #333333;
+    /* Dark text */
+
+    /* Other elements */
+    --md-paper-bg-color: #f5f5f5;
+    /* Slightly off-white for paper-like surfaces */
+    --md-paper-fg-color: #1b1f23;
+    /* Default dark color */
+}
+.md-button {
+    margin-top: 0.8rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Primary Button */ 
+.md-button.md-button--primary {
+    background-color: #0a9396 !important;
+    color: #fff !important;
+    border: 2px solid #0a9396 !important;
 }
 
-.md-typeset .md-button--primary {
-    background-color: var(--md-primary-fg-color-alternative);
-    border-color: var(--md-primary-fg-color-alternative);
-    color: var(--md-primary-bg-color);
+.md-button.md-button--primary:hover,
+.md-button.md-button--primary:focus {
+    background-color: transparent !important;
+    /* Darker shade on hover */
+    color: #fff !important;
+    border-color: #e0f7fa !important;
 }
 
-.tx-hero .md-button:focus,
-.tx-hero .md-button:hover {
-    background-color: var(--md-primary-fg-color-alternative-hover) !important;
-    border-color: var(--md-primary-fg-color-alternative-hover) !important;
+.md-button.md-button--primary-light {
+    background-color: #0a9396 !important;
+    color: #fff !important;
+    border: 2px solid #0a9396 !important;
 }
 
-.md-typeset .md-button:focus,
-.md-typeset .md-button:hover {
-    background-color: var(--md-primary-fg-color-alternative-hover) !important;
-    border-color: var(--md-primary-fg-color-alternative-hover) !important;
+.md-button.md-button--primary-light:hover,
+.md-button.md-button--primary-light:focus {
+    background-color: transparent !important;
+    /* Darker shade on hover */
+    color: #0a9396 !important;
+    border-color: #0a9396 !important;
 }
 
-.md-typeset a:focus,
-.md-typeset a {
-    color: var(--a-color);
+/* Secondary Button */
+.md-button {
+    background-color: #e0f7fa !important;
+    /* Light button */
+    color: #005f73 !important;
+    /* Text color */
+    border: 2px solid #e0f7fa !important;
 }
 
-.md-nav__item .md-nav__link--active,
-.md-nav__item .md-nav__link--active code {
-    color: var(--a-color);
+.md-button:hover,
+.md-button:focus {
+    background-color: transparent !important;
+    /* Match primary button color on hover/focus */
+    color: #fff !important;
+    /* Ensure text color is white on hover/focus */
+    border-color: #0a9396 !important;
 }
 
+/* Fix for  rendering SVGs in Safari */
 .md-nav__link svg {
-    /* Fix for  rendering SVGs in Safari */
     transform: translate(0, 0);
 }
-.md-main {
-    flex-grow: 1 !important;
+
+/* Link color */
+p>a {
+    color: var(--md-accent-fg-color) !important
+}
+
+td>a {
+    color: var(--md-accent-fg-color) !important
+}
+
+/* Make active page link color the accent color */
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
+    color: var(--md-accent-fg-color);
+}
+
+footer {
+    color: #fff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto;
+}
+
+.footer-column {
+    padding: 10px;
+}
+
+footer .footer-logo .citcom-logo {
+    width: 5rem;
+    filter: invert(100%);
+}
+
+footer .footer-logo .vrain-logo {
+    width: 5rem;
+    margin-left: 1rem;
+}
+
+footer .footer-tagline img {
+    width: 6rem;
+}
+
+footer .footer-tagline p {
+    font-size: 0.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    /* Extra padding for the icon */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--a-color);
+}
+
+body>div.md-container>main>div>div>article>div.grid.cards>ul>li:hover {
+    border-color: #0000;
+    box-shadow: var(--md-shadow-z2);
+    background-color: var(--md-typeset-table-color--light);
+}
+
+.md-typeset .emojione,
+.md-typeset .gemoji,
+.md-typeset .twemoji {
+    vertical-align: middle !important;
 }

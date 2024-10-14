@@ -1,5 +1,3 @@
-<!-- Custom HTML site displayed as the Home chapter -->
-
 {% extends "main.html" %}
 {% block tabs %}
 {{ super() }}
@@ -13,7 +11,7 @@
     }
 
     .md-content__inner {
-        margin: 0 0.8rem 2rem !important;
+        margin: 0 1.5rem 2.5rem !important;
     }
 
     .md-header__button.md-icon {
@@ -21,7 +19,7 @@
     }
 
     .md-main {
-        flex-grow: 0
+        flex-grow: 0;
     }
 
     .md-main__inner {
@@ -30,214 +28,60 @@
     }
 
     .tx-container {
-        padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), #0096AE 99%, #fff 99%)
+        padding: 2rem;
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), #0096AE 99%, #fff 99%);
+        /* Solid color background */
+        color: #fff;
+        /* Text color */
     }
 
     .tx-hero {
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        justify-content: center;
-    }
-
-    .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700
-    }
-
-    .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: 0 auto;
-    }
-
-    .tx-hero__image {
-        width: 20rem;
-        /* height: 17rem; */
-        order: 1;
-        /* padding-right: 2.5rem; */
-        padding-left: 3rem;
-    }
-
-    .tx-hero .md-button {
-        margin-top: .5rem;
-        margin-right: .5rem;
-        color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button:focus,
-    .tx-hero .md-button:hover {
-        background-color: var(--md-accent-fg-color);
-        color: var(--md-default-bg-color);
-        border-color: var(--md-accent-fg-color)
-    }
-
-    .feature-item h2 svg {
-        height: 30px;
-        float: left;
-        margin-right: 10px;
-        transform: translateY(10%);
-    }
-
-    .top-hr {
-        margin-top: 42px;
-    }
-
-    .feature-item {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        box-sizing: border-box;
-        padding: 0 15px;
-        word-break: break-word
-    }
-
-    .feature-item h2 {
-        color: #333;
-        font-weight: 300;
-        font-size: 25px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: normal;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: inherit;
-    }
-
-    .feature-item p {
-        font-size: 16px;
-        line-height: 1.8em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        color: #111;
-        margin: 0 0 10px;
-        display: block;
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.4rem
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 3.5rem;
-            margin-bottom: 3.5rem;
-            margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-
-        .top-hr {
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .bottom-hr {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .feature-item {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .feature-item:hover {
-            background-color: #526cfe47;
-            border-radius: 3px;
-        }
-    }
-
-    .hr {
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .text-center {
-        text-align: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15px;
-        font-family: 'Lato', sans-serif;
-        font-size: 23px;
-        font-weight: 300;
-        padding-bottom: 10px;
-    }
-
-    .logos {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-flow: row wrap;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        flex: 1 1 auto;
-        padding: 25px;
-        max-height: 130px;
-        vertical-align: middle;
-    }
-
-    .hr-logos {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    .md-footer-meta__inner {
-        display: flex;
+        margin: 50px 3rem;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
+        position: relative;
     }
 
-    .md-footer-social {
-        padding-top: 20px;
+    .tx-hero h2 {
+        margin-bottom: 1.2rem;
+        color: #fff;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .tx-hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+        color: #e0f7fa;
+        /* Light color for contrast */
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    .tx-hero__content {
+        display: inline;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+        /* Ensure content is above the image */
     }
 </style>
+
 <!-- Main site Entry button descriptions -->
 <section class="tx-container">
     <div class="md-grid md-typeset">
         <div class="tx-hero">
-            <div class="tx-hero__image">
-                <img src="assets/smart-city.png" draggable="false">
-            </div>
+            <!-- <div class="tx-hero__image">
+                <img src="assets/smart-city.png" alt="Smart City" draggable="false">
+            </div> -->
             <div class="tx-hero__content">
-                <h1> CitCom.ai - VRAIN </h1>
-                <p>Welcome to VRAIN documentation for the CitCom.ai project. On the following site, you will find
-                    different guides and resources.
-                </p>
+                <h2>CitCom.ai | VRAIN</h2>
+                <p>Support & Documentation Hub for Testing AI in Smart Cities and Communities</p>
                 <a href="/welcome" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
                     Get started
                 </a>
@@ -248,7 +92,6 @@
         </div>
     </div>
 </section>
-
 
 {% endblock %}
 {% block site_nav %}{% endblock %}

@@ -3,8 +3,33 @@ icon: material/file-document-outline
 title: Documentation
 ---
 
-Reports and deployment guides of different components
+Reports and deployment guides of different components.
 
-- [Lepus](lepus.md)
-- [NGSI-V2 Broker to NGSI-LD via FIWARE IoT-Agent](./iot_agent.md)
-- [Data Space](data_space/index.md)
+## How can I connect different data platforms or data spaces?
+
+<div class="grid cards" markdown>
+
+-   :material-store-search-outline:{ .lg .middle } __Data Federation__
+
+    ---
+
+    The *data federation section* groups the guides to be able to communicate different brokers based on their technology.
+
+    [:octicons-arrow-right-24: Learn more](./data_federation/index.md)
+
+</div>
+
+
+## What data space connector technologies exist and how can I deploy a connector?
+
+<div class="grid cards" markdown>
+
+-   :material-store-search-outline:{ .lg .middle } __Data Space Connector__
+
+    ---
+
+    The *Data Space Connectors section* groups the guides of data space connector technology.
+
+    [:octicons-arrow-right-24: Learn more](./data_space_connectors/index.md)
+
+</div>
