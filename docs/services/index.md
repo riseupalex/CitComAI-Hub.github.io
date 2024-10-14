@@ -7,7 +7,7 @@ Minimal interoperable AI services for platforms compatible with MIMs:
 
 <div class="grid cards" markdown>
 
--   :material-truck-outline:{ .lg .middle } __MIAIS Waste Collection__
+-   :material-truck-outline:{ .lg .middle } __Waste Collection (MIAIS)__
 
     ---
 
@@ -19,7 +19,7 @@ Minimal interoperable AI services for platforms compatible with MIMs:
 
     ---
 
-    Optimize bins & dumpsters location.
+    Optimize bin & dumpster locations.
 
     [:octicons-arrow-right-24: Deployment guide](./wastecontainer_location_optimization.md)
 
