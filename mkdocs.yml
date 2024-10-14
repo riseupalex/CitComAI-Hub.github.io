@@ -1,4 +1,4 @@
-site_name: CitCom.ai - VRAIN
+site_name: CitCom.ai - Documentation
 site_url: https://citcom-vrain.github.io
 repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
 repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
@@ -18,46 +18,47 @@ theme:
     - navigation.footer
     - navigation.indexes
   palette:
-    - primary: custom
+    primary: custom
+    accent: custom
 nav:
   - welcome.md
   - Getting started:
       - getting_started/index.md
       - Nodes & Countries: getting_started/nodes_countries.md
       - Interoperability: getting_started/interoperability.md
-      - Data spaces: 
-        - getting_started/data_spaces/index.md
-        - Join one: getting_started/data_spaces/join.md
-        - Deploys one: getting_started/data_spaces/deployment.md
+      - Data spaces:
+          - getting_started/data_spaces/index.md
+          - Join one: getting_started/data_spaces/join.md
+          - Deploys one: getting_started/data_spaces/deployment.md
       - Get involved: getting_started/get_involved.md
-  - Data catalog: 
-    - data_catalog/index.md
+  - Data catalog:
+      - data_catalog/index.md
   - Guides:
       - documentation/index.md
       - Data Federation:
-        - documentation/data_federation/index.md
-        # - NGSI-LD to NGSI-LD:
-        #   - documentation/data_federation/ngsild_to_ld/index.md
-        - NGSI-v2 to NGSI-LD:
-          # - documentation/data_federation/ngsiv2_to_ld/index.md
-          - Lepus: documentation/data_federation/ngsiv2_to_ld/lepus.md
-          - FIWARE IoT-Agent: documentation/data_federation/ngsiv2_to_ld/iot_agent.md
+          - documentation/data_federation/index.md
+          # - NGSI-LD to NGSI-LD:
+          #   - documentation/data_federation/ngsild_to_ld/index.md
+          - NGSI-v2 to NGSI-LD:
+              # - documentation/data_federation/ngsiv2_to_ld/index.md
+              - Lepus: documentation/data_federation/ngsiv2_to_ld/lepus.md
+              - FIWARE IoT-Agent: documentation/data_federation/ngsiv2_to_ld/iot_agent.md
         # - Custom brokers:
         #   - documentation/data_federation/custom/index.md
-      - Data Space Connectors: 
-        - documentation/data_space_connectors/index.md
-        - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
-        - Fiware: 
-            - documentation/data_space_connectors/fiware/index.md
-            - Legacy (v. 1.X.X):
-                - documentation/data_space_connectors/fiware/legacy_1.X.X/index.md
-                - Deployments:
-                  - AWS deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/aws_deployment.md
-                  - Local deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/local_deployment.md
-                  - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
-                      - documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/mvds_iaas/index.md
-            - Latest (v. 2.X.X):
-                - documentation/data_space_connectors/fiware/latest_2.X.X/index.md
+      - Data Space Connectors:
+          - documentation/data_space_connectors/index.md
+          - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
+          - Fiware:
+              - documentation/data_space_connectors/fiware/index.md
+              - Legacy (v. 1.X.X):
+                  - documentation/data_space_connectors/fiware/legacy_1.X.X/index.md
+                  - Deployments:
+                      - AWS deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/aws_deployment.md
+                      - Local deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/local_deployment.md
+                      - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
+                          - documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/mvds_iaas/index.md
+              - Latest (v. 2.X.X):
+                  - documentation/data_space_connectors/fiware/latest_2.X.X/index.md
   - AI services:
       - services/index.md
       - Minimal Interoperable AI Service: services/waste_collection.md
@@ -69,8 +70,6 @@ nav:
       - AI Toolkit: toolbox/ai_toolkit.md
       - MIMs Toolkit: toolbox/mims_toolkit.md
       - Other Tools: toolbox/other_toolkit.md
-  - FAQS:
-      - faqs/index.md
 extra:
   generator: false
 markdown_extensions:
