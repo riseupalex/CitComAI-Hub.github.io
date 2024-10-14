@@ -16,7 +16,6 @@ theme:
     - content.code.copy
     - navigation.sections
     - navigation.footer
-    - navigation.instant
     - navigation.indexes
   palette:
     - primary: custom
