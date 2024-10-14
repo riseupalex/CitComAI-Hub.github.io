@@ -62,7 +62,7 @@ nav:
   - AI services:
       - services/index.md
       - Minimal Interoperable AI Service: services/waste_collection.md
-      - AI system Logging & Monitor: services/ai_logging_monitor.md
+      - Container Location Optimization: services/wastecontainer_location_optimization.md
   - TEF Nodes:
       - tef/index.md
   - Toolbox:
