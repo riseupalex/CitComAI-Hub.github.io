@@ -37,14 +37,14 @@ nav:
       - documentation/index.md
       - Data Federation:
         - documentation/data_federation/index.md
-        - NGSI-LD to NGSI-LD:
-          - documentation/data_federation/ngsild_to_ld/index.md
+        # - NGSI-LD to NGSI-LD:
+        #   - documentation/data_federation/ngsild_to_ld/index.md
         - NGSI-v2 to NGSI-LD:
-          - documentation/data_federation/ngsiv2_to_ld/index.md
+          # - documentation/data_federation/ngsiv2_to_ld/index.md
           - Lepus: documentation/data_federation/ngsiv2_to_ld/lepus.md
           - FIWARE IoT-Agent: documentation/data_federation/ngsiv2_to_ld/iot_agent.md
-        - Custom brokers:
-          - documentation/data_federation/custom/index.md
+        # - Custom brokers:
+        #   - documentation/data_federation/custom/index.md
       - Data Space Connectors: 
         - documentation/data_space_connectors/index.md
         - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
@@ -62,9 +62,9 @@ nav:
   - AI services:
       - services/index.md
       - Minimal Interoperable AI Service: services/waste_collection.md
+      - Container Location Optimization: services/wastecontainer_location_optimization.md
   - TEF Nodes:
       - tef/index.md
-      - TEF sites analysis: tef/tef_list.md
   - Toolbox:
       - toolbox/index.md
       - AI Toolkit: toolbox/ai_toolkit.md

@@ -91,6 +91,7 @@ For the development and implementation of different AI services, here we list a 
 | [DVC](https://dvc.org/) | ML Experiments Management with Git. |
 | **Operations** | |
 | [Whylogs](https://whylabs.ai/) | An open-source data logging library for machine learning models and data pipelines. Provides visibility into data quality & model performance over time. Supports privacy-preserving data collection, ensuring safety & robustness. |
+| [AI system Logging & Monitor](../toolbox/ai_logging_monitor.md) | AI system Logging & Monitor (RECICLAI) |
 | [Hive](https://hive.apache.org/) | The Apache Hive ™ is a distributed, fault-tolerant data warehouse system that enables analytics at a massive scale and facilitates reading, writing, and managing petabytes of data residing in distributed storage using SQL. |
 | **ETL** | |
 | [Airbyte](https://airbyte.com/) | The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted. |

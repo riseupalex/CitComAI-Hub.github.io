@@ -5,6 +5,6 @@ CitCom.ai project **embraces minimal interoperability mechanisms (MIMs)** as par
 
 In particular, MIMs help create a common framework for AI applications, data management, and public administration tools, ensuring that these systems can work together seamlessly across different cities and regions. This alignment with MIMs ensures that the AI tools developed under the CitCom.AI project are not only practical but also scalable and adaptable to various local needs​.
 
-!!! Tip "More details"
+!!! Tip "Learn more about this"
 
     Check [MIMs Toolkit](./../toolbox/mims_toolkit.md) section or [OASC MIMs 2024](https://mims.oascities.org/) for more details.
