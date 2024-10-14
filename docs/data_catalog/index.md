@@ -17,9 +17,9 @@ The data catalog is a centralized hub to keep track of available datasets. It is
 
 | Dataset             | Super Node | TEF Node      | Owner                 | Follows SDM | Data Model                                                                                                              | Get Access                                    |
 | ------------------- | ---------- | ------------- | --------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| WasteContainer      | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md)     | [Contact owner](mailto:vsanchofe@valencia.es) |
-| TrafficFlowObserved | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/environment/-/blob/main/AirQualityObserved/spec.md)     | [Contact owner](mailto:vsanchofe@valencia.es) |
-| AirQualityObserved  | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/transportation/-/blob/main/TrafficFlowObserved/spec.md) | [Contact owner](mailto:vsanchofe@valencia.es) |
+| WasteContainer      | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md)     | [Contact owner](https://valencia.opendatasoft.com/pages/home/) |
+| TrafficFlowObserved | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/environment/-/blob/main/AirQualityObserved/spec.md)     | [Contact owner](https://valencia.opendatasoft.com/pages/home/) |
+| AirQualityObserved  | Southern   | València City | València City Council | Partially   | [See specification](https://gitlab.com/vlci-public/models-dades/transportation/-/blob/main/TrafficFlowObserved/spec.md) | [Contact owner](https://valencia.opendatasoft.com/pages/home/) |
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
