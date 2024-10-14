@@ -1,5 +1,5 @@
 # Minimal Interoperable AI Service (MIAIS) - Waste Collection 
-[Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--primary }
+[Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--primary-light }
 
 <figure markdown>
   ![Waste Collection](img/waste_collection.gif){ loading=lazy }

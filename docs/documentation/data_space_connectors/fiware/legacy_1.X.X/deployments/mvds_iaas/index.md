@@ -3,7 +3,7 @@
 !!! warning
     This guide is still a work in progress. Errors may appear.
 
-[Repository :simple-github:](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure){ .md-button .md-button--primary }
+[Repository :simple-github:](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure){ .md-button .md-button--primary-light }
 
 The Minimum Viable Data Space Infrastructure as a Service (MVDS-IaaS) is a set of components that are necessary to deploy a Data Space. The MVDS-IaaS is based on the [FIWARE](https://www.fiware.org/) ecosystem and is designed to be deployed on top of a Kubernetes cluster. The MVDS-IaaS is composed of the following components:
 
