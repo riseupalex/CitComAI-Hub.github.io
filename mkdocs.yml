@@ -65,7 +65,6 @@ nav:
       - AI system Logging & Monitor: services/ai_logging_monitor.md
   - TEF Nodes:
       - tef/index.md
-      - TEF sites analysis: tef/tef_list.md
   - Toolbox:
       - toolbox/index.md
       - AI Toolkit: toolbox/ai_toolkit.md
