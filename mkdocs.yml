@@ -29,7 +29,7 @@ nav:
       - Data spaces:
           - getting_started/data_spaces/index.md
           - Join one: getting_started/data_spaces/join.md
-          - Deploys one: getting_started/data_spaces/deployment.md
+          - Deploy one: getting_started/data_spaces/deployment.md
       - Get involved: getting_started/get_involved.md
   - Data catalog:
       - data_catalog/index.md
