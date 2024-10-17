@@ -57,8 +57,8 @@ nav:
                       - Local deployment: documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/local_deployment.md
                       - Minimum Viable Data Space Infrastructure (MVDS-IaaS):
                           - documentation/data_space_connectors/fiware/legacy_1.X.X/deployments/mvds_iaas/index.md
-              - Latest (v. 2.X.X):
-                  - documentation/data_space_connectors/fiware/latest_2.X.X/index.md
+              # - Latest (v. 2.X.X):
+              #     - documentation/data_space_connectors/fiware/latest_2.X.X/index.md
   - AI services:
       - services/index.md
       - Minimal Interoperable AI Service: services/waste_collection.md
