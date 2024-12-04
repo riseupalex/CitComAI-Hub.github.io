@@ -13,7 +13,7 @@ jobs:
     if: |
       contains(github.event.issue.labels.*.name, 'new_dataset') &&
       github.event.issue.state == 'open'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: "Issue notification of start of processing"
@@ -29,7 +29,7 @@ jobs:
 
   csv-processing:
     needs: issue-notification
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: "Clone the repository into the GitHub Actions"
@@ -71,7 +71,7 @@ jobs:
   csv-error-handling:
     needs: csv-processing
     if: ${{ failure() }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     
@@ -95,7 +95,7 @@ jobs:
   
   close-issue:
     needs: csv-processing
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
 
