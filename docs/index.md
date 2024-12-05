@@ -15,6 +15,9 @@ body > header > nav > div.md-header__title.md-header__title--active > div > div:
 .package-icon{
     width: 5rem;
 }
+body > div.md-container > main > div > div > article > a{
+    display: none
+}
 </style>
 
 <div style="text-align: center;">
