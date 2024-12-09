@@ -1,6 +1,7 @@
 site_name: CitCom.ai | VRAIN
 site_url: https://citcom-vrain.github.io
 repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
+edit_uri: edit/main/docs/
 repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
 copyright: Copyright &copy; 2023 - 2024 CitCom.ai - VRAIN
 site_dir: public
@@ -14,6 +15,7 @@ theme:
   favicon: assets/logo.png
   features:
     - content.code.copy
+    - content.action.edit
     - navigation.sections
     - navigation.footer
     - navigation.indexes
@@ -108,5 +110,9 @@ markdown_extensions:
   - pymdownx.tilde
   - neoteroi.timeline
 plugins:
+  - git-authors:
+      show_email_address: false
   - search
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
