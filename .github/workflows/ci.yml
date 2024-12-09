@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for git authors and commit dates
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
