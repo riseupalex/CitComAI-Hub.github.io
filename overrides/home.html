@@ -1,0 +1,97 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    .md-footer-meta__inner {
+        margin-top: 0 !important;
+    }
+
+    .md-source-file {
+        display: none !important;
+    }
+
+    .md-content__inner {
+        margin: 0 1.5rem 2.5rem !important;
+    }
+
+    .md-header__button.md-icon {
+        display: none !important;
+    }
+
+    .md-main {
+        flex-grow: 0;
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    .tx-container {
+        padding: 2rem;
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), #0096AE 99%, #fff 99%);
+        /* Solid color background */
+        color: #fff;
+        /* Text color */
+    }
+
+    .tx-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 3rem;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .tx-hero h2 {
+        margin-bottom: 1.2rem;
+        color: #fff;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .tx-hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+        color: #e0f7fa;
+        /* Light color for contrast */
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    .tx-hero__content {
+        display: inline;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+        /* Ensure content is above the image */
+    }
+</style>
+
+<!-- Main site Entry button descriptions -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <!-- <div class="tx-hero__image">
+                <img src="assets/smart-city.png" alt="Smart City" draggable="false">
+            </div> -->
+            <div class="tx-hero__content">
+                <h2>CitCom.ai | VRAIN</h2>
+                <p>Support & Documentation Hub for Testing AI in Smart Cities and Communities</p>
+                <a href="/welcome" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
+                    Get started
+                </a>
+                <a href="https://github.com/CitCom-VRAIN" title="{{ lang.t('source.link.title') }}" class="md-button">
+                    Go to GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block site_nav %}{% endblock %}
