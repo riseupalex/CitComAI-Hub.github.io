@@ -5,7 +5,10 @@ from pathlib import Path
 import chardet
 import pandas as pd
 
-from scripts.csv_to_markdown.utils import load_config
+try:
+    from scripts.csv_to_markdown.utils import load_config
+except ModuleNotFoundError:
+    from utils import load_config
 
 
 def detect_encoding(file_path: Path) -> Optional[str]:

@@ -1,21 +1,21 @@
 metadata:
+  DATASET-NAME:
+    table_column: "Dataset"
   SUPER-NODE:
     table_column: "Super Node"
   TEF-NODE:
-    table_column: ""
-  SITE:
     table_column: "TEF Node"
-  DATASET:
-    table_column: "Dataset"
+  SITE:
+    table_column: "Site"
   DATA-MODEL:
-    table_column: ""
-  FREQUENCY:
-    table_column: ""
+    table_column: "Data Model"
+  SAMPLIG-TIME:
+    table_column: "Sampling Time"
   HISTORICAL:
-    table_column: ""
-  DATASET OWNER:
+    table_column: "Historical"
+  OWNER:
     table_column: "Owner"
-  CONTACT:
+  GET-ACCESS:
     table_column: "Get Access"
 
 dataset:
