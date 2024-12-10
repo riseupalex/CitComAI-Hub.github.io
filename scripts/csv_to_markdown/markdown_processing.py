@@ -3,8 +3,12 @@ import concurrent.futures
 import re
 import pandas as pd
 
-from scripts.csv_to_markdown.utils import load_config
-from scripts.csv_to_markdown.csv_processing import process_csv
+try:
+    from scripts.csv_to_markdown.utils import load_config
+    from scripts.csv_to_markdown.csv_processing import process_csv
+except ModuleNotFoundError:
+    from utils import load_config
+    from csv_processing import process_csv
 
 
 class MarkdownTable:
@@ -142,9 +146,10 @@ class MarkdownTable:
             - AssertionError: If any of the keys in new_values are not found in
                 the table columns.
         """
-        assert all(
-            map(lambda x: x in self.table_columns, new_values.keys())
-        ), f"Metadata keys not found in table columns: {new_values.keys()}"
+        eq_columns = set(self.table_columns) - set(new_values.keys())
+        assert not any(
+            eq_columns
+        ), f"Metadata keys not found in table columns: {list(eq_columns)}"
 
         new_row = (
             "| "
@@ -155,7 +160,7 @@ class MarkdownTable:
         self.idx_range_table["end"] += 1
         self.lines.insert(self.idx_range_table["end"], new_row)
 
-    def modify_cell(self, column_name: str, idx_row_edit: int, new_value: str):
+    def modify_cell(self, column_name: str, new_value: str, idx_row_edit: int = None):
         """
         Modify the value of a specific cell in the markdown table.
 
@@ -176,6 +181,11 @@ class MarkdownTable:
         assert (
             column_name in self.table_columns
         ), f"Column '{column_name}' not found in table columns: {self.table_columns}"
+        idx_row_edit = (
+            self.idx_range_table["end"] - self.idx_range_table["start"]
+            if idx_row_edit is None
+            else idx_row_edit
+        )
         column_index = self.table_columns.index(column_name)
 
         table_row = self._md_table_to_lst(
@@ -191,6 +201,7 @@ def markdown_page(
     dict_metadata: dict,
     df_table: pd.DataFrame,
     index_md_path: Path,
+    metadata_path: Path,
     metadata_table_md: dict,
 ):
     ############################################################################
@@ -208,12 +219,32 @@ def markdown_page(
     # the new dataset.                                                         #
     ############################################################################
     md_table = df_table.to_markdown(index=False)
+    # replace nan values with empty string
+    md_table = re.sub(r"nan", "", md_table)
 
-    # with open("prueba.md", "w") as md_file:
-    #     # md_file.write(tableMd.get_markdown)
-    #     md_file.write(md_table)
+    ############################################################################
+    # Part 3: Metadata markdown creation                                       #
+    ############################################################################
+    metadata_path.mkdir(parents=True, exist_ok=True)
+    md_metadata_f_name = f"{str(new_row_colVal.get("Super Node")).lower()}_{str(new_row_colVal.get("TEF Node")).lower()}_{str(new_row_colVal.get("Site")).lower()}.md"
 
-    return tableMd.get_markdown, md_table
+    if not (metadata_path / md_metadata_f_name).exists():
+        md = f"# Super Node: {new_row_colVal.get('Super Node')} | TEF Node: {new_row_colVal.get('TEF Node')}\n\n"
+        with open(metadata_path / md_metadata_f_name, "w") as md_file:
+            md_file.write(md)
+
+    md_table = (
+        f"## Site: {new_row_colVal.get('Site')} | {new_row_colVal.get('Dataset')} \n\n"
+        + md_table
+        + "\n\n"
+    )
+
+    tableMd.modify_cell(
+        "Dataset",
+        f"[{new_row_colVal.get('Dataset')}]({metadata_path / md_metadata_f_name})",
+    )
+
+    return tableMd.get_markdown, (md_table, metadata_path / md_metadata_f_name)
 
 
 if __name__ == "__main__":
@@ -250,14 +281,16 @@ if __name__ == "__main__":
 
     # Markdown processing
     for file_name, (metadata, df) in csv_processed.items():
-        # print(f"File name: {file_name}")
-        # print("Metadata:")
-        # print(metadata)
-        # print("Dataframe:")
-        # print(df)
-        markdown_page(
+
+        md_table, (md_metadata, metadata_pth) = markdown_page(
             metadata,
             df,
             Path(config_yml["markdowns"]["index"]),
+            Path(config_yml["markdowns"]["dataset_details"]),
             METADATA_TABLE_MD,
         )
+
+        # with open(metadata_pth, "a") as md_file:
+        #     md_file.write(md_metadata)
+        with open("test_new_page.md", "w") as md_file:
+            md_file.write(md_table)

@@ -33,6 +33,7 @@ body {
     --md-paper-fg-color: #1b1f23;
     /* Default dark color */
 }
+
 .md-button {
     margin-top: 0.8rem;
     margin-left: 0.2rem;
@@ -42,7 +43,8 @@ body {
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* Primary Button */ 
+
+/* Primary Button */
 .md-button.md-button--primary {
     background-color: #0a9396 !important;
     color: #fff !important;
@@ -178,4 +180,8 @@ body>div.md-container>main>div>div>article>div.grid.cards>ul>li:hover {
 .md-typeset .gemoji,
 .md-typeset .twemoji {
     vertical-align: middle !important;
+}
+
+body>div.md-container>main>div>div.md-content>article>a.md-content__button.md-icon::after {
+    content: "Contribute to this page";
 }

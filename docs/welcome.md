@@ -10,6 +10,12 @@ The [CitCom.ai](https://citcom.ai) project is an ambitious **European Union init
 
 The initiative is particularly valuable for companies looking to understand and comply with new EU laws surrounding AI, providing them with technical support, access to high-performance computing, digital twins, and other advanced tools. It also serves as a resource for public organizations to learn about and procure innovative AI solutions.
 
+<br>
+<figure markdown="span">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-wiVzj51lg0?si=RBL-LdvWbwCx-mgP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
+<br>
+
 
 !!! Tip "Next steps"
 

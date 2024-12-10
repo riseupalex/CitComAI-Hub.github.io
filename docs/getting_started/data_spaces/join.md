@@ -13,7 +13,7 @@ To access to a data space, you mainly need:
 2. **A data space connector**: To be able to communicate with the data space. 
 Data Space Deployment. 
 
-## Sing Up
+## Sig Up
 
 !!! warning "Current sing up process"
 

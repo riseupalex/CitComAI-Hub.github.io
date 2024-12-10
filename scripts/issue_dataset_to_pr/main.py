@@ -68,11 +68,17 @@ def main(git_token: str, repo_name: str, issue_number: str, config_yml: dict):
             )
         )
         MD_INDEX_PAGE = Path(cfg_yml["markdowns"]["index"])
+        MD_METADATA_PAGE = Path(cfg_yml["markdowns"]["dataset_details"])
         for file_name, (metadata, df) in csv_content.items():
-            mod_page, _ = markdown_page(metadata, df, MD_INDEX_PAGE, METADATA_TABLE_MD)
-            # save the markdown file (mod_page) in MD_INDEX_PAGE
+            main_table_page, (metadata_page, metadata_path) = markdown_page(
+                metadata, df, MD_INDEX_PAGE, MD_METADATA_PAGE, METADATA_TABLE_MD
+            )
+            # add new table to the main table page
+            with open(metadata_path, "a") as md_file:
+                md_file.write(metadata_page)
+            # save the markdown file (main_table_page) in MD_INDEX_PAGE
             with open(MD_INDEX_PAGE, "w") as md_file:
-                md_file.write(mod_page)
+                md_file.write(main_table_page)
 
     # GitHub API
     GIT = Github(git_token)
