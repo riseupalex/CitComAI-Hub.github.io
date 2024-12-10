@@ -16,6 +16,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://citcom-vrain.github.io/data_catalog/instructions/</loc>
+         <lastmod>2024-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://citcom-vrain.github.io/data_catalog/metadata_datasets/south_spain_valencia/</loc>
+         <lastmod>2024-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://citcom-vrain.github.io/documentation/</loc>
          <lastmod>2024-12-10</lastmod>
          <changefreq>daily</changefreq>
