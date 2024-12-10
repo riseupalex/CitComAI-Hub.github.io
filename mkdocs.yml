@@ -8,6 +8,9 @@ site_dir: public
 extra_css:
   - stylesheets/extra.css
   - stylesheets/neoteroi-mkdocs.css
+  - assets/css/data_catalog.css
+extra_javascript:
+  - assets/js/data_catalog.js
 theme:
   custom_dir: docs/overrides
   name: material
