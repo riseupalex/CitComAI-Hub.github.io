@@ -21,8 +21,8 @@ title: Data Catalog
 <div markdown>
 The data catalog is a centralized hub to keep track of available datasets. It is regularly updated to include new data as it becomes available in any TEF node. If you want access to any dataset, please click "Contact" to reach the owners.
 
+!!! question "[How to add new datasets?](./instructions.md)"
 </div>
-<!-- !!! question "[How to add new datasets?](./instructions.md)" -->
 
 [:simple-github: Add New Datasets ](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/issues/new/choose){ .md-button .md-button--primary-light }
 </div>
@@ -47,5 +47,5 @@ The data catalog is a centralized hub to keep track of available datasets. It is
 
 | Dataset | Super Node | TEF Node | Site | Data Model | Sampling Time | Historical | Owner | Get Access |
 | ------- | ---------- | -------- | ---- | ---------- | ------------- | ---------- | ----- | ---------- |
-|  [Wate Container](docs/data_catalog/metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md?ref_type=heads | RealTime | From 2000 | València City Council | https://valencia.opendatasoft.com/pages/home/ |
-|  [Weather Forecast](docs/data_catalog/metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | https://gitlab.com/vlci-public/models-dades/weather/blob/main/WeatherForecast/spec.md | Daily | From 2010 | València City Council | https://valencia.opendatasoft.com/pages/home/ |
+|  [Waste Container](./metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | [gitlab_vlci](https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md?ref_type=heads) | RealTime | From 2000 | València City Council | [Contact](https://valencia.opendatasoft.com/pages/home/) |
+|  [Weather Forecast](./metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | [gitlab_vlci](https://gitlab.com/vlci-public/models-dades/weather/blob/main/WeatherForecast/spec.md) | Daily | From 2010 | València City Council | [Contact](https://valencia.opendatasoft.com/pages/home/) |

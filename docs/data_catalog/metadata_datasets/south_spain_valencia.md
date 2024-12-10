@@ -1,6 +1,6 @@
 # Super Node: South | TEF Node: Spain
 
-## Site: Valencia | Wate Container 
+## Site: Valencia | Waste Container 
 
 | ATTRIBUTE       | TYPE     | UNITS (SI)   | DESCRIPTION/COMMENTS                                                                                                                       |
 |:----------------|:---------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
