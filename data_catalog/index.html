@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../stylesheets/neoteroi-mkdocs.css">
     
+      <link rel="stylesheet" href="../assets/css/data_catalog.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1478,16 +1480,42 @@
 
   <h1>Data Catalog</h1>
 
+<script>
+    // Hide sidebar. This script is only executed in the data catalog page.
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.md-sidebar--secondary');
+        if (document.querySelector('.catalog-header') && sidebar) {
+            sidebar.style.display = 'none';
+            sidebar.style.width = '0';
+            sidebar.style.padding = '0';
+            sidebar.style.margin = '0';
+        }
+    });
+</script>
+
+<div class="catalog-header">
+<div>
 <p>The data catalog is a centralized hub to keep track of available datasets. It is regularly updated to include new data as it becomes available in any TEF node. If you want access to any dataset, please click "Contact" to reach the owners.</p>
+</div>
+<!-- !!! question "[How to add new datasets?](./instructions.md)" -->
+<p><a class="md-button md-button--primary-light" href="https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/issues/new/choose"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> Add New Datasets </a></p>
+</div>
 <!-- Search input -->
 <div class="search-container">
-    <label class="md-search__icon md-icon" for="__search">
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-    </label>
-    <input type="text" id="searchInput" placeholder="Search for names..." />
+    <div class="search-wrapper">
+        <label class="md-search__icon md-icon" for="searchInput">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        </label>
+        <input type="text" id="searchInput" placeholder="Search for datasets..." />
+    </div>
+    <button id="toggleFilters">
+        <span class="filter-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12v7.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-2.01-2.01a.989.989 0 0 1-.29-.83V12h-.03L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L14.03 12H14Z"/></svg>
+        </span>
+        <span class="check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        </span>
+    </button>
 </div>
 
 <table>
@@ -1496,71 +1524,28 @@
 <th>Dataset</th>
 <th>Super Node</th>
 <th>TEF Node</th>
-<th>Owner</th>
-<th>Follows SDM</th>
+<th>Site</th>
 <th>Data Model</th>
+<th>Sampling Time</th>
+<th>Historical</th>
+<th>Owner</th>
 <th>Get Access</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WasteContainer</td>
-<td>Southern</td>
-<td>València City</td>
-<td>València City Council</td>
-<td>Partially</td>
-<td><a href="https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md">See specification</a></td>
-<td><a href="https://valencia.opendatasoft.com/pages/home/">Contact owner</a></td>
-</tr>
-<tr>
-<td>TrafficFlowObserved</td>
-<td>Southern</td>
-<td>València City</td>
-<td>València City Council</td>
-<td>Partially</td>
-<td><a href="https://gitlab.com/vlci-public/models-dades/environment/-/blob/main/AirQualityObserved/spec.md">See specification</a></td>
-<td><a href="https://valencia.opendatasoft.com/pages/home/">Contact owner</a></td>
-</tr>
-<tr>
-<td>AirQualityObserved</td>
-<td>Southern</td>
-<td>València City</td>
-<td>València City Council</td>
-<td>Partially</td>
-<td><a href="https://gitlab.com/vlci-public/models-dades/transportation/-/blob/main/TrafficFlowObserved/spec.md">See specification</a></td>
-<td><a href="https://valencia.opendatasoft.com/pages/home/">Contact owner</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Hide sidebar
-    document.querySelector('.md-sidebar--secondary').style.display = 'none';
-
-    // filter
-    const searchInput = document.getElementById("searchInput");
-    const table = document.querySelector("table");
-
-    searchInput.addEventListener("keyup", function() {
-        const filter = searchInput.value.toLowerCase();
-        const rows = table.getElementsByTagName("tr");
-
-        for (let i = 1; i < rows.length; i++) {
-            const cells = rows[i].getElementsByTagName("td");
-            let found = false;
-
-            for (let j = 0; j < cells.length; j++) {
-                if (cells[j].textContent.toLowerCase().indexOf(filter) > -1) {
-                    found = true;
-                    break;
-                }
-            }
-
-            rows[i].style.display = found ? "" : "none";
-        }
-    });
-});
-</script>
 
 
 
@@ -1583,7 +1568,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-14T12:18:15+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-12-10T13:23:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-12-10</span>
   </span>
 
     
@@ -1603,11 +1588,11 @@ document.addEventListener("DOMContentLoaded", function() {
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20Z"/></svg>
       
     </span>
     <nav>
-      Joan Ciprià
+      Joan Ciprià, Sergio Marti
     </nav>
   </span>
 
@@ -1715,6 +1700,8 @@ document.addEventListener("DOMContentLoaded", function() {
         <script src="../js/timeago.min.js"></script>
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../assets/js/data_catalog.js"></script>
       
     
   </body>
