@@ -12,7 +12,7 @@
 | depth           | number   | m            | Container depth                                                                                                                            |
 | height          | number   | m            | Container height.                                                                                                                          |
 | fillingLevel    | number   |           | Percentage of container filling in parts by 1.                                                                                             |
-| temeprature     | number   | ÂºC          | Temperature inside the container.                                                                                                          |
+| temeprature     | number   | ºC          | Temperature inside the container.                                                                                                          |
 | c_factor        | number   |           | Multiplicative factor between [0 - 2] to adapt the measurement taken by the sensor with the visual % of filling that the client has of it. |
 
 ## Site: Valencia | Weather Forecast 
@@ -24,7 +24,7 @@
 | dateIssued         | date-time | ISO8601 UTC  | Date and time of issuance of the forecast in ISO8601 UTC format.    |
 | validFrom          | date-time | ISO8601 UTC  | Date and time of start of the validity period in ISO8601 UTC format |
 | validTo            | date-time | ISO8601 UTC  | Date and time of end of the validity period in ISO8601 UTC format.  |
-| temperatureSurface | number    | ÂºC          | Surface temperature.                                                |
+| temperatureSurface | number    | ºC          | Surface temperature.                                                |
 | windSpeed          | number    | m/s          | Wind speed at 10 meters high                                        |
-| dewPoint2m         | number    | ÂºC          | Dew point at 2 meters high.                                         |
+| dewPoint2m         | number    | ºC          | Dew point at 2 meters high.                                         |
 
