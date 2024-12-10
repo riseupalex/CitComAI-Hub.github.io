@@ -47,3 +47,5 @@ The data catalog is a centralized hub to keep track of available datasets. It is
 
 | Dataset | Super Node | TEF Node | Site | Data Model | Sampling Time | Historical | Owner | Get Access |
 | ------- | ---------- | -------- | ---- | ---------- | ------------- | ---------- | ----- | ---------- |
+|  [Wate Container](docs/data_catalog/metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | https://gitlab.com/vlci-public/models-dades/wastemanagement/-/blob/main/WasteContainer/spec.md?ref_type=heads | RealTime | From 2000 | València City Council | https://valencia.opendatasoft.com/pages/home/ |
+|  [Weather Forecast](docs/data_catalog/metadata_datasets/south_spain_valencia.md)  | South | Spain | Valencia | https://gitlab.com/vlci-public/models-dades/weather/blob/main/WeatherForecast/spec.md | Daily | From 2010 | València City Council | https://valencia.opendatasoft.com/pages/home/ |
