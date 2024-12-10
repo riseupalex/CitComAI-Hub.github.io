@@ -38,6 +38,7 @@ nav:
       - Get involved: getting_started/get_involved.md
   - Data catalog:
       - data_catalog/index.md
+      - data_catalog/instructions.md
   - Guides:
       - documentation/index.md
       - Data Federation:
