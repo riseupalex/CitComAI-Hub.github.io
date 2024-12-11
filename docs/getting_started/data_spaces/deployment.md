@@ -21,7 +21,7 @@ This section describes how to deploy a Data Space from scratch in different scen
 
 !!! warning
 
-    This guide is a work in progress. It will be updated with more detailed in the next months. [Terraform deployment](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure).
+    This guide is a work in progress. It will be updated with more detailed in the next months. [Terraform deployment](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/tree/main/examples/kind_minimal_ds_local).
 
 ## Data Federation
 
