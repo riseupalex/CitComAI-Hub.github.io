@@ -13,9 +13,9 @@ To access to a data space, you mainly need:
 2. **A data space connector**: To be able to communicate with the data space. 
 Data Space Deployment. 
 
-## Sig Up
+## Sign Up
 
-!!! warning "Current sing up process"
+!!! warning "Current sign up process"
 
     In general, it will be necessary to **contact via email the managers of the data space** so that they authorize our organization.
 
