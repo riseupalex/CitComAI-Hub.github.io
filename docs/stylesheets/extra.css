@@ -88,7 +88,7 @@ body {
     /* Match primary button color on hover/focus */
     color: #fff !important;
     /* Ensure text color is white on hover/focus */
-    border-color: #0a9396 !important;
+    border-color: #e0f7fa !important;
 }
 
 /* Fix for  rendering SVGs in Safari */
