@@ -44,13 +44,15 @@ As mentioned, a demo example with some dummy data has been provided so partners 
 git clone https://github.com/CitCom-VRAIN/waste-collection-demo.git && cd waste-collection-demo
 ```
 
-2. Init git submodules with the following command. This will clone and install a dead simple [ngsi-ld client library](https://github.com/CitCom-VRAIN/ngsild-client) in `lib` folder.
+2. Init git submodules with the following command. This will clone and install a dead simple [ngsi-ld client library](https://github.com/CitCom-VRAIN/ngsild-client) in `lib` folder. Please note that the library is for testing purposes only and lacks most functionality. However, it quickly allows you to implement your own methods to interact with the context broker.
 ```bash
 git submodule init && git submodule update
 ```
 
-3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose) installed. This will set-up an Orion-LD broker with a MongoDB database. Check out the [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) file for more details.
+3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose) installed. This will set-up an Orion-LD broker with a MongoDB database. Check out the [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) file for more details. Alternatively, the demo can also be deployed by using a Scorpio NGSI-LD Broker. If you feel more familiar with this case, switch the branch to `mvs-scorpiold` before running `docker compose up`:
 ```bash
+# Optional: Switch to Scorpio NGSI-LD Broker
+# git checkout mvs-scorpiold
 docker compose up
 ```
 
@@ -71,11 +73,7 @@ cp .env.example .env
 
 7. Then edit the `.env` file and replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
 ```bash
-PROTOCOL="http"
-ENDPOINT_CB="127.0.0.1:1026"
 OPENROUTESERVICE_API_KEY="Replace this string with your Openroute API key"
-WASTECONTAINERS_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"
-VEHICLEMODEL_CONTEXT="https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
 ```
 
 8. After editing the file and saving it, read the .env file:
@@ -112,10 +110,10 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
     Moreover, maybe your situation needs to consider some time restrictions or priorities. Check out the [Openroute service API specification](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md), which is powerful and includes many parameters to fit your optimization needs. To change/add additional query parameters, go over [`Optimization.py`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/services/Optimization.py) and [`Optimizer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/Optimizer.js) files.
 
 ??? tip "Authentication"
-      When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitCom-VRAIN/ngsild-client) library included in the example comes with authentication support, with optional service and subservice options. See the following code as a guide to include these features in your project:
+      When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitCom-VRAIN/ngsild-client) library included in the example does not come with authentication support. However, it is quite straightforward to extend it to meet authentication requirements. As an example, see the following code from the [Valencia](https://github.com/CitCom-VRAIN/waste-collection-demo/tree/valencia) TEF site implementation, which implementes [authentication for their NGSIv2 setup](https://github.com/CitCom-VRAIN/ngsild-client/blob/master/Authv2.py).
 
        ```python
-       from lib.ngsildclient.Auth import Auth
+       from lib.ngsildclient.Auth import Authv2
        from lib.ngsildclient.Client import Client
 
 
@@ -124,7 +122,7 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
        subservice = "/containers"
 
        # Authenticate
-       auth = Auth()
+       auth = Authv2()
        token = auth.get_auth_token_subservice(service, subservice)
 
        # Ngsi-ld broker client
@@ -134,7 +132,8 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
        context = os.environ.get("WASTECONTAINERS_CONTEXT")
        containers = client.get_all_entities_by_type("WasteContainer", context, 100, 0, service, subservice, token).json()
        ```
-      Then, declare the following environment variables in your `.env`
+      
+      Environment variables in `.env` file:
 
        ```bash
        AUTH_PROTOCOL="https"
@@ -143,14 +142,6 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
        AUTH_PASSWORD="xxxxx"
        ```
 
-       You can also check the [Valencia](https://github.com/CitCom-VRAIN/waste-collection-demo/tree/valencia) branch implementation to see how the authentication in NGSIv2 is made
-
-## Prediction service
-!!! info
-    This feature is still a work in progress. Thus, it is not available right now.
-
-In addition to the waste collection optimization, the service will include a prediction of waste containers filling level. The generated data from the AI service will be accessible following MIM1 and MIM2 recommendations.
-
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).
-- [ ] Solutions should be provided using Smart data models ([FleetVehicle](), [FleetVehicleOperation](), [Road]() and [RoadSegment]()).
+- [ ] Solutions offered by the AI service should also be provided following MIM1 and MIM2 recommendations. Eg: using Smart data models format like ([FleetVehicle](), [FleetVehicleOperation](), [Road]() and [RoadSegment]()).
