@@ -24,7 +24,7 @@ body > div.md-container > main > div > div > article > a{
 
 <img class="package-icon" src="./assets/package.png">
   <h1>Minimal Package for TEF nodes</h1>
-  <p>Work package 3 (WP3) provides the <strong>Minimal Package for TEF (Testing and Experimentation Facilities) nodes</strong>, which contains comprehensive <strong>guides, toolboxes, and deployment frameworks</strong> to ensure interoperability across a wide range of TEF nodes by defining a <strong>common reference architecture</strong>. Based on this architecture, it also provides support and examples to develop <strong>AI services</strong>.</p>
+  <p>Work package 3 (WP3) provides the <strong>Minimal Package for CitCom.ai TEF (Testing and Experimentation Facility) nodes</strong>, which contains comprehensive <strong>guides, toolboxes, and deployment frameworks</strong> to ensure interoperability across the wide range of TEF nodes by defining a <strong>common reference architecture</strong>. Based on this architecture, it also provides support and examples to develop <strong>AI services</strong>.</p> 
 </div>
 
 <br>
@@ -43,7 +43,7 @@ body > div.md-container > main > div > div > article > a{
 
     ---
 
-    Current status of Testing and Experimentation Facilities (TEF).
+    Testing and Experimentation Facility (TEF) nodes.
 
     [:octicons-arrow-right-24: Learn more](./tef/index.md)
 
