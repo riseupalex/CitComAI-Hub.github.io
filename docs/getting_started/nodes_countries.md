@@ -1,17 +1,18 @@
 # Nodes & Countries
 
-The CitCom.ai project is organized into a **network** of specialized testing sites known as **nodes**. These nodes are strategically distributed across different locations to cover a wide range of environments and use cases. The project is divided into three main __*super nodes*__, each with its own focus areas and satellite sub-nodes.
+CitCom is organized as three "supernodes" Nordic, Central, and South, with satellites and sub-nodes located across 11 countries in the European Union: Denmark, Sweden, Finland, the Netherlands, Belgium, Luxembourg, France, Germany, Spain, Poland, and Italy. 
 
-- **Nordic Node**: Focuses on innovations in **energy** management and sustainability, leveraging the expertise and infrastructure available in Northern Europe.
-- **Central Node**: Located in the heart of Europe, this node emphasizes urban **mobility** and smart city solutions, testing technologies like autonomous vehicles and smart traffic systems.
-- **Southern Node**: This node concentrates on **connectivity** and telecommunications, ensuring robust and scalable solutions for both urban and rural settings.
+- **Nordic Supernode** is focused on the theme "POWER." Nordic nodes work in areas that support smart cities and communities and focus on energy, environmental solutions, cyber security, ethics, and edge learning.
+- **Central Supernode** revolves around the "MOVE" theme. The node focuses more specifically on challenges related to mobility and logistics in cities and communities.
+- **Southern Supernode** revolves around the "CONNECT" theme. The supernode focuses more specifically on the need to securely connect citizens, infrastructures, AI, and robotics services in cities and communities. This theme and supernode will focus on innovations that provide intelligence to local infrastructures and city cross-sectoral services.
 
-|               |  The Nordic Super Node   |            The Central Super Node            |    The Southern Super Node    |
+Supernodes serve as regional hubs that aggregate expertise, resources, and best practices, thereby providing strategic oversight and ensuring that the testing environments remain closely aligned with the unique challenges and opportunities of their respective regions.
+
+|               |  The Nordic Supernode   |            The Central Supernode            |    The Southern Supernode    |
 | ------------: | :----------------------: | :------------------------------------------: | :---------------------------: |
 | *Focus Areas* |          POWER           |                   MOBILITY                   |         CONNECTIVITY          |
 |        *Lead* |         Denmark          |                   Belgium                    |             Spain             |
 |     *Members* | Denmark, Sweden, Finland | Belgium, France, Luxembourg, The Netherlands | Spain, Italy, Poland, Germany |
 
 !!! Tip "Learn more about this"
-
-    Each super node groups different TEF nodes/sites. Check the [TEF nodes](./../tef/index.md) section for further details.
+    Check the [TEF nodes](./../tef/index.md) section for further details.
