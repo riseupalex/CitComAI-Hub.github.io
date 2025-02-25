@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 body {
-    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -88,7 +85,7 @@ body {
     /* Match primary button color on hover/focus */
     color: #fff !important;
     /* Ensure text color is white on hover/focus */
-    border-color: #0a9396 !important;
+    border-color: #e0f7fa !important;
 }
 
 /* Fix for  rendering SVGs in Safari */
