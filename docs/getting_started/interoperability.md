@@ -1,10 +1,24 @@
-# Interoperability & MIMs
-[MIMs](https://mims.oascities.org/) stands for "Minimal Interoperability Mechanisms". These guidelines and standards were developed by the [Open & Agile Smart Cities (OASC)](https://oascities.org/) initiative to promote **interoperability** among different city systems and technologies, such as traffic management systems, waste management systems, and energy distribution systems. The idea is to ensure that data, systems, and services can be shared and used across various platforms without vendor lock-in, enabling a more cohesive and collaborative global marketplace for smart city solutions. MIMs address scenarios like integrating these different technologies, accessing data from various sources, and building interoperable solutions​.
+# Interoperability
+Interoperability is a key aspect of CitCom.ai’s approach to ensuring that data can be securely and effectively shared across different systems and organizations. 
 
-CitCom.ai project **embraces minimal interoperability mechanisms (MIMs)** as part of its approach. MIMs are crucial for ensuring interoperability and standardization within smart city solutions, a vital focus of the [Open & Agile Smart Cities (OASC)](https://oascities.org/) initiative. The CitCom.AI **project is aligned with these principles**, as it aims to develop AI-driven tools that are interoperable, transparent, and secure across different urban contexts.
+## IDSA Documentation
 
-In particular, MIMs help create a common framework for AI applications, data management, and public administration tools, ensuring that these systems can work together seamlessly across different cities and regions. This alignment with MIMs ensures that the AI tools developed under the CitCom.AI project are not only practical but also scalable and adaptable to various local needs​.
+- **Key Layers:**  
+  The IDS documentation emphasizes four primary layers—**technical**, **semantic**, **organizational**, and **legal**—that collectively underpin effective interoperability.
+
+- **Intra Data Space Interoperability:**  
+  Within a single Data Space, a unified governance framework ensures that all participants adhere to the same protocols and models.
+
+- **Cross-Data Space Interoperability:**  
+  When operating across multiple Data Spaces, additional coordination is required to bridge varying protocols and legal frameworks.
+
+For a comprehensive explanation and additional context, please refer to the original [IDS documentation on Interoperability in Data Spaces](https://docs.internationaldataspaces.org/ids-knowledgebase/idsa-rulebook/idsa-rulebook/3_interoperability).
+
+## MIMs
+[MIMs](https://mims.oascities.org/) stands for "Minimal Interoperability Mechanisms". These guidelines and standards were developed by the [Open & Agile Smart Cities (OASC)](https://oascities.org/) initiative to promote **interoperability** among different city systems and technologies, such as traffic management systems, waste management systems, and energy distribution systems. CitCom.ai project **embraces minimal interoperability mechanisms (MIMs)** as part of its approach. 
+
+
 
 !!! Tip "Learn more about this"
 
-    Check [MIMs Toolkit](./../toolbox/mims_toolkit.md) section or [OASC MIMs 2024](https://mims.oascities.org/) for more details.
+    Check [Interoperability in Data Spaces](https://docs.internationaldataspaces.org/ids-knowledgebase/idsa-rulebook/idsa-rulebook/3_interoperability) section from IDSA. Also check [MIMs Toolkit](./../toolbox/mims_toolkit.md) section or [OASC MIMs 2024](https://mims.oascities.org/) for more details.
