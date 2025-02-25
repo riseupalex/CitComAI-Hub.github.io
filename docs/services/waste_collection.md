@@ -109,7 +109,7 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
 
     Moreover, maybe your situation needs to consider some time restrictions or priorities. Check out the [Openroute service API specification](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md), which is powerful and includes many parameters to fit your optimization needs. To change/add additional query parameters, go over [`Optimization.py`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/services/Optimization.py) and [`Optimizer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/Optimizer.js) files.
 
-??? tip "Authentication"
+??? tip "Level 1: Authentication"
       When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitCom-VRAIN/ngsild-client) library included in the example does not come with authentication support. However, it is quite straightforward to extend it to meet authentication requirements. As an example, see the following code from the [Valencia](https://github.com/CitCom-VRAIN/waste-collection-demo/tree/valencia) TEF site implementation, which implementes [authentication for their NGSIv2 setup](https://github.com/CitCom-VRAIN/ngsild-client/blob/master/Authv2.py).
 
        ```python
@@ -141,6 +141,50 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
        AUTH_USER="xxxxx"
        AUTH_PASSWORD="xxxxx"
        ```
+
+??? tip "Level 2: Data Space Connector Authentication"
+      If your TEF has a data space connector deployed, you can use the `fdsauth` python library to authenticate and retrieve the corresponding token. To install `fdsauth`, simply use `pip`:
+      ```bash
+      pip install fdsauth
+      ```
+      Next, a DID (Decentralized Identifier) and the corresponding key-material is required. You can create such via:
+      ```bash
+      mkdir certs && cd certs
+      docker run -v $(pwd):/cert quay.io/wi_stefan/did-helper:0.1.1
+      ```
+
+      Then, use the following example code to obtain your authentication token:
+      ```python
+      from fdsauth import Consumer
+      import requests
+
+      consumer = Consumer(
+          keycloak_protocol="http",
+          keycloak_endpoint="keycloak.consumer-a.local",
+          keycloak_realm_path="realms/test-realm/protocol",
+          keycloak_user_name="test-user",
+          keycloak_user_password="test",
+          apisix_protocol="http",
+          apisix_endpoint="apisix-proxy.provider-a.local",
+          certs_path="./certs",
+      )
+
+      token = consumer.get_data_service_access_token()
+
+      try:
+          # Attempt to access data using the obtained service token. Get entities of type EnergyReport.
+          url = f"http://apisix-proxy.provider-a.local/ngsi-ld/v1/entities?type=EnergyReport"
+          headers = {
+              "Accept": "application/json",
+              "Authorization": f"Bearer {token}",
+          }
+          response = requests.get(url, headers=headers)
+          response.raise_for_status()
+          print(response.json())
+      except Exception as req_err:
+          print(f"Request error occurred: {req_err}")
+      ```
+      For more details, check out the [fdsauth repository](https://github.com/CitCom-VRAIN/fdsauth/).
 
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).
