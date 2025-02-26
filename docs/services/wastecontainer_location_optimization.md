@@ -46,7 +46,7 @@ cp .env.example .env
 ```
 
 
-5. Then edit the `.env` file and replace the `OPENROUTESERVICE_API_KEY` value with your own Openroute service API key.
+5. Then edit the `env` variables so they point to your real data platform.
 ```bash
 ENDPOINT_CB="127.0.0.1"
 ENDPOINT_CB_PORT="9090"
