@@ -1,0 +1,41 @@
+---
+title: Aarhus City Lab
+---
+
+## Overview
+
+## Data Platform
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align: center;">Specifications</th>
+  </tr>
+  <tr>
+    <td><strong>Data Broker<strong></td>
+    <td>
+      {{ config.extra.labels.data_brokers.fiware }}<br>
+      <strong>- API:</strong> {{ config.extra.labels.api_brokers.ngsi_ld }}<br>
+      <strong>- Version:</strong> Scorpio
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Data Source<strong></td>
+    <td><a href="https://www.os2.eu/os2iot">OS2IoT</a></td>
+  </tr>
+  <tr>
+    <td><strong>IdM &amp; Auth<strong></td>
+    <td>&lt;no_specified\></td>
+  </tr>
+  <tr>
+    <td><strong>Data Publication<strong></td>
+    <td>&lt;no_specified\></td>
+  </tr>
+</table>
+
+![aarhus_city_lab_arch](./img/aarhus_city_lab-arch.png)
+
+### European Data Space for Smart Communities (DS4SSCC)
+
+{{ config.extra.labels.ds4ssc_compliant.yes_comp.data_sources }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_broker }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_api }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_idm_auth }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_publication }}
+
+![aarhus_city_lab_arch-ds4sscc](./img/aarhus_city_lab_ds4sscc-arch.svg)
