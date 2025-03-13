@@ -39,6 +39,11 @@ nav:
   - Data catalog:
       - data_catalog/index.md
       - data_catalog/instructions.md
+  - Data Space:
+      - dataspace/index.md
+      - dataspace/trust_anchor.md
+      - dataspace/vc_issuer.md
+      - dataspace/connector.md
   - Guides:
       - documentation/index.md
       - Data Federation:
