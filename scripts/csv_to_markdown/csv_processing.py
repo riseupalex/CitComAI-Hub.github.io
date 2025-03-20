@@ -80,6 +80,9 @@ def process_csv(
 
         df_metadata = df.iloc[: len(key_values)].copy()
         df_metadata = df_metadata.dropna(axis=1, how="all")
+        # replace NaN with "no specific value"
+        df_metadata.fillna("*no specific value*", inplace=True)
+        
         assert df_metadata.shape[1] == 2, _msg_print(
             "Only the first two columns must be filled!"
         )
