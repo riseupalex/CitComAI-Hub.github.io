@@ -5,7 +5,7 @@ title: TEF Nodes
 
 Overview of the current Testing and Experimentation Facility (TEF) nodes / sites.
 
-| Node/Site                | Focus/Theme                              | Infrastructure                                  |
+| Node/Site                | Main Focus/Theme                         | Infrastructure                                  |
 | ------------------------ | ---------------------------------------- | ----------------------------------------------- |
 | ***Nordic Supernode***   | ***POWER***                              | ***Living labs, and research facilities***      |
 | DOLL Living Lab          | Energy-efficient solutions               | Physical testbed for energy-efficient lighting  |
@@ -20,7 +20,7 @@ Overview of the current Testing and Experimentation Facility (TEF) nodes / sites
 | Brussels (Belgium)       | Urban combined mobility                  | Urban mobility tracking and analytics           |
 | Eindhoven (Netherlands)  | Sustainable mobility                     | Smart intersection, sensor technology           |
 | Paris (France)           | Autonomous vehicles                      | Urban driving tracks, simulation testing        |
-| Luxembourg (Luxembourg)  | Electromobility                          | Prototyping, testing in electromobility         |
+| Luxembourg (Luxembourg)  | Electromobility                          | AI Prototyping, testing and assessment          |
 | ***Southern Supernode*** | ***CONNECT***                            | ***Urban, AI, robotics***                       |
 | Valencia (Spain)         | Smart Cities, Climate Mission            | Living lab, sensor network                      |
 | Milano (Italy)           | Urban regeneration, facility management  | Urban regeneration, high-tech features          |
