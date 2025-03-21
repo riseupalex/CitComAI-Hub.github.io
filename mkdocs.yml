@@ -72,20 +72,20 @@ nav:
   - TEF Nodes:
       - tef/index.md
       - Nordic - POWER: 
-        - tef/nordic_power/aarhus_city_lab.md
-        - tef/nordic_power/center_denmark.md
         - tef/nordic_power/doll_living_lab.md
-        - tef/nordic_power/dti.md
+        - tef/nordic_power/aarhus_city_lab.md
         - tef/nordic_power/dtu.md
+        - tef/nordic_power/dti.md
+        - tef/nordic_power/center_denmark.md
         - tef/nordic_power/gate21.md
         - tef/nordic_power/rise.md
         - tef/nordic_power/tampere.md
       - Central - MOVE:
+        - tef/central_move/mechelen.md
         - tef/central_move/brussels.md
         - tef/central_move/eindhoven.md
-        - tef/central_move/list.md
-        - tef/central_move/mechelen.md
         - tef/central_move/paris.md
+        - tef/central_move/list.md
       - South - CONNECT:
         - tef/south_connect/valencia.md
         - tef/south_connect/milano.md
