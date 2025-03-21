@@ -34,9 +34,9 @@ Overview of the current Testing and Experimentation Facility (TEF) nodes / sites
 
 | TEF Site | Node | Data Broker | API Broker | DS4SSCC Ref. Architecture |
 | -------- | ---- | ----------- | ---------- | ------------------------- |
-| [Valencia](./southern_connect/valencia.md) | Spain | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_v2 }} | |
-| [Milano](./southern_connect/milano.md) | Italy | {{ config.extra.labels.data_brokers.fiware }} |  | |
-| [Warsaw](./southern_connect/warsaw.md) | Poland |  |  | |
+| [Valencia](./south_connect/valencia.md) | Spain | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_v2 }} | |
+| [Milano](./south_connect/milano.md) | Italy | {{ config.extra.labels.data_brokers.fiware }} |  | |
+| [Warsaw](./south_connect/warsaw.md) | Poland |  |  | |
 
 <!-- | Node/Site                | Focus/Theme                              | Infrastructure                                  |
 | ------------------------ | ---------------------------------------- | ----------------------------------------------- |
