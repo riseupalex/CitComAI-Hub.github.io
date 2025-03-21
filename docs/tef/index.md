@@ -13,10 +13,10 @@ Overview of the current Testing and Experimentation Facility (TEF) nodes / sites
 | -------- | ---- | ----------- | ---------- | ------------------------- |
 | [DOLL Living Lab](./nordic_power/doll_living_lab.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
 | [Aarhus City Lab](./nordic_power/aarhus_city_lab.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
-| [DTU](./nordic_power/dtu.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | | |
+| [DTU](./nordic_power/dtu.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
 | [DTI](./nordic_power/dti.md) | Denmark |  | | |
 | [Center Denmark](./nordic_power/center_denmark.md) | Denmark | {{ config.extra.labels.data_brokers.kafka }} | {{ config.extra.labels.api_brokers.custom }} | |
-| [GATE21](./nordic_power/gate21.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | | |
+| [GATE21](./nordic_power/gate21.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
 | [Tampere](./nordic_power/tampere.md) | Finland | {{ config.extra.labels.data_brokers.iot_ticket }}​ | {{ config.extra.labels.api_brokers.custom }} | |
 | [RISE](./nordic_power/rise.md) | Sweden | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_v2 }} <br> {{ config.extra.labels.api_brokers.ngsi_ld }} | |
 
