@@ -39,9 +39,18 @@ nav:
   - Data catalog:
       - data_catalog/index.md
       - data_catalog/instructions.md
-  - Data Space:
+  - MV Data Space:
       - dataspace/index.md
-      - dataspace/trust_anchor.md
+      - Trust Frameworks:
+        - dataspace/trust_frameworks/index.md
+        - Gaia-X:
+            - dataspace/trust_frameworks/gaiax_clearing_house/index.md
+        - iShare: 
+            - dataspace/trust_frameworks/ishare/index.md
+        - Fiware Trust Anchor:
+            - dataspace/trust_frameworks/fiware_trust_anchor/index.md
+            - dataspace/trust_frameworks/fiware_trust_anchor/api_trusted_issuers_list.md
+            - dataspace/trust_frameworks/fiware_trust_anchor/api_trusted_issuers_registry.md
       - dataspace/vc_issuer.md
       - dataspace/connector.md
   - Guides:
