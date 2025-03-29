@@ -9,7 +9,7 @@ assignees: ''
 
 # New Dataset(s) Request
 
-Request to add new datasets to the [Citcom.ai documentation](https://citcom-vrain.github.io/data_catalog/). Follow the instructions to process your request correctly.
+Request to add new datasets to the [Citcom.ai documentation](https://citcomai-hub.github.io/data_catalog/). Follow the instructions to process your request correctly.
 
 ## Instructions
 
