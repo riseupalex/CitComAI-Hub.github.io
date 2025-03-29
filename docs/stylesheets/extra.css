@@ -10,6 +10,12 @@ body {
     color: #000;
     font-weight: 300;
 }
+
+/* Fix for rendering SVGs in Safari */
+.md-nav__link svg {
+    transform: translate(0, 0);
+}
+
 sup {
     font-size: 10px;
 }
