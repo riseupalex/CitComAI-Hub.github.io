@@ -1,8 +1,8 @@
 site_name: CitCom<sup>AI</sup> Hub
-site_url: https://citcom-vrain.github.io
-repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
+site_url: https://citcomai-hub.github.io
+repo_url: https://github.com/CitComAI-Hub/CitComAI-Hub.github.io
 edit_uri: edit/main/docs/
-repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
+repo_name: CitComAI-Hub/CitComAI-Hub.github.io
 copyright: Copyright &copy; 2023 - 2024 CitCom.ai Hub
 site_dir: public
 extra_css:
