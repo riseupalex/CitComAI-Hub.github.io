@@ -1,6 +1,5 @@
 ---
-title: CitCom<sup>AI</sup> Hub
-template: home.html
+    template: home.html
 ---
 <style>
 /* Hide title on the home page */
