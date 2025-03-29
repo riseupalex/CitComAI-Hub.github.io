@@ -12,7 +12,7 @@
         }
     },
     // "containerEnv": {
-    //     "PYTHONPATH": "/workspaces/CitCom-VRAIN.github.io/"
+    //     "PYTHONPATH": "/workspaces/CitComAI-Hub.github.io/"
     // },
     "remoteUser": "vscode",
     "customizations": {
