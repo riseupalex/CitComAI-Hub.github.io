@@ -1,5 +1,5 @@
 ---
-title: CitCom.ai | VRAIN
+title: CitCom<sup>AI</sup> Hub
 template: home.html
 ---
 <style>
