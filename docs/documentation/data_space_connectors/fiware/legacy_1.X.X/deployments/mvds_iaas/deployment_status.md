@@ -35,7 +35,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    | ✅     | -          | [mongodb.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
+    | ✅     | -          | [mongodb.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
 
     |    Variables    |   Value   |
     | :-------------: | :-------- |
@@ -48,7 +48,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | [MongoDB](#mongodb_1) | [orionld.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
+    |  ✅    | [MongoDB](#mongodb_1) | [orionld.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
 
     |    Variables    |     Value    |
     | :-------------: | :----------- |
@@ -64,7 +64,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
+    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
 
 ### DSBA-compliant demo
 
@@ -101,9 +101,9 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    | ✅     | -          | [mongodb.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
+    | ✅     | -          | [mongodb.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml) | _LoadBalancer_ | 
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/mongodb.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/mongodb.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mongodb.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -117,9 +117,9 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    | ✅     | -          | [mysql.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml) | - |
+    | ✅     | -          | [mysql.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml) | - |
     
-    - **values.yaml**: [modules/ds_operator/config/helm_values/mysql.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/mysql.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/mysql.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -135,19 +135,19 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️     | -          | [waltid.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml) | `waltid.ds-operator.io` (NOT WORKING) |
+    |  ⚠️     | -          | [waltid.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml) | `waltid.ds-operator.io` (NOT WORKING) |
 
     !!! warning "Doubts/Errors"
-        Ingress is [configured](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml#L9) as in other services but the corresponding endpoint is not generated.
+        Ingress is [configured](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml#L9) as in other services but the corresponding endpoint is not generated.
 
         **Other doubts:**
 
-        - [**templates**](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml#L80):
+        - [**templates**](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml#L80):
             - What is this credential (GaiaXParticipantCredential.json)?
             - Where do you get it from? 
             - What is its function?
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/waltid.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/waltid.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/waltid.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -166,9 +166,9 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | [MongoDB](#mongodb_1) | [orionld.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
+    |  ✅    | [MongoDB](#mongodb_1) | [orionld.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml) | - |
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/orionld.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/orionld.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/orionld.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -182,9 +182,9 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | [MySQL](#mysql) | [credentials_config_service.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/credentials_config_service.yaml) | - |
+    |  ✅    | [MySQL](#mysql) | [credentials_config_service.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/credentials_config_service.yaml) | - |
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/credentials_config_service.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/credentials_config_service.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/credentials_config_service.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/credentials_config_service.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -199,9 +199,9 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | [MySQL](#mysql) | [trusted_issuers_list.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_issuers_list.yaml) | `til.ds-operator.io`<br>`tir.ds-operator.io` |
+    |  ✅    | [MySQL](#mysql) | [trusted_issuers_list.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_issuers_list.yaml) | `til.ds-operator.io`<br>`tir.ds-operator.io` |
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/trusted_issuers_list.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_issuers_list.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/trusted_issuers_list.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_issuers_list.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -224,7 +224,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
+    |  ❓    | [Orion LD](#orion-ld) | [trusted_participants_registry.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml) | `tpr.ds-operator.io` |
 
     !!! warning "Doubts/Errors"
         - [**satellite**](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/trusted-issuers-registry/values.yaml#L27): 
@@ -233,7 +233,7 @@ Detailed local deployment status.
             - What is its function? 
             - Can the ID name (EU.EORI.FIWARESATELLITE) be any name or does it have to be that name for some reason?
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/trusted_participants_registry.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/trusted_participants_registry.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/trusted_participants_registry.yaml)
 
     |    Variables    |   Value   |
     | :-------------: | :------- |
@@ -250,7 +250,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️    | [Credentials Config Service](#credentials-config-service)<br>[Trusted ISSUERS List](#trusted-issuers-list)<br>[WaltID](#-waltid) | [verifier.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml) | `verifier.ds-operator.io` |
+    |  ⚠️    | [Credentials Config Service](#credentials-config-service)<br>[Trusted ISSUERS List](#trusted-issuers-list)<br>[WaltID](#-waltid) | [verifier.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml) | `verifier.ds-operator.io` |
 
     !!! warning "Doubts/Errors"
         With the _initContainers_ configuration as [Fiware](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/verifier/values.yaml#L26) has it, the service is not deployed.
@@ -262,11 +262,11 @@ Detailed local deployment status.
 
         - [**m2m**](https://github.com/FIWARE-Ops/fiware-gitops/blob/master/aws/dsba/onboarding-portal/verifier/values.yaml#L18): 
             - What is this m2m? 
-            - Is it correctly configured in [this way](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml#L43)? 
+            - Is it correctly configured in [this way](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml#L43)? 
     - **FIWARE repository**:
         - **code**: [github](https://github.com/FIWARE/VCVerifier)
         - **helm-chart**: [i4Trust v1.0.23](https://github.com/i4Trust/helm-charts/tree/vcverifier-1.0.23/charts/vcverifier)
-    - **values.yaml**: [modules/ds_operator/config/helm_values/verifier.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/verifier.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/verifier.yaml)
 
     |    Variables    |   Value  |
     | :-------------: | :------- |
@@ -287,7 +287,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ❓    | [WaltID](#-waltid)<br>[Verifier](#-verifier)<br>[Keyrock?](#keyrock) | [pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
+    |  ❓    | [WaltID](#-waltid)<br>[Verifier](#-verifier)<br>[Keyrock?](#keyrock) | [pdp.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
 
     !!! warning "Doubts/Errors"
         - [**ishare.existingSecret**](): 
@@ -302,7 +302,7 @@ Detailed local deployment status.
             - What is this?
             - Is it set correctly with the default value?
 
-    - **values.yaml**: [modules/ds_operator/config/helm_values/pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml)
+    - **values.yaml**: [modules/ds_operator/config/helm_values/pdp.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml)
 
     |    Variables    |   Value  |
     | :-------------: | :------- |
@@ -319,7 +319,7 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ⚠️    | [Orion LD](#orion-ld)<br>[PDP](#-pdp) | [pdp.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
+    |  ⚠️    | [Orion LD](#orion-ld)<br>[PDP](#-pdp) | [pdp.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/pdp.yaml) | - |
 
     !!! warning "under configuration ..."
 
@@ -350,13 +350,13 @@ Detailed local deployment status.
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ✅    | [Credentials Config Service](#credentials-config-service)<br>[Kong](#kong-proxy)<br>[Verifier](#-verifier) | [portal.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
+    |  ✅    | [Credentials Config Service](#credentials-config-service)<br>[Kong](#kong-proxy)<br>[Verifier](#-verifier) | [portal.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/portal.yaml) | - |
 
 === "❌ Keyrock"
 
     | Status | Depends on | Values.yaml | Endpoint |
     | :----: | :--------: | :---------  | :------  |
-    |  ❌     | [WaltID](#-waltid)<br>[MySQL](#mysql)<br>[PDP](#-pdp) | [kong.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/kong_conf.yaml) | - |
+    |  ❌     | [WaltID](#-waltid)<br>[MySQL](#mysql)<br>[PDP](#-pdp) | [kong.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/develop/modules/ds_operator/config/helm_values/kong_conf.yaml) | - |
 
     ```bash
     > fiware-idm@8.3.0 start /opt/fiware-idm
@@ -454,7 +454,7 @@ Detailed local deployment status.
     | [**PDP**](#pdp)                                                   |       ✅      |
     | [**Kong (Proxy)**](#-kong-proxy)                                  |       ❓      |
 
-**values.yaml**: [modules/ds_connector/config/helm_values/connector.yaml](https://github.com/CitCom-VRAIN/Minimum_Viable_DataSpace_Infrastructure/blob/feature/module_connector/modules/ds_connector/config/helm_values/connector.yaml)
+**values.yaml**: [modules/ds_connector/config/helm_values/connector.yaml](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/blob/feature/module_connector/modules/ds_connector/config/helm_values/connector.yaml)
 
 === "Mongo DB"
 

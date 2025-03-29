@@ -51,13 +51,13 @@ Create and start the container by using the following command:
 Set-up your AI service / client so it points to `127.0.0.1.1:3000`.
 
 ## Debugging
-As mentioned above, Lepus is still in its early stages, so it lacks some features, and wild bugs may appear. In order to make it easier to detect and report errors, a [developing / debugging repository](https://github.com/CitCom-VRAIN/lepus-dev) was created. If you find any issues or want to request a feature, please, open a [new issue](https://github.com/jason-fox/lepus/issues/new/choose) in the official repository.
+As mentioned above, Lepus is still in its early stages, so it lacks some features, and wild bugs may appear. In order to make it easier to detect and report errors, a [developing / debugging repository](https://github.com/CitComAI-Hub/lepus-dev) was created. If you find any issues or want to request a feature, please, open a [new issue](https://github.com/jason-fox/lepus/issues/new/choose) in the official repository.
 
 Steps to run the development version (it is necessary to have [Node.js](https://nodejs.org/en) installed):
 
 1. Clone the repository and navigate to its root folder:
 ```bash
-git clone https://github.com/CitCom-VRAIN/lepus-dev && cd lepus-dev
+git clone https://github.com/CitComAI-Hub/lepus-dev && cd lepus-dev
 ```
 
 2. Install dependencies
