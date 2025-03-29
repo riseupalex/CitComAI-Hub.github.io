@@ -2,6 +2,21 @@
 {% block tabs %}
 {{ super() }}
 <style>
+    .md-button {
+        margin-top: 0.8rem;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    .github-icon {
+        margin-left: 0.3em;
+        position: relative;
+        top: 1px;
+    }
+
     .md-footer-meta__inner {
         margin-top: 0 !important;
     }
@@ -29,10 +44,8 @@
 
     .tx-container {
         padding: 2rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), #0096AE 99%, #fff 99%);
-        /* Solid color background */
         color: #fff;
-        /* Text color */
+        background: linear-gradient(to bottom, #14151A, #1E2129 99%, #fff 99%);
     }
 
     .tx-hero {
@@ -46,7 +59,6 @@
 
     .tx-hero h2 {
         margin-bottom: 1.2rem;
-        color: #fff;
         font-weight: 600;
         font-size: 2.5rem;
         text-align: center;
@@ -56,7 +68,6 @@
         font-size: 1.1rem;
         max-width: 600px;
         margin: 0 auto 1.5rem;
-        color: #e0f7fa;
         /* Light color for contrast */
         text-align: center;
         line-height: 1.8;
@@ -80,13 +91,23 @@
                 <img src="assets/smart-city.png" alt="Smart City" draggable="false">
             </div> -->
             <div class="tx-hero__content">
-                <h2>CitCom.ai | VRAIN</h2>
-                <p>Support & Documentation Hub for Testing AI in Smart Cities and Communities</p>
+                <div>
+                    <h2>CitCom<sup>AI</sup> Hub</h2>
+                    <p>Support & Documentation for Testing AI in Smart Cities and Communities</p>
+                </div>
                 <a href="/welcome" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
                     Get started
                 </a>
+                <!-- ...existing code... -->
+                <!-- Updated GitHub button with inline SVG icon on the right -->
                 <a href="https://github.com/CitCom-VRAIN" title="{{ lang.t('source.link.title') }}" class="md-button">
                     Go to GitHub
+                    <svg class="github-icon" width="22" height="22" viewBox="0 0 16 16" fill="currentColor"
+                        aria-hidden="true" >
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.98 0-.88.31-1.6.82-2.16-.08-.2-.36-1.01.08-2.11 0 0 .67-.22 2.2.82a7.5 7.5 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.16 0 3.1-1.87 3.78-3.65 3.98.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
                 </a>
             </div>
         </div>
