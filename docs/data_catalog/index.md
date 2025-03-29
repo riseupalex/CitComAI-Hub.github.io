@@ -24,7 +24,7 @@ The data catalog is a centralized hub to keep track of available datasets. It is
 !!! question "[How to add new datasets?](./instructions.md)"
 </div>
 
-[:simple-github: Add New Datasets ](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/issues/new/choose){ .md-button .md-button--primary-light }
+[:simple-github: Add New Datasets ](https://github.com/CitComAI-Hub/CitComAI-Hub.github.io/issues/new/choose){ .md-button .md-button--primary-light }
 </div>
 
 <!-- Search input -->

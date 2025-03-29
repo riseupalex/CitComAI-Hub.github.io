@@ -2,7 +2,7 @@
 
 To add new datasets to the data catalog, an automated request system has been enabled through GitHub Issues and _csv's_ files. 
 
-Each of the datasets that you want to add to the data catalog must be attached as a different _csv_ file. The template for this file can be found at the following link: [Dataset Template](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/blob/main/templates/NEW_DATASET_TEMPLATE.csv).
+Each of the datasets that you want to add to the data catalog must be attached as a different _csv_ file. The template for this file can be found at the following link: [Dataset Template](https://github.com/CitComAI-Hub/CitComAI-Hub.github.io/blob/main/templates/NEW_DATASET_TEMPLATE.csv).
 
 ![Plantilla de archivo csv](./img/dataset_template_empty.png)
 
