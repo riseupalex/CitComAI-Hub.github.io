@@ -1,4 +1,4 @@
-site_name: CitCom.ai | VRAIN
+site_name: CitCom<sup>AI</sup> Hub
 site_url: https://citcom-vrain.github.io
 repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
 edit_uri: edit/main/docs/
@@ -15,7 +15,7 @@ theme:
   custom_dir: docs/overrides
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - content.code.copy
     - content.action.edit
@@ -23,8 +23,7 @@ theme:
     - navigation.footer
     - navigation.indexes
   palette:
-    primary: custom
-    accent: custom
+    primary: black
 nav:
   - welcome.md
   - Getting started:
