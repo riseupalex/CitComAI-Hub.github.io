@@ -33,7 +33,7 @@ At Level 1, the focus shifts to identifying and adopting pivotal interoperabilit
 This level establishes core interoperability through shared data models and context management, even though individual systems may retain internal heterogeneity. 
 
 ### Level 2 - Common Interface with Integrated Security
-At Level 2, interoperability is further enhanced by defining a standard interface typically through deploying a DS Connector. This connector not only leverages the standards from Level 1 but also integrates a comprehensive security layer that includes:
+At Level 2, interoperability is further enhanced by defining a standard interface typically through deploying a data space connector. This connector not only leverages the standards from Level 1 but also integrates a comprehensive security layer that includes:
 
 - **Trust Frameworks:** Mechanisms to establish and maintain trust among participants.
 
