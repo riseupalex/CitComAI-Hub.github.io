@@ -1,5 +1,5 @@
 # Minimal Interoperable AI Service (MIAIS) - Waste Collection 
-[Repository :simple-github:](https://github.com/CitCom-VRAIN/waste-collection-demo){ .md-button .md-button--primary-light }
+[Repository :simple-github:](https://github.com/CitComAI-Hub/waste-collection-demo){ .md-button .md-button--primary-light }
 
 <figure markdown>
   ![Waste Collection](img/waste_collection.gif){ loading=lazy }
@@ -41,15 +41,15 @@ As mentioned, a demo example with some dummy data has been provided so partners 
 
 1. Clone the repository and navigate to its root folder:
 ```bash
-git clone https://github.com/CitCom-VRAIN/waste-collection-demo.git && cd waste-collection-demo
+git clone https://github.com/CitComAI-Hub/waste-collection-demo.git && cd waste-collection-demo
 ```
 
-2. Init git submodules with the following command. This will clone and install a dead simple [ngsi-ld client library](https://github.com/CitCom-VRAIN/ngsild-client) in `lib` folder. Please note that the library is for testing purposes only and lacks most functionality. However, it quickly allows you to implement your own methods to interact with the context broker.
+2. Init git submodules with the following command. This will clone and install a dead simple [ngsi-ld client library](https://github.com/CitComAI-Hub/ngsild-client) in `lib` folder. Please note that the library is for testing purposes only and lacks most functionality. However, it quickly allows you to implement your own methods to interact with the context broker.
 ```bash
 git submodule init && git submodule update
 ```
 
-3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose) installed. This will set-up an Orion-LD broker with a MongoDB database. Check out the [`docker-compose.yaml`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) file for more details. Alternatively, the demo can also be deployed by using a Scorpio NGSI-LD Broker. If you feel more familiar with this case, switch the branch to `mvs-scorpiold` before running `docker compose up`:
+3. Next, create and run the Orion-LD Docker image. It is necessary to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose) installed. This will set-up an Orion-LD broker with a MongoDB database. Check out the [`docker-compose.yaml`](https://github.com/CitComAI-Hub/waste-collection-demo/blob/mvs-orionld/docker-compose.yaml) file for more details. Alternatively, the demo can also be deployed by using a Scorpio NGSI-LD Broker. If you feel more familiar with this case, switch the branch to `mvs-scorpiold` before running `docker compose up`:
 ```bash
 # Optional: Switch to Scorpio NGSI-LD Broker
 # git checkout mvs-scorpiold
@@ -105,12 +105,12 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
 	- `lib/`: External python libraries.
 
 ??? tip "Formulate new delivery/pickup problems"
-    We worked with optimizing trucks routes ([`Vehicle`](https://github.com/smart-data-models/dataModel.Transportation/tree/master/Vehicle) entity) to pickup [`WasteContainers`](https://github.com/smart-data-models/dataModel.WasteManagement/tree/master/WasteContainer) that are full (`fillingLevel` attribute). However, these entities can be replaced to formulate new delivery/pickup problems. Visit the [Smart Data Models repositories](https://github.com/smart-data-models) for more entities and decide which attributes are relevant for your problem. To integrate these changes in the project, you should create the corresponding entity classes in `static/modules/` folder, just like [`WasteContainer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/WasteContainer.js). Take also a look at [`main.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/main.js) and modify it accordingly. 
+    We worked with optimizing trucks routes ([`Vehicle`](https://github.com/smart-data-models/dataModel.Transportation/tree/master/Vehicle) entity) to pickup [`WasteContainers`](https://github.com/smart-data-models/dataModel.WasteManagement/tree/master/WasteContainer) that are full (`fillingLevel` attribute). However, these entities can be replaced to formulate new delivery/pickup problems. Visit the [Smart Data Models repositories](https://github.com/smart-data-models) for more entities and decide which attributes are relevant for your problem. To integrate these changes in the project, you should create the corresponding entity classes in `static/modules/` folder, just like [`WasteContainer.js`](https://github.com/CitComAI-Hub/waste-collection-demo/blob/mvs-orionld/static/modules/WasteContainer.js). Take also a look at [`main.js`](https://github.com/CitComAI-Hub/waste-collection-demo/blob/mvs-orionld/static/main.js) and modify it accordingly. 
 
-    Moreover, maybe your situation needs to consider some time restrictions or priorities. Check out the [Openroute service API specification](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md), which is powerful and includes many parameters to fit your optimization needs. To change/add additional query parameters, go over [`Optimization.py`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/services/Optimization.py) and [`Optimizer.js`](https://github.com/CitCom-VRAIN/waste-collection-demo/blob/mvs-orionld/static/modules/Optimizer.js) files.
+    Moreover, maybe your situation needs to consider some time restrictions or priorities. Check out the [Openroute service API specification](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md), which is powerful and includes many parameters to fit your optimization needs. To change/add additional query parameters, go over [`Optimization.py`](https://github.com/CitComAI-Hub/waste-collection-demo/blob/mvs-orionld/services/Optimization.py) and [`Optimizer.js`](https://github.com/CitComAI-Hub/waste-collection-demo/blob/mvs-orionld/static/modules/Optimizer.js) files.
 
 ??? tip "Level 1: Authentication"
-      When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitCom-VRAIN/ngsild-client) library included in the example does not come with authentication support. However, it is quite straightforward to extend it to meet authentication requirements. As an example, see the following code from the [Valencia](https://github.com/CitCom-VRAIN/waste-collection-demo/tree/valencia) TEF site implementation, which implementes [authentication for their NGSIv2 setup](https://github.com/CitCom-VRAIN/ngsild-client/blob/master/Authv2.py).
+      When working with brokers in a production state, authentication is often required. The [`ngsild-client`](https://github.com/CitComAI-Hub/ngsild-client) library included in the example does not come with authentication support. However, it is quite straightforward to extend it to meet authentication requirements. As an example, see the following code from the [Valencia](https://github.com/CitComAI-Hub/waste-collection-demo/tree/valencia) TEF site implementation, which implementes [authentication for their NGSIv2 setup](https://github.com/CitComAI-Hub/ngsild-client/blob/master/Authv2.py).
 
        ```python
        from lib.ngsildclient.Auth import Authv2
@@ -184,7 +184,7 @@ If your TEF site meets all minimum requirements, you can go over deploying the M
       except Exception as req_err:
           print(f"Request error occurred: {req_err}")
       ```
-      For more details, check out the [fdsauth repository](https://github.com/CitCom-VRAIN/fdsauth/).
+      For more details, check out the [fdsauth repository](https://github.com/CitComAI-Hub/fdsauth/).
 
 ## Track and status of known problems
 - [X] Openroute optimization service has a maximum limit of 70 locations. This can be solved by [deploying your own Openroute instance](https://giscience.github.io/openrouteservice/getting-started).

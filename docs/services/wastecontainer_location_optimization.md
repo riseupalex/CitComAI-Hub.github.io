@@ -1,5 +1,5 @@
 # Optimizing WasteContainer Location
-[Repository :simple-github:](https://github.com/CitCom-VRAIN/optimizing-container-location){ .md-button .md-button--primary-light }
+[Repository :simple-github:](https://github.com/CitComAI-Hub/optimizing-container-location){ .md-button .md-button--primary-light }
 
 <figure markdown>
   ![Optimizing WasteContainer Location](img/optimizing_wastecontainer_location.gif){ loading=lazy }
@@ -27,7 +27,7 @@ graph TD;
 
 1. Clone the repository and navigate to its root folder:
 ```bash
-git clone https://github.com/CitCom-VRAIN/optimizing-container-location.git && cd optimizing-container-location
+git clone https://github.com/CitComAI-Hub/optimizing-container-location.git && cd optimizing-container-location
 ```
 
 2. Create and activate a Python virtual environment:

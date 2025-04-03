@@ -1,9 +1,9 @@
-site_name: CitCom.ai | VRAIN
-site_url: https://citcom-vrain.github.io
-repo_url: https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io
+site_name: CitCom<sup>AI</sup> Hub
+site_url: https://citcomai-hub.github.io
+repo_url: https://github.com/CitComAI-Hub/CitComAI-Hub.github.io
 edit_uri: edit/main/docs/
-repo_name: CitCom-VRAIN/CitCom-VRAIN.github.io
-copyright: Copyright &copy; 2023 - 2024 CitCom.ai - VRAIN
+repo_name: CitComAI-Hub/CitComAI-Hub.github.io
+copyright: Copyright &copy; 2023 - 2024 CitCom.ai Hub
 site_dir: public
 extra_css:
   - stylesheets/extra.css
@@ -15,7 +15,7 @@ theme:
   custom_dir: docs/overrides
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - content.code.copy
     - content.action.edit
@@ -23,8 +23,7 @@ theme:
     - navigation.footer
     - navigation.indexes
   palette:
-    primary: custom
-    accent: custom
+    primary: black
 nav:
   - welcome.md
   - Getting started:

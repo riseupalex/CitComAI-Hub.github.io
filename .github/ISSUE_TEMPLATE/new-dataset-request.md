@@ -9,12 +9,12 @@ assignees: ''
 
 # New Dataset(s) Request
 
-Request to add new datasets to the [Citcom.ai documentation](https://citcom-vrain.github.io/data_catalog/). Follow the instructions to process your request correctly.
+Request to add new datasets to the [Citcom.ai documentation](https://citcomai-hub.github.io/data_catalog/). Follow the instructions to process your request correctly.
 
 ## Instructions
 
 1. Add site name to the issue title (ex. `[NEWDATASET]: <site_name>`)
-2. Use the [***NEW_DATASET_TEMPLATE.csv***](https://github.com/CitCom-VRAIN/CitCom-VRAIN.github.io/tree/main/templates) to add information about a dataset. 
+2. Use the [***NEW_DATASET_TEMPLATE.csv***](https://github.com/CitComAI-Hub/CitComAI-Hub.github.io/tree/main/templates) to add information about a dataset. 
 3. Attach all the **csv** files you need under the following section.
 4. Add any comments or additional information in the comments section.
 5. Submit the issue!.

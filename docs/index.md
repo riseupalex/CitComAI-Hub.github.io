@@ -1,6 +1,5 @@
 ---
-title: CitCom.ai | VRAIN
-template: home.html
+    template: home.html
 ---
 <style>
 /* Hide title on the home page */
