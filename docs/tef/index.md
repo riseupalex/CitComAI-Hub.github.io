@@ -13,7 +13,7 @@ Overview of the current Testing and Experimentation Facility (TEF) nodes / sites
 | -------- | ---- | ----------- | ---------- | ------------------------- |
 | [DOLL Living Lab](./nordic_power/doll_living_lab.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
 | [Aarhus City Lab](./nordic_power/aarhus_city_lab.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
-| [DTU](./nordic_power/dtu.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
+| [Net Zero Innovation Hub](./nordic_power/net_zero_innovation_hub.md) | Denmark |  |  | |
 | [DTI](./nordic_power/dti.md) | Denmark |  | | |
 | [Center Denmark](./nordic_power/center_denmark.md) | Denmark | {{ config.extra.labels.data_brokers.kafka }} | {{ config.extra.labels.api_brokers.custom }} | |
 | [GATE21](./nordic_power/gate21.md) | Denmark | {{ config.extra.labels.data_brokers.fiware }} | {{ config.extra.labels.api_brokers.ngsi_ld }} | |
