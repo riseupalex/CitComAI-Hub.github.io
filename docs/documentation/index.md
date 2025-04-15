@@ -1,6 +1,6 @@
 ---
 icon: material/file-document-outline
-title: Documentation
+title: Guides
 ---
 
 Reports and deployment guides of different components.
