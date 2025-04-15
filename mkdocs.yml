@@ -52,7 +52,7 @@ nav:
         #   - documentation/data_federation/custom/index.md
       - Data Space Connectors:
           - documentation/data_space_connectors/index.md
-          - Eclipse: documentation/data_space_connectors/eclipse_mvd.md
+          - Eclipse: documentation/data_space_connectors/eclipse/index.md
           - Fiware:
               - documentation/data_space_connectors/fiware/index.md
               - Legacy (v. 1.X.X):
