@@ -1,38 +1,49 @@
-# FIWARE
+# FIWARE Connector
 
-Fiware is embarking on the development of different services that in combination meet the requirements defined for implementing a data space. For these developments they are following the [DSBA Technical Convergence](https://data-spaces-business-alliance.eu/wp-content/uploads/dlm_uploads/Data-Spaces-Business-Alliance-Technical-Convergence-V2.pdf) recomentations.
+## Introduction
+The [FIWARE Data Space Connector](https://github.com/FIWARE/data-space-connector) is an integrated suite of components every organization participating in a data space should deploy to “connect” to a data space. Following the DSBA recommendations, it allows to:
 
-This is a technology that Fiware **currently has in development**, so it is open to major modifications. Currently, versions 2.x.x are the most advanced, achieving significant improvements in simplicity and ease of use at the local level compared to versions 1.x.x.
+* Interface with Trust Services aligned with [EBSI specifications](https://api-pilot.ebsi.eu/docs/apis)
+* Implement authentication based on [W3C DID](https://www.w3.org/TR/did-core/) with 
+ [VC/VP standards](https://www.w3.org/TR/vc-data-model/) and 
+ [SIOPv2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html#name-cross-device-self-issued-op) / 
+ [OIDC4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#request_scope) protocols
+* Implement authorization based on attribute-based access control (ABAC) following an 
+ [XACML P*P architecture](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml) using 
+ [Open Digital Rights Language (ODRL)](https://www.w3.org/TR/odrl-model/) and the 
+ [Open Policy Agent (OPA)](https://www.openpolicyagent.org/)
+* Provide compatibility with [ETSI NGSI-LD](https://www.etsi.org/committee/cim) as data exchange API
+* Supports the [TMForum APIs](https://www.tmforum.org/oda/open-apis/) for contract negotiation
 
-## Legacy version (1.x.x)
+**Note:** Although the FIWARE Data Space Connector provides compatibility with NGSI-LD as the data exchange 
+API, it could also be used for any other RESTful API by replacing or extending the PDP component of the 
+connector.
 
-### Demo-Setup DSBA-compliant
+The functionalities mentioned above can be used by an organization to connect to the data space in its role 
+as data (processing) service provider, consumer of data (processing) services, or both.
 
-As a first approximation of a future data space, Fiware developed a fairly complete example ([Demo-Setup DSBA-compliant Dataspace](https://github.com/FIWARE-Ops/fiware-gitops/tree/master/aws/dsba)), which tries to address the main blocks of a data space:
+### Key points
 
-- [Data Space Operator](legacy_1.X.X/index.md#data-space-operator) (Trust Anchor)
-- [Marketplace](legacy_1.X.X/#marketplace)
-- [Data Space Connector](legacy_1.X.X/#fiware-data-space-connector) (Provider or Consumer)
+- Final and ready-to-use software (versus the framework approach of Eclipse)
+- (Partial support for) IDS Dataspace Protocol (DSP)
+- Not as agnostic as Eclipse, although its modular approach makes it possible (in theory) to extend its capabilities.
+- It is not very tested; expect bugs and error reporting work.
+- Development is relatively slow.
 
-![dataspace_schema](./img/fiware_dataspace.png)
+## Getting started
+The [Minimum Viable Data Space Infrastructure](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure) repository provides a ready-to-use, minimal deployment of a FIWARE Data Space Connector. Its main purpose is to offer an easy way to deploy the FIWARE connector locally.
 
-However, this example is a demo to show the feasibility of the technology, but **it is far from being easily reusable in other real environments or putting it into production systems**. Furthermore, it is designed to be deployed in [Red Hat Openshift AWS](https://aws.amazon.com/es/rosa/), so the cost of maintaining it may be a limiting factor for a simple test of the technology.
+### Minimum Viable Data Space (Local)
+Check out the [examples/kind_minimal_ds_local exmple](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure/tree/main/examples/kind_minimal_ds_local). This example is composed of the following blocks:
 
-### Minimum Data Space
+- Fiware Data Space (FDS) Operator or Trust Anchor: Trust Anchor that manages the issuers and credentials.
+- FDS Connector A (Provider): Entity that provides and consumes data from the data space.
+- FDS Connector B (Consumer): Entity that only consumes data from the data space.
 
-As an alternative to the previous Fiware example, a minimum data space architecture is proposed, which consists of:
+<figure markdown>
+  ![FIWARE minimal data space](img/minimum_dataspace_arch.png){ loading=lazy }
+</figure>
 
-- [Trusted Participant/Issuers Registry](https://github.com/FIWARE/trusted-issuers-registry) (fulfilling the functions of Trust Anchor). 
-- [FIWARE Data Space Connector](https://github.com/FIWARE-Ops/data-space-connector) (at least two).
+For further details and to get started, please visit the [repository on GitHub](https://github.com/CitComAI-Hub/Minimum_Viable_DataSpace_Infrastructure).
 
-This architecture is what we could call the Minimum Data Space.
 
-![minimum_dataspace_schema](./img/minimum_dataspace_arch.png)
-
-### Guidelines for deployments
-
-[Guidelines](./legacy_1.X.X/index.md#deployments)
-
-## Latest version (2.x.x)
-
-- New version

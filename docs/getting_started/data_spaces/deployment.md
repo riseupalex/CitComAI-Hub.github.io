@@ -6,7 +6,7 @@ These are the instructions to deploy a Data Space from scratch with Fiware techn
 
 ## Minimal Viable Data Space
 
-The minimal viable data space is composed of a Trust Anchor and a Data Space Connector ([Reference](../../documentation/data_space_connectors/fiware/index.md#minimum-data-space)).
+The minimal viable data space is composed of a Trust Anchor and a Data Space Connector.
 
 ### FIWARE Data Space Connector
 

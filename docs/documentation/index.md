@@ -1,6 +1,6 @@
 ---
 icon: material/file-document-outline
-title: Documentation
+title: Guides
 ---
 
 Reports and deployment guides of different components.
@@ -9,7 +9,7 @@ Reports and deployment guides of different components.
 
 <div class="grid cards" markdown>
 
--   :material-store-search-outline:{ .lg .middle } __Data Federation__
+-   :material-graph-outline:{ .lg .middle } __Data Federation__
 
     ---
 
@@ -24,7 +24,7 @@ Reports and deployment guides of different components.
 
 <div class="grid cards" markdown>
 
--   :material-store-search-outline:{ .lg .middle } __Data Space Connector__
+-   :material-power-plug-outline:{ .lg .middle } __Data Space Connector__
 
     ---
 
