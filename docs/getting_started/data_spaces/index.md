@@ -5,7 +5,7 @@ Data spaces support **interoperability**, ensuring that data from different sour
 
 In CitCom.ai, data spaces are pivotal in accelerating innovation by facilitating collaboration among different stakeholders. They offer a **secure** and compliant framework for data exchange, ensuring that the **AI solutions developed within the project are both reliable and aligned with European standards**.
 
-Basically, a data space must be formed, at least, by the following components ([Minimum Data Space Reference](../../documentation/data_space_connectors/fiware/index.md#minimum-data-space)): 
+Basically, a data space must be formed, at least, by the following components: 
 
 - **Trust Anchor (TA)**: Responsible for managing trust in the data space. It is the manager of the identities of the different elements of the data space and of managing the trust in them. At least one TA shall exist in the data space, managed by the organization in charge of the data space. 
 
