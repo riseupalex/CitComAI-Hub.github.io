@@ -26,7 +26,7 @@ Once you successfully run samples, consider modifying configuration files or sam
   ![Eclipse connector experiment](img/eclipse_experiment.png){ loading=lazy }
 </figure>
 
-Using a middleware makes it possible to connect the Eclipse connector to the current data platform. The middleware, an API rest server built with Flask, handles authentication and redirects all data requests to the data platform (via [Lepus](/documentation/data_federation/ngsiv2_to_ld/lepus/) to translate NGSIv2 to NGSI-LD).
+Using a middleware makes it possible to connect the Eclipse connector to the current data platform. The middleware, an API rest server built with Flask, handles authentication and redirects all data requests to the data platform (via [Lepus](../../data_federation/ngsiv2_to_ld/lepus.md) to translate NGSIv2 to NGSI-LD).
 
 === "middleware.py"
     ```python
