@@ -23,7 +23,7 @@ Go to [samples repository](https://github.com/eclipse-edc/Samples) and take a hi
 Once you successfully run samples, consider modifying configuration files or sample code to see how changes affect the behavior. This hands-on approach will help cement your understanding of how EDC can be extended to meet your organization’s needs. For example, by modifying the [transfer-03 example](https://github.com/eclipse-edc/Samples/tree/main/transfer/transfer-03-consumer-pull) it is possible to perform a quick and dirty experiment in order to connect your current TEF data platform to the connector. Take a look at the Valencia TEF setup.
 
 <figure markdown>
-  ![Waste Collection](img/eclipse_experiment.png){ loading=lazy }
+  ![Eclipse connector experiment](img/eclipse_experiment.png){ loading=lazy }
 </figure>
 
 Using a middleware makes it possible to connect the Eclipse connector to the current data platform. The middleware, an API rest server built with Flask, handles authentication and redirects all data requests to the data platform (via [Lepus](/documentation/data_federation/ngsiv2_to_ld/lepus/) to translate NGSIv2 to NGSI-LD).
