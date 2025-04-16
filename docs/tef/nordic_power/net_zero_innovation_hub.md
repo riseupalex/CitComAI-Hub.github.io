@@ -1,5 +1,5 @@
 ---
-title: DTU
+title: Net Zero Innovation Hub
 ---
 
 ## Overview
@@ -36,14 +36,14 @@ Describe the key infrastructure components available at the TEF Site, including 
   <tr>
     <td><strong>Data Broker<strong></td>
     <td>
-      {{ config.extra.labels.data_brokers.fiware }}<br>
-      <strong>- API:</strong> {{ config.extra.labels.api_brokers.ngsi_ld }}<br>
-      <strong>- Version:</strong> Scorpio
+      &lt;no_specified\><br>
+      <strong>- API:</strong> &lt;no_specified\><br>
+      <strong>- Version:</strong> &lt;no_specified\>
     </td>
   </tr>
   <tr>
     <td><strong>Data Source<strong></td>
-    <td><a href="https://www.os2.eu/os2iot">OS2IoT</a></td>
+    <td>&lt;no_specified\></a></td>
   </tr>
   <tr>
     <td><strong>IdM &amp; Auth<strong></td>
@@ -59,13 +59,13 @@ Describe the key infrastructure components available at the TEF Site, including 
 
 Provide a high-level overview of the architecture of the TEF Site, including the key components and technologies used. Include any relevant diagrams or visualizations to help stakeholders understand the infrastructure.
 
-![dtu_arch](./img/dut-arch.png)
+<!-- ![_arch](./img/arch.png) -->
 
 ### European Data Space for Smart Communities (DS4SSCC)
 
-{{ config.extra.labels.ds4ssc_compliant.yes_comp.data_sources }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_broker }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_api }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_idm_auth }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_publication }}
+<!-- {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_sources }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_broker }} {{ config.extra.labels.ds4ssc_compliant.yes_comp.data_api }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_idm_auth }} {{ config.extra.labels.ds4ssc_compliant.no_comp.data_publication }}
 
-![dtu_arch-ds4sscc](./img/dtu_ds4sscc-arch.svg)
+![_arch-ds4sscc](./img/_ds4sscc-arch.svg) -->
 
 ## Relevant datasets of the site
 
