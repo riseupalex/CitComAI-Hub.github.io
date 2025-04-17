@@ -1,5 +1,5 @@
 # Optimizing WasteContainer Location
-[Repository :simple-github:](https://github.com/CitComAI-Hub/optimizing-container-location){ .md-button .md-button--primary-light }
+[Repository :simple-github:](https://github.com/CitComAI-Hub/optimizing-container-location){:target="_blank" .md-button .md-button--primary-light }
 
 <figure markdown>
   ![Optimizing WasteContainer Location](img/optimizing_wastecontainer_location.gif){ loading=lazy }

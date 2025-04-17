@@ -1,6 +1,6 @@
 # FIWARE IoT-Agent
 
-[Repository :simple-github:](https://github.com/CitComAI-Hub/IoTAgent.NGSI-V2_to_NGSI-LD_Subscription){ .md-button .md-button--primary-light }
+[Repository :simple-github:](https://github.com/CitComAI-Hub/IoTAgent.NGSI-V2_to_NGSI-LD_Subscription){:target="_blank" .md-button .md-button--primary-light }
 
 This section explains **how to connect an NGSI-V2 broker with an NGSI-LD broker (_Fiware Orion_) through subscriptions to a _FIWARE IoT-Agent_**. This connection between brokers arises as an alternative to the use of [FIWARE Lepus](./lepus.md) due to the lack of testing and the experimental nature of this service.
 

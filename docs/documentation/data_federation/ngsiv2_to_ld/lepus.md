@@ -1,5 +1,5 @@
 # Lepus
-[Repository :simple-github:](https://github.com/jason-fox/lepus){ .md-button .md-button--primary-light }
+[Repository :simple-github:](https://github.com/jason-fox/lepus){:target="_blank" .md-button .md-button--primary-light }
 
 **FIWARE-Lepus** is an NGSI-LD wrapper for use with NGSI-v2 Context Brokers. It understands the NGSI-LD endpoints and inputs, converts them to NGSI-v2, makes a request to the NGSI-v2 broker behind it and transforms responses back to NGSI-LD using a fixed JSON-LD @context. It supports the NGSI-LD federationOps endpoints only and is designed to be used as a registered source with NGSI-LD Context Brokers in federation mode.
 
