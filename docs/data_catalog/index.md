@@ -1,6 +1,8 @@
 ---
 icon: material/store-search-outline
 title: Data Catalog
+hide:
+  - toc
 ---
 
 <script>
