@@ -14,7 +14,7 @@ The [TEF Site Name] is located in [City, Country] and is dedicated to advancing 
 
 List the services available at the TEF Site related to the CitCom.ai Services Catalog. Provide a brief description of each service, and include any relevant links or documentation.
 
-- **Service 1**: [Description of Service 1]
+- **Service 1**: [Action-driven Ethics Introduction workshop] (https://citcom.ai/services/fair-data-lab-track-services-action-driven-ethics-introduction-workshop 'Read more...')
 - **Service 2**: [Description of Service 2]
 - **Service 3**: [Description of Service 3]
 
